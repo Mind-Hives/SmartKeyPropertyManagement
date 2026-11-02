@@ -1,48 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "../../assets/logos/smartkey logo.avif";
 
 const aboutLinks = [
-  {
-    name: "Our Company",
-    path: "/",
-  },
-  {
-    name: "Our Team",
-    path: "/about",
-  },
+  { name: "Our Company", path: "" },
+  { name: "Our Team", path: "/about" },
 ];
 
 const servicesLinks = [
-  {
-    name: "Rent Collection & Arrears Recovery",
-    path: "/services/rent-collection-and-arrears-recovery",
-  },
-  {
-    name: "Lease Administration & Renewals",
-    path: "/services/lease-administration-and-renewals",
-  },
-  {
-    name: "Tenant Screening & Placements",
-    path: "/services/tenant-screening-and-placement",
-  },
-  {
-    name: "Accounting & Financial Reporting",
-    path: "/services/accounting-financial-reporting",
-  },
-  {
-    name: "Maintenance & Resident Services",
-    path: "/services/property-maintenance-and-resident-services",
-  },
-  {
-    name: "Compliance & Strategic Oversight",
-    path: "/services/property-compliance-and-strategic-oversight",
-  },
-  {
-    name: "Legal Compliances & Risk Management",
-    path: "/services/legal-compliances-and-risk-management",
-  },
+  { name: "Rent Collection & Arrears Recovery", path: "/services/rent-collection-and-arrears-recovery" },
+  { name: "Lease Administration & Renewals", path: "/services/lease-administration-and-renewals" },
+  { name: "Tenant Screening & Placements", path: "/services/tenant-screening-and-placement" },
+  { name: "Accounting & Financial Reporting", path: "/services/accounting-financial-reporting" },
+  { name: "Maintenance & Resident Services", path: "/services/property-maintenance-and-resident-services" },
+  { name: "Compliance & Strategic Oversight", path: "/services/property-compliance-and-strategic-oversight" },
+  { name: "Legal Compliances & Risk Management", path: "/services/legal-compliances-and-risk-management" },
 ];
 
 const appFolioLinks = [
@@ -53,212 +25,257 @@ const appFolioLinks = [
 ];
 
 const locations = [
-  {
-    name: "Queens",
-    path: "/locations/queens",
-  },
-  {
-    name: "Bronx",
-    path: "/locations/bronx",
-  },
-  {
-    name: "Manhattan",
-    path: "/locations/manhattan",
-  },
+  { name: "Queens", path: "/queens" },
+  { name: "Bronx", path: "/bronx" },
+  { name: "Manhattan", path: "/manhattan" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileAppFolioOpen, setMobileAppFolioOpen] = useState(false);
+  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+  const location = useLocation();
+
+  // Close desktop dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Close dropdowns and mobile menu after route navigation
+  useEffect(() => {
+    setActiveDropdown(null);
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown((current) =>
+      current === dropdown ? null : dropdown
+    );
+  };
+
+  // Common active link styling
+  const getNavLinkClass = ({ isActive }) =>
+    `font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
+      isActive
+        ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
+        : ""
+    }`;
+
+  // Check whether a dropdown contains the current page
+  const isDropdownActive = (links) =>
+    links.some((item) => item.path === location.pathname);
+
+  // Desktop dropdown component
+  const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
+    const isActive = isDropdownActive(links);
+    const isDropdownOpen = activeDropdown === name;
+
+    return (
+      <li className="relative">
+        <button
+          type="button"
+          onClick={() => toggleDropdown(name)}
+          aria-expanded={isDropdownOpen}
+          className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
+            isActive
+              ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
+              : ""
+          }`}
+        >
+          {name}
+
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-300 ${
+              isDropdownOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        {/* Dropdown spacing */}
+        <div className="absolute left-0 top-full h-5 w-full" />
+
+        {/* Dropdown list */}
+        <div
+          className={`absolute left-0 top-[145%] ${width} rounded-xl bg-[#f7f4ee] p-4 shadow-2xl transition-all duration-300 ${
+            isDropdownOpen
+              ? "visible translate-y-0 opacity-100"
+              : "invisible translate-y-4 opacity-0"
+          }`}
+        >
+          <div
+            className={`flex flex-col ${
+              name === "Services" ? "gap-3 text-left" : "gap-2"
+            }`}
+          >
+            {links.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setActiveDropdown(null)}
+                className={`text-[16px] font-[500] leading-relaxed text-[#17263d] transition-colors duration-300 hover:text-[#12a8ff] ${
+                  location.pathname === item.path
+                    ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-4"
+                    : ""
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </li>
+    );
+  };
+
+  // Mobile dropdown component
+  const MobileDropdown = ({
+    name,
+    links,
+    isDropdownOpen,
+    setDropdownOpen,
+  }) => {
+    return (
+      <>
+        <button
+          type="button"
+          onClick={() => setDropdownOpen(!isDropdownOpen)}
+          className={`flex w-full cursor-pointer items-center justify-between transition-colors duration-300 hover:text-[#12a8ff] ${
+            isDropdownActive(links) ? "text-[#12a8ff]" : ""
+          }`}
+          aria-expanded={isDropdownOpen}
+        >
+          {name}
+
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-300 ${
+              isDropdownOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        {isDropdownOpen && (
+          <div className="flex flex-col gap-3 pl-4">
+            {links.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.path}
+                className={({ isActive }) =>
+                  `block text-sm transition-colors duration-300 hover:text-[#12a8ff] ${
+                    isActive
+                      ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-4"
+                      : ""
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+        )}
+      </>
+    );
+  };
 
   return (
-    <nav className="absolute top-0 left-0 z-50 w-full">
+    <nav
+      ref={dropdownRef}
+      className="absolute top-0 left-0 z-50 w-full"
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-2">
 
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/">
             <img
-              src={logo}
+              src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
               alt="Smart Key Property Management"
-              className="h-24 w-24 object-contain sm:h-28 sm:w-28 md:h-32 md:w-32"
+              className="h-32 w-32 object-contain sm:h-28 sm:w-28 md:h-45 md:w-45 lg:h-56 lg:w-56"
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden items-center gap-6 text-lg font-medium text-white lg:flex xl:gap-8">
+        <ul className="hidden items-center gap-6 text-xl font-medium text-white lg:flex xl:gap-8">
 
           {/* Home */}
           <li>
-            <Link
-              to="/"
-              className="font-medium transition hover:text-[#12a8ff]"
-            >
+            <NavLink to="/" end className={getNavLinkClass}>
               Home
-            </Link>
+            </NavLink>
           </li>
 
           {/* About */}
-          <li className="group relative">
-            <Link
-              to="/about"
-              className="flex items-center gap-1 font-medium transition hover:text-[#12a8ff]"
-            >
-              About
-              <ChevronDown
-                size={16}
-                className="transition-transform duration-300 group-hover:rotate-180"
-              />
-            </Link>
-
-            <div className="absolute left-0 top-full h-5 w-full"></div>
-
-            <div className="invisible absolute left-0 top-[145%] min-w-40 translate-y-4 rounded-xl bg-[#f7f4ee] p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex flex-col gap-2">
-                {aboutLinks.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    className="text-[16px] font-[500] leading-relaxed text-[#17263d] transition hover:text-[#12a8ff]"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </li>
+          <DesktopDropdown name="About" links={aboutLinks} />
 
           {/* Services */}
-          <li className="group relative">
-            <button
-              type="button"
-              className="flex cursor-pointer items-center gap-1 font-medium transition group-hover:text-[#12a8ff]"
-            >
-              Services
-              <ChevronDown
-                size={16}
-                className="transition-transform duration-300 group-hover:rotate-180"
-              />
-            </button>
-
-            <div className="absolute left-0 top-full h-5 w-full"></div>
-
-            <div className="invisible absolute left-0 top-[145%] w-80 translate-y-4 rounded-xl bg-[#f7f4ee] p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex flex-col gap-3 text-left">
-                {servicesLinks.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    className="text-[16px] font-[500] leading-relaxed text-[#17263d] transition hover:text-[#12a8ff]"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </li>
+          <DesktopDropdown
+            name="Services"
+            links={servicesLinks}
+            width="w-80"
+          />
 
           {/* Pricing */}
           <li>
-            <Link
-              to="/pricing"
-              className="font-medium transition hover:text-[#12a8ff]"
-            >
+            <NavLink to="/pricing" className={getNavLinkClass}>
               Pricing
-            </Link>
+            </NavLink>
           </li>
 
           {/* Portfolio */}
           <li>
-            <Link
-              to="/portfolio"
-              className="font-medium transition hover:text-[#12a8ff]"
-            >
+            <NavLink to="/portfolio" className={getNavLinkClass}>
               Portfolio
-            </Link>
+            </NavLink>
           </li>
 
           {/* AppFolio */}
-          <li className="group relative">
-            <button
-              type="button"
-              className="flex cursor-pointer items-center gap-1 text-[16px] font-[500] transition group-hover:text-[#12a8ff]"
-            >
-              AppFolio
-              <ChevronDown
-                size={16}
-                className="transition-transform duration-300 group-hover:rotate-180"
-              />
-            </button>
-
-            <div className="absolute left-0 top-full h-5 w-full"></div>
-
-            <div className="invisible absolute left-0 top-[145%] min-w-40 translate-y-4 rounded-xl bg-[#f7f4ee] p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex flex-col gap-2">
-                {appFolioLinks.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    className=" text-[16px] font-[500] leading-relaxed text-[#17263d] transition hover:text-[#12a8ff]"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </li>
+          <DesktopDropdown name="AppFolio" links={appFolioLinks} />
 
           {/* Blogs */}
           <li>
-            <Link
-              to="/blogs"
-              className="font-medium transition hover:text-[#12a8ff]"
-            >
+            <NavLink to="/blogs" className={getNavLinkClass}>
               Blogs
-            </Link>
+            </NavLink>
           </li>
 
           {/* Locations */}
-          <li className="group relative">
-            <button
-              type="button"
-              className="flex cursor-pointer items-center gap-1 font-medium transition group-hover:text-[#12a8ff]"
-            >
-              Locations
-              <ChevronDown
-                size={16}
-                className="transition-transform duration-300 group-hover:rotate-180"
-              />
-            </button>
-
-            <div className="absolute left-0 top-full h-5 w-full"></div>
-
-            <div className="invisible absolute left-0 top-[145%] w-40 translate-y-4 rounded-xl bg-[#f7f4ee] p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex flex-col gap-2 text-left">
-                {locations.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    className=" text-[16px] font-[500] leading-relaxed text-[#17263d] transition hover:text-[#12a8ff]"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </li>
+          <DesktopDropdown
+            name="Locations"
+            links={locations}
+            width="w-40"
+          />
         </ul>
 
         {/* Desktop Contact */}
         <div className="hidden lg:block">
-          <Link
-            to="/contact"
-            className="rounded-full border border-white px-6 py-2 text-sm font-medium text-white transition duration-300 hover:bg-white hover:text-black xl:text-base"
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              `rounded-full border border-white px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-white hover:text-black xl:text-base ${
+                isActive ? " text-black" : ""
+              }`
+            }
           >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -266,8 +283,9 @@ const Navbar = () => {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="cursor-pointer"
+            className="cursor-pointer transition-colors duration-300 hover:text-[#12a8ff]"
             aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -276,80 +294,72 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="flex flex-col gap-4 bg-[#07172a] px-6 py-6 text-white lg:hidden">
+        <div className="flex max-h-[80vh] flex-col gap-4 overflow-y-auto bg-[#07172a] px-6 py-6 text-white lg:hidden">
 
-          <Link
+          {/* Home */}
+          <NavLink
             to="/"
-            className="block"
-            onClick={() => setIsOpen(false)}
+            end
+            className={({ isActive }) =>
+              `block transition-colors duration-300 hover:text-[#12a8ff] ${
+                isActive ? "text-[#12a8ff] underline underline-offset-4" : ""
+              }`
+            }
           >
             Home
-          </Link>
+          </NavLink>
 
-          <Link
-            to="/about"
-            className="block"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
+          {/* About */}
+          <MobileDropdown
+            name="About"
+            links={aboutLinks}
+            isDropdownOpen={mobileAboutOpen}
+            setDropdownOpen={setMobileAboutOpen}
+          />
 
-          {/* Mobile Services */}
-          <button
-            type="button"
-            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-            className="flex w-full cursor-pointer items-center justify-between"
-          >
-            Services
-            <ChevronDown
-              size={16}
-              className={`transition-transform ${
-                mobileServicesOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
+          {/* Services */}
+          <MobileDropdown
+            name="Services"
+            links={servicesLinks}
+            isDropdownOpen={mobileServicesOpen}
+            setDropdownOpen={setMobileServicesOpen}
+          />
 
-          {mobileServicesOpen && (
-            <div className="flex flex-col gap-3 pl-4">
-              {servicesLinks.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className="block text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          )}
-
-          <Link
+          {/* Pricing */}
+          <NavLink
             to="/pricing"
-            className="block"
-            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `block transition-colors duration-300 hover:text-[#12a8ff] ${
+                isActive ? "text-[#12a8ff] underline underline-offset-4" : ""
+              }`
+            }
           >
             Pricing
-          </Link>
+          </NavLink>
 
-          <Link
+          {/* Portfolio */}
+          <NavLink
             to="/portfolio"
-            className="block"
-            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `block transition-colors duration-300 hover:text-[#12a8ff] ${
+                isActive ? "text-[#12a8ff] underline underline-offset-4" : ""
+              }`
+            }
           >
             Portfolio
-          </Link>
+          </NavLink>
 
-          {/* Mobile AppFolio */}
+          {/* AppFolio */}
           <button
             type="button"
             onClick={() => setMobileAppFolioOpen(!mobileAppFolioOpen)}
-            className="flex w-full cursor-pointer items-center justify-between"
+            className="flex w-full cursor-pointer items-center justify-between transition-colors duration-300 hover:text-[#12a8ff]"
+            aria-expanded={mobileAppFolioOpen}
           >
             AppFolio
             <ChevronDown
               size={16}
-              className={`transition-transform ${
+              className={`transition-transform duration-300 ${
                 mobileAppFolioOpen ? "rotate-180" : ""
               }`}
             />
@@ -358,56 +368,50 @@ const Navbar = () => {
           {mobileAppFolioOpen && (
             <div className="flex flex-col gap-3 pl-4">
               {appFolioLinks.map((item, index) => (
-                <Link
+                <a
                   key={index}
-                  to={item.path}
-                  className="block text-sm"
-                  onClick={() => setIsOpen(false)}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm transition-colors duration-300 hover:text-[#12a8ff]"
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           )}
 
-          <Link
+          {/* Blogs */}
+          <NavLink
             to="/blogs"
-            className="block"
-            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `block transition-colors duration-300 hover:text-[#12a8ff] ${
+                isActive ? "text-[#12a8ff] underline underline-offset-4" : ""
+              }`
+            }
           >
             Blogs
-          </Link>
+          </NavLink>
 
-          {/* Mobile Locations */}
-          <button
-            type="button"
-            onClick={() => {}}
-            className="flex w-full cursor-pointer items-center justify-between"
-          >
-            Locations
-            <ChevronDown size={16} />
-          </button>
+          {/* Locations */}
+          <MobileDropdown
+            name="Locations"
+            links={locations}
+            isDropdownOpen={mobileLocationsOpen}
+            setDropdownOpen={setMobileLocationsOpen}
+          />
 
-          <div className="flex flex-col gap-3 pl-4">
-            {locations.map((item, index) => (
-              <Link
-                key={index}
-                to={item.path}
-                className="block text-[16px] font-[500]"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <Link
-            to="/contact"
-            className="mt-2 block rounded-full border border-white py-2 text-center"
-            onClick={() => setIsOpen(false)}
+          {/* Contact */}
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              `mt-2 block rounded-full border border-white py-2 text-center transition-colors duration-300 hover:bg-white hover:text-black ${
+                isActive ? "bg-white text-black" : ""
+              }`
+            }
           >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
       )}
     </nav>

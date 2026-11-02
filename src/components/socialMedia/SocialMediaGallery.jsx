@@ -27,17 +27,17 @@ const SocialMediaGallery = ({
   };
 
   return (
-    <section className="w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+    <section className="w-full overflow-hidden bg-[#eaf6fc] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-14">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#173957] sm:text-4xl lg:text-5xl">
             {title}
           </h2>
 
           {subtitle && (
-            <p className="mt-4 text-base text-gray-400 sm:text-lg lg:text-xl">
+            <p className="mt-4 text-base text-[#647b91] sm:text-lg lg:text-xl">
               {subtitle}
             </p>
           )}
@@ -83,7 +83,7 @@ const SocialMediaGallery = ({
             type="button"
             onClick={() => scrollSlider(-1)}
             aria-label="Previous cards"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white hover:text-black sm:h-12 sm:w-12"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1d3557] text-[#1d3557] transition hover:bg-[#03045e] hover:text-white sm:h-12 sm:w-12"
           >
             <ChevronLeft size={24} />
           </button>
@@ -92,7 +92,7 @@ const SocialMediaGallery = ({
             type="button"
             onClick={() => scrollSlider(1)}
             aria-label="Next cards"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white hover:text-black sm:h-12 sm:w-12"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1d3557] text-[#1d3557] transition hover:bg-[#03045e] hover:text-white sm:h-12 sm:w-12"
           >
             <ChevronRight size={24} />
           </button>

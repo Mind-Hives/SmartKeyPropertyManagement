@@ -1,37 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router';
+import ScrollingNames from '@/components/scrollingName/ScrollingName';
 import FooterCTA from '@/components/footerCTA/FooterCTA';
 import FAQ from '@/components/faq';
-import ScrollingNames from '@/components/scrollingName/ScrollingName';
 
 
 function Queens() {
 
     const names = [
-  "Astoria",
-  "Long Island City",
-  "Sunnyside",
-  "Woodside",
-  "Jackson Heights",
-  "Elmhurst",
-  "Flushing",
-  "Forest Hills",
-  "Rego Park",
-  "Jamaica",
-  "Kew Gardens",
-  "Ridgewood",
-  "Bayside",
-  "Fresh Meadows",
-  "Astoria",
-  "Sunnyside",
-  "Woodside",
-  "Elmhurst",
-  "Flushing",
-  "Jamaica",
-  "Forest Hills",
-  "Bayside",
-];
-         
+        "Astoria",
+        "Long Island City",
+        "Sunnyside",
+        "Woodside",
+        "Jackson Heights",
+        "Elmhurst",
+        "Flushing",
+        "Forest Hills",
+        "Rego Park",
+        "Jamaica",
+        "Kew Gardens",
+        "Ridgewood",
+        "Bayside",
+        "Fresh Meadows",
+        "Astoria",
+        "Sunnyside",
+        "Woodside",
+        "Elmhurst",
+        "Flushing",
+        "Jamaica",
+        "Forest Hills",
+        "Bayside",
+    ];
+                
     const services = [
         {
             title: "Rent Collection & Arrears Support",

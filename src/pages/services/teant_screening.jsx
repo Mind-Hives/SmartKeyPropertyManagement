@@ -1,29 +1,24 @@
 import React from "react";
-import Hero from "@/components/hero";
+import FooterCTA from "@/components/footerCTA/FooterCTA";
+import FeatureBlock from "@/components/featureBlock/FeatureBlock";
+import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import FAQ from "@/components/faq";
 import { motion } from "framer-motion";
-import {
-  UserCheck,
-  FileSearch,
-  ShieldCheck,
-  Home,
-  ClipboardCheck,
-  Phone,
-} from "lucide-react";
+
 
 const professionalItems = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c291376335d033a6ea5a_economic.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208197/Tenant_economic_SmartKey_result.avif',
     title: "Late Payments & Cash Flow Disruption",
     text: "Inconsistent or delayed rent payments affect predictable cash flow and can quickly create financial strain. Proper income verification and credit evaluation help identify applicants with a reliable payment history before a lease is signed.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c1f2f3f97b2def12c3de_legal-system.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208201/Tenant_legal-system_SmartKey_result.avif',
     title: "Evictions & Legal Exposure",
     text: "Evictions are costly, time-consuming and legally sensitive. Reviewing eviction history, rental conduct and compliance factors reduces the risk of future disputes and unnecessary legal proceedings.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c20dbf28e2a261ffad64_earning.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208200/Tenant_earning_SmartKey_result.avif',
     title: "High Turnover & Hidden Costs",
     text: "Frequent tenant turnover increases vacancy loss, marketing expenses and unit preparation costs. Placing qualified, stable tenants from the start reduces avoidable turnover and protects overall property performance.",
   },
@@ -31,17 +26,17 @@ const professionalItems = [
 
 const vacancyCards = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9bef88106091ad6469a16_multi-agent-system.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208202/Tenant_Multi-Agent-System_SmartKey_result.avif',
     title: "Active Broker & Agent Network",
     text: "We maintain relationships with real estate professionals who generate consistent rental inquiries, helping reduce downtime between tenancies. This active referral pipeline supports steady applicant flow and limits prolonged vacancy exposure.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9bf42a1b5a6cab2fdf692_workflow.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208197/Tenant_Workflow_SmartKey_result.avif',
     title: "Housing Voucher Workflow Familiarity",
     text: "We understand documentation, inspection coordination and approval steps associated with programs such as CityFHEPS, helping minimize preventable delays. Familiarity with required paperwork and agency timelines allows us to move applications forward efficiently.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9bf6184a8a895e0d1ae4e_payment.png"></img>,
+    icon: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208200/Tenant_payment_SmartKey_result.avif',
     title: "Coordinated Approval & Payment Processes",
     text: "For eligible placements, we navigate agency workflows such as DSS/HRA to support smoother lease execution and more predictable rent flow. Clear coordination reduces administrative bottlenecks and supports timely onboarding.",
   },
@@ -125,105 +120,106 @@ const faqData = [
 const TenantScreeningPage = () => {
   return (
     <main className="bg-white text-[#17395f]">
-      {/* Top Hero */}
-      <section className="relative md:h-[520px] overflow-hidden flex items-center">
+      {/* Teana Hero */}
+      <section className="relative aspect-[16/6] overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-28">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc3825017bc8c3bdf8fb3b_teanant%20screnning.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793205077/Tenant_Screening_SmartKey.avif"
           alt="Tenant Screening"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#07172a]/70"></div>
-        <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-          <p className="text-white/75 text-xs mb-4">
+        <div className="absolute inset-0 bg-[#07172a]/75"></div>
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 flex flex-col">
+          
+          <p className="text-white/70 text-sm sm:text-base">
             Home / Services / Tenant Screening
           </p>
-          <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
-            Tenant Screening &<br /> Placements
+
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            Tenant Screening & <br /> Placements
           </h1>
         </div>
       </section>
+
       {/* Intro */}
-      <section className="px-5 pt-14 pb-10 text-center">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs text-[#2f79b7] font-semibold mb-3">
-            Tenant Screening & Placement Services for Residential Landlords
-          </p>
-          <h2 className="text-xl md:text-4xl  font-bold leading-tight">
+      <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
+        <div className="w-full max-w-9xl mx-auto flex flex-col items-center text-center">
+          
+          <h2 className="w-full max-w-7xl text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
             Tenant Screening & Placement Services <br /> for Residential
             Landlords
           </h2>
-          <p className="max-w-4xl mx-auto mt-5 text-md text-gray-600 leading-relaxed">
+
+          <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
             Placing the wrong tenant can lead to missed rent, costly turnover and avoidable legal complications. <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/">Smart Key Property Management</a> approaches tenant screening services and placement with a structured, disciplined process designed to protect rental income and reduce unnecessary vacancy.
-            <br />
-            <br />
+          </p>
+          <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
             To ensure the highest quality of residents, we utilize AppFolio's advanced tenant screening services, which provide instant, data-driven insights including credit, criminal, and eviction history to help us make secure, informed leasing decisions; please note that these screenings incur an additional per-applicant fee, which is processed directly through the platform.
           </p>
-          <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-            <a href="/contact">Schedule Free Consultation</a>
-          </button>
+          <div className="mt-8 flex justify-center">
+            <a
+                href="/contact-us"
+                className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
+            >
+                Schedule Free Consultation
+            </a>
+          </div>
         </div>
       </section>
+      
       {/* Professional Screening */}
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Why Professional Tenant Screening Matters
-          </h2>
-          <p className="mx-auto text-md max-w-4xl mt-5 text-md text-gray-600 leading-relaxed">
-            Tenant screening is not a routine administrative step; it directly impacts rental income stability, legal exposure and long-term property performance. A weak screening process increases the likelihood of financial disruption and operational stress for property owners.
-          </p>
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+
+          <div className="text-center">
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl lg:text-4xl">
+              Why Professional Tenant Screening Matters
+            </h2>
+
+            <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
+              Tenant screening is not a routine administrative step; it directly impacts rental income stability, legal exposure and long-term property performance. A weak screening process increases the likelihood of financial disruption and operational stress for property owners.
+            </p>
+          </div>
+
           <div className="mt-8 space-y-4">
             {professionalItems.map((card, index) => (
-              <div
-                key={index}
-                className="bg-[#dff6ff] border border-[#7ed8ff] rounded-md p-4 md:p-5 flex flex-col md:flex-row gap-4 items-start text-left"
-              >
-                <div className="w-12 h-12 rounded bg-white text-[#1f83c5] flex items-center justify-center shrink-0">
-                  {card.icon}
-                </div>
-
-                <div>
-                  <h3 className="text-base md:text-lg font-semibold">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                    {card.text}
-                  </p>
-                </div>
-              </div>
+              // Feature component used
+              <FeatureBlock
+                  key={index}
+                  icon={card.icon}
+                  title={card.title}
+                  text={card.text}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Vacancy Section */}
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Reduce Vacancy With Structured Tenant Placement
-          </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-sm text-gray-600 leading-relaxed">
-             Vacancy reduces <a href="https://www.smartkeypropertymanagement.com/services/rent-collection-and-arrears-recovery">rental collection</a> and increases operating pressure. Sapproaches tenant placement with a system designed to keep units occupied while maintaining strict screening standards. Our placement workflow prioritizes consistent lead flow, timely communication and structured coordination to minimize unnecessary downtime between tenancies.
-          </p>
-          <div className="flex grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            {vacancyCards.map((card, index) => (
-              <div 
-              key={index} 
-              className="bg-[#dff6ff] border border-[#7ed8ff] rounded-md p-4 md:p-5 flex flex-col gap-4 items-start text-left"
-              >
-                <div className="w-32 h-32 flex text-[#1f83c5] items-center justify-center shrink-0">
-                  {card.icon}
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+
+          <div className="text-center">
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl">
+              Reduce Vacancy With Structured Tenant Placement
+            </h2>
+
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+              Vacancy reduces <a className="text-blue-500 hover:underline" href="/services/rent-collection-and-arrears-recovery">rental collection</a> and increases operating pressure. Sapproaches tenant placement with a system designed to keep units occupied while maintaining strict screening standards. Our placement workflow prioritizes consistent lead flow, timely communication and structured coordination to minimize unnecessary downtime between tenancies.
+            </p>
+          </div>
+
+          <div className="mt-8 space-y-4">
+            <div className="flex flex-wrap justify-center gap-6">
+              {vacancyCards.map((card, index) => (
+                <div
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                >
+                    <FeatureBlockVertical {...card} />
                 </div>
-                <div>
-                <h3 className="text-base md:text-lg font-semibold">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                  {card.text}
-                </p>
-                </div>
-              </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </section>
@@ -287,81 +283,103 @@ const TenantScreeningPage = () => {
       </section>
 
       {/* Why Choose */}
-      <section className="px-5 py-10 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
+
+          <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
             Why Choose Smart Key Property Management for
-            <br className="hidden md:block" /> Tenant Screening?
+            <br /> Tenant Screening?
           </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-sm text-gray-600 leading-relaxed">
-            Smart Key Property Management delivers structured tenant screening with documented verification, organized reporting, professional applicant communication and <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/services/property-compliance-and-strategic-oversight">compliance-focused workflows</a>. Property owners retain final approval while we manage the evaluation process with consistency and transparency.
+
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+            Smart Key Property Management delivers structured tenant screening with documented verification, organized reporting, professional applicant communication and <a className="text-blue-500 hover:underline" href="/services/property-compliance-and-strategic-oversight">compliance-focused workflows</a>. Property owners retain final approval while we manage the evaluation process with consistency and transparency.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          
+          <div className="w-full flex flex-wrap justify-center gap-4 mt-8">
             {whyCards.map((item, index) => (
               <div
                 key={index}
-                className="border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md"
+                className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md flex items-center justify-center"
               >
-                <ClipboardCheck className="mx-auto text-[#1f83c5]" size={26} />
-                <h3 className="mt-4 text-sm font-semibold">{item}</h3>
+                <h3 className="m-2 text-base font-semibold text-center">
+                  {item}
+                </h3>
               </div>
             ))}
           </div>
-          <div className="max-w-5xl mx-auto text-center">
-              <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-                  <a href="/contact">Get Started Today</a>
-              </button>
+
+          <div className="w-full flex justify-center mt-10">
+            <a
+                href="/contact-us"
+                className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+            >
+                Get Started Today
+            </a>
           </div>
         </div>
       </section>
+
       {/* Compliance */}
-      <section className="px-5 py-12 bg-[#f7fbff]">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto w-full max-w-5xl">
+
+          <h2 className="text-center text-2xl font-bold leading-tight text-[#416184] sm:text-3xl lg:text-4xl">
             Compliance & Fair Housing Alignment
           </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-md text-gray-600 leading-relaxed">
-            Tenant screening must follow defined regulatory standards and fair housing compliance requirements. Smart Key applies consistent evaluation criteria to every applicant and documents each step of the screening process to support transparency and defensibility. Our tenant screening compliance procedures are structured to reduce risk exposure while maintaining objective, non-discriminatory review practices aligned with applicable housing regulations. <br /><br />
-            <ul className="font-bold text-md text-left list-disc ml-39">
-              <li>Consistent screening criteria applied uniformly</li>
-              <li>Documented verification and evaluation workflow</li>
-              <li>Structured communication aligned with compliance standards</li>
-            </ul>
+
+          <p className="mx-auto mt-4 max-w-4xl text-sm leading-6 text-[#416184] sm:text-base sm:leading-7">
+            Tenant screening must follow defined regulatory standards and fair housing compliance requirements. Smart Key applies consistent evaluation criteria to every applicant and documents each step of the screening process to support transparency and defensibility. Our tenant screening compliance procedures are structured to reduce risk exposure while maintaining objective, non-discriminatory review practices aligned with applicable housing regulations. 
           </p>
+          <ul className="mt-5 space-y-3 pl-26 pr-26 text-sm leading-6 text-[#416184] sm:text-base sm:leading-7">
+            <li>
+                <strong>1. Consistent screening criteria applied uniformly </strong>
+            </li>
+            <li>
+                <strong>2. Documented verification and evaluation workflow </strong>
+            </li>
+            <li>
+                <strong>3. Structured communication aligned with compliance standards </strong>
+            </li>
+          </ul>
         </div>
       </section>
+
       {/* CTA */}
-      <section className="px-5 py-14 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl md:text-3xl font-bold">
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
+
+          <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
             Move-In Coordination & Lease Execution
           </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-md text-gray-600 leading-relaxed">
+          
+          <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
             Approval is only part of the process. Smart Key ensures the transition from screening to tenancy is organized and documented. Lease preparation and execution are finalized with clear terms and proper documentation. Move-in funds are confirmed before possession is granted. Tenant onboarding communication sets expectations early, reducing misunderstandings and operational friction from day one. This structured move-in process supports smoother lease commencement and long-term tenancy stability.
           </p>
-          <button className="mt-7 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-            <Phone size={16} />
-            <a href="/contact">Start Lease Process</a>
-          </button>          
+
+          <div className="w-full flex justify-center mt-10">
+            <a
+                href="/contact-us"
+                className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+            >
+                Start Lease Process
+            </a>
+          </div>
         </div>
       </section>
-      <section>
-          <div>
-              <FAQ 
-              title="Frequently Asked Question"
-              data={faqData}
-              />
-          </div>
-      </section>
-      <section>
-          <Hero 
-          title={"Own Property? We Make Managing It Effortless."}
-          buttonText="Schedule Free Consultation"
-          backgroundType="image"
-          backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
-          buttonLink="/contact"
-          />
-      </section>
+
+      {/* FAQ */}
+      <FAQ 
+          title="Frequently Asked Question"
+          data={faqData}
+      />
+      
+      {/* Footer CTA */}
+      <FooterCTA 
+          backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
+          title={'Own Property? We Make Managing It Effortless.'}
+          buttonText='Schedule Free Consultation'
+          buttonLink='/contact-us'
+      />
     </main>
   );
 };

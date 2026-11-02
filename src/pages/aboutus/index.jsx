@@ -9,54 +9,72 @@ const leaders = [
     role: "Founder",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208154/697b7a1759e92e8dbd789a8e_Pankaj_Founder.avif",
     desc: "Founder and CEO of Smart Key Property Management, leading with a focus on efficiency, trust, and landlord-first service.",
+    phNumber:"+1 (201) 442-9946",
+    email:"kamlesh@smartkeypropertymanagement.com"
   },
   {
-    name: "RIDY",
+    name: "ROY",
     role: "Head Of Department",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208143/697b7a5f1328ab3b578385b9_Roy.avif",
     desc: "Head of Department managing client support, property operations, and internal coordination.",
+        phNumber:"+1 (646) 992-8471",
+    email:"roy@smartkeypropertymanagement.com"
   },
   {
     name: "LEO",
     role: "Senior Project Manager",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208153/697b7a657c2fa73c6989c508_Leo.avif",
     desc: "Project Manager responsible for process planning, execution, and client service delivery.",
+        phNumber:"+1 (646) 927-1278",
+    email:"leo@smartkeypropertymanagement.com"
   },
   {
     name: "ALEX",
     role: "Operations Lead",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208145/697b7a76f43280b655e442dc_Alex.avif",
     desc: "Operations Lead managing daily workflows, team coordination, and service execution.",
+        phNumber:"+1 (646) 693-0986",
+    email:"alex@smartkeypropertymanagement.com"
   },
   {
     name: "SCOTT",
     role: "Accounts Lead",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208148/697b7a94295697111e492350_Scoot.avif",
     desc: "Accounts Lead handling reporting, rent tracking, reconciliation, and financial workflows.",
+        phNumber:"+1 (646) 502-6367",
+    email:"scott@smartkeypropertymanagement.com"
   },
   {
     name: "GARY K.",
     role: "Collection Lead",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208141/697ce47f8fbbb11689874625_Gary_K.avif",
     desc: "Collection Lead managing tenant rent collections, reminders, and payment follow-ups.",
+        phNumber:"+1 (646) 412-5838",
+    email:"gary@smartkeypropertymanagement.com"
   },
   {
     name: "DARYL",
     role: "Legal Compliance and Risk Executive",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208148/69f0d99be442dd51f269303b_Dayrl_image.avif",
     desc: "Handles legal notices, compliance, risk management, and documentation support.",
+        phNumber:"+1 (718) 568-8219",
+    email:"daryl@smartkeypropertymanagement.com"
   },
   {
     name: "DANNY",
     role: "Marketing Lead",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208154/697b7a6f1056d24360fed3a7_Danny.avif",
     desc: "Marketing Lead supporting brand presence, campaigns, and property marketing.",
+        phNumber:"+1 (646) 693-0988",
+    email:"danny@smartkeypropertymanagement.com"
   },
   {
     name: "LINDA",
     role: "Sales Representative",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208152/697b7a7febc4c89079513bdb_linda.avif",
     desc: "Sales Representative assisting clients with service questions, onboarding, and consultations.",
+        phNumber:"+1 (646) 412-5559",
+    email:"linda@smartkeypropertymanagement.com"
   },
 ];
 
@@ -80,7 +98,7 @@ const TeamSection = () => {
 
   return (
     <main className="bg-white">
-      <section className="bg-[#bfbfbf] pt-28 pb-14 px-5 text-center">
+      <section className="bg-[#3e5c76] pt-48 pb-24 px-5 text-center">
         <h1 className="text-white text-2xl md:text-4xl font-medium leading-tight">
           "Meet the Experts Behind Smart Key
           <br className="hidden md:block" />
@@ -176,12 +194,19 @@ const TeamCard = ({ member }) => {
         </p>
 
         <div className="mt-3 space-y-1 text-xs text-gray-600">
-          <p className="flex items-center gap-2">
+
+          <p className="">
+            <a className="flex items-center gap-2" href={`tel:${member.phNumber}`}>
             <Phone size={13} /> Call Me
+            </a>
           </p>
-          <p className="flex items-center gap-2">
+
+          <p className="">
+            <a className="flex items-center gap-2" href={`mailto:${member.email}`}>
             <Mail size={13} /> Mail Me
+            </a>
           </p>
+
         </div>
       </div>
     </div>

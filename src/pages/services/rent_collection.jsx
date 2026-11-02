@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Home, Wrench, FileText, ShieldCheck, DollarSign, Phone } from "lucide-react";
 import FeatureBlock from "@/components/featureBlock/FeatureBlock";
 import FAQ from "@/components/faq";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
+import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 
 
 const costCards = [
@@ -135,6 +135,7 @@ const RentCollectionPage = () => {
                 <div className="absolute inset-0 bg-[#07172a]/75"></div>
 
                 <div className="relative z-10 w-full max-w-6xl mx-auto px-5 flex flex-col">
+                    
                     <p className="text-white/70 text-sm sm:text-base">
                         Home / Rent Collection
                     </p>
@@ -162,7 +163,7 @@ const RentCollectionPage = () => {
 
                     <div className="mt-8 flex justify-center">
                         <a
-                            href="/contact"
+                            href="/contact-us"
                             className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
                         >
                             Request a Property Consultation
@@ -216,15 +217,16 @@ const RentCollectionPage = () => {
                     </div>
                     
                     <div className="mt-8 space-y-4">
-                        {benefits.map((card, index) => (
-                            // Feature component used
-                            <FeatureBlock
-                                key={index}
-                                icon={card.icon}
-                                title={card.title}
-                                text={card.text}
-                            />
-                        ))}
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {benefits.map((feature, index) => (
+                                <div
+                                    key={index}
+                                    className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                                >
+                                    <FeatureBlockVertical {...feature} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -311,7 +313,7 @@ const RentCollectionPage = () => {
                     {/* Call to Action */}
                     <div className="w-full flex justify-center mt-10">
                         <a
-                            href="/contact"
+                            href="/contact-us"
                             className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
                         >
                             Get Started Today
@@ -332,7 +334,7 @@ const RentCollectionPage = () => {
                     <p className="mx-auto mt-4 max-w-4xl text-sm leading-6 text-[#416184] sm:text-base sm:leading-7">
                         Risk management is crucial for landlords to protect their rental income and prevent{" "}
                         <a
-                            href="https://www.smartkeypropertymanagement.com/services/legal-compliances-and-risk-management"
+                            href="/services/legal-compliances-and-risk-management"
                             className="font-semibold hover:underline text-[#1f83c5]"
                         >
                             legal complications
@@ -364,21 +366,21 @@ const RentCollectionPage = () => {
 
 
             {/* CTA */}
-            <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
-                <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
+            <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+                <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
                     
-                    <h1 className="w-full max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
                         Compliance Support & Professional Coordination for Landlords
-                    </h1>
+                    </h2>
 
-                    <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
+                    <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
                         Smart Key provides landlords with comprehensive compliance support and professional coordination, ensuring full alignment with legal requirements and operational best practices. Our team works closely with legal professionals to tackle any compliance challenges, helping landlords navigate the complexities of rental property management without risk. From ensuring all documentation is complete and accurate to coordinating with legal experts for dispute resolution, we offer peace of mind by handling the intricate details of property management. With Smart Key, landlords can trust that their property operations will remain compliant, organized, and legally secure throughout the rental lifecycle.
                     </p>
 
-                    <div className="mt-8 flex justify-center">
+                    <div className="w-full flex justify-center mt-10">
                         <a
-                            href="/contact"
-                            className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
+                            href="/contact-us"
+                            className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
                         >
                             Start Lease Process
                         </a>
@@ -397,7 +399,7 @@ const RentCollectionPage = () => {
                 backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
                 title={'Own Property? We Make Managing It Effortless.'}
                 buttonText='Schedule Free Consultation'
-                buttonLink='/contact'
+                buttonLink='/contact-us'
             />
         </main>
     );

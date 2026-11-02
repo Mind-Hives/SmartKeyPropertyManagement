@@ -3,7 +3,6 @@ import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FAQ from "@/components/faq";
 import FeatureBlock from "@/components/featureBlock/FeatureBlock";
 import { motion } from "framer-motion";
-import { FileText, CalendarDays, RefreshCw, ShieldCheck, AlertTriangle, ClipboardCheck, Phone,} from "lucide-react";
 
 const includeItems = [
   {
@@ -162,7 +161,7 @@ const LeaseAdministrationPage = () => {
 
           <div className="mt-8 flex justify-center">
             <a 
-            href="/contact"
+            href="/contact-us"
             className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
             >
               Request a Property Consultation
@@ -177,6 +176,7 @@ const LeaseAdministrationPage = () => {
 
           {/* Section Heading */}
           <div className="text-center">
+
             <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl">
               What Lease Administration Actually Includes
             </h2>
@@ -202,26 +202,40 @@ const LeaseAdministrationPage = () => {
       </section>
 
       {/* Missed Lease Renewals */}
-      <section className="px-5 py-10 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Managing Lease Renewals and Tenant Agreements Requires More Than Just Paperwork
-          </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-[16px] leading-relaxed">
-             The management of <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/services/rent-collection-and-arrears-recovery">rental</a> properties on a concise basis relies heavily on the rental lease administration process. Many landlords experience delays in renewal responses, communication gaps with tenants, unsuccessful documentation of lease documents and failures in lease coordination and tracking tenant interactions across multiple units, all of which can result in below-average occupancy and overall operational stability.<br/><br/>The implementation of these types of best practices will help to ensure that landlords have the support they need to operate effectively, with decreased expenses as well as reduced tenant-related delay and disruption.
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+
+          <div className="text-center">
+
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl">
+              Managing Lease Renewals and Tenant Agreements Requires More Than Just Paperwork
+            </h2>
+          </div>
+
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+             The management of <a className="text-blue-500 hover:underline" href="/services/rent-collection-and-arrears-recovery">rental</a> properties on a concise basis relies heavily on the rental lease administration process. Many landlords experience delays in renewal responses, communication gaps with tenants, unsuccessful documentation of lease documents and failures in lease coordination and tracking tenant interactions across multiple units, all of which can result in below-average occupancy and overall operational stability.
+          </p>
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+            The implementation of these types of best practices will help to ensure that landlords have the support they need to operate effectively, with decreased expenses as well as reduced tenant-related delay and disruption.
           </p>
         </div>
       </section>
 
       {/* Difficult Cards */}
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Where Lease Management Becomes Difficult for <br/>Property Owners
-          </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-[16px] leading-relaxed">Without structured systems, lease handling quickly becomes difficult to manage across multiple tenants and renewal cycles. Small gaps in communication or tracking often lead to larger operational issues over time.</p>
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+          <div className="text-center">
 
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl">
+              Where Lease Management Becomes Difficult for <br/>Property Owners
+            </h2>
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+              Without structured systems, lease handling quickly becomes difficult to manage across multiple tenants and renewal cycles. Small gaps in communication or tracking often lead to larger operational issues over time.
+            </p>
+          </div>
+          {/* Points  */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            
             {riskCards.map((card, index) => (
               <div 
               key={index} 
@@ -243,6 +257,7 @@ const LeaseAdministrationPage = () => {
           </div>
         </div>
       </section>
+      
       {/* Process */}
       <section className="w-full bg-white py-14 md:py-20 px-5">
         <div className="max-w-5xl mx-auto text-center">
@@ -304,68 +319,84 @@ const LeaseAdministrationPage = () => {
       </section>
 
       {/* Smart Key Handles */}
-      <section className="px-5 py-10 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-3xl font-bold">
-            How Smart Key Handles Lease Administration & <br/>Renewals
-          </h2>
-          <p className="text-center w-auto mt-4 ml-5 mr-5 leading-relaxed">Smart Key manages lease administration through a structured system designed to keep renewals, tenant communication and documentation organized across rental properties. Our process helps landlords maintain operational consistency, reduce missed timelines and simplify day-to-day lease coordination.</p>
-          <div className="grid lg:grid-cols-5 gap-4 mt-8">
-            {smartKeyCards.map((item, index) => (
-              <div
-                key={index}
-                className="border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md"
-              >
-                <ClipboardCheck className="mx-auto text-[#1f83c5]" size={26} />
-                <h3 className="mt-4 text-sm font-semibold">{item}</h3>
-              </div>
-            ))}
-          </div>
-            <div className="max-w-5xl mx-auto text-center">
-                <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-                    <a href="/pricing">Pricing Plan</a>
-                </button>
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+            <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
+
+                <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
+                    How Smart Key Handles Lease Administration & <br/>Renewals
+                </h2>
+
+                <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
+                    Smart Key manages lease administration through a structured system designed to keep renewals, tenant communication and documentation organized across rental properties. Our process helps landlords maintain operational consistency, reduce missed timelines and simplify day-to-day lease coordination.
+                </p>
+
+                {/* Why Choose Smart Key Cards */}
+                <div className="w-full flex flex-wrap justify-center gap-4 mt-8">
+                    {smartKeyCards.map((item, index) => (
+                        <div
+                            key={index}
+                            className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md flex items-center justify-center"
+                        >
+                            <h3 className="m-2 text-base font-semibold text-center">
+                                {item}
+                            </h3>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Call to Action */}
+                <div className="w-full flex justify-center mt-10">
+                    <a
+                        href="/pricing"
+                        className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+                    >
+                        Pricing Plan
+                    </a>
+                </div>
+
             </div>
-        </div>
-      </section>
+        </section>
 
       {/* Final Info */}
-      <section className="px-5 py-12 ">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
+          
+          <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
             What This Means for Property Owners
           </h2>
-          <p className="max-w-4xl mx-auto mt-4 ml-5 mr-5 text-lg leading-relaxed text-center w-auto">
+          
+          <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
             Handling several properties as a landlord can be overwhelming. With the help of well-organized lease administration processes, landlords can operate with much more efficiency over time, instead of having to handle everything on their own. Organized lease administration allows for effective management of lease renewals, communication with tenants, and tracking of documentation; therefore, when landlords have organization in place, they experience fewer missed deadlines, reduced vacancy rates and more consistency with their rental income.
-            <br />
-            <br />
-            Additionally, coordinated efforts will reduce confusion in the day-to-day operations of landlords managing multiple leases, which often leads to added stress. With organized lease administration, landlords who own multiple properties will benefit from improved operational consistency across the units they own and, in turn, will provide a better overall tenant experience.
-            <br />
-            <br />
-            In addition, having a process in place makes it easier to have a more successful <a href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement">tenant screening and placement</a> process, while also ensuring that all needed documentation is accurate, available, and properly coordinated.
           </p>
-          <div className="max-w-5xl mx-auto text-center">
-              <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-                  <a href="/contact">Start Lease Process</a>
-              </button>
+          <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">          
+            Additionally, coordinated efforts will reduce confusion in the day-to-day operations of landlords managing multiple leases, which often leads to added stress. With organized lease administration, landlords who own multiple properties will benefit from improved operational consistency across the units they own and, in turn, will provide a better overall tenant experience.
+          </p>
+          <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">  
+            In addition, having a process in place makes it easier to have a more successful <a className="text-blue-500 hover:underline" href="/services/tenant-screening-and-placement">tenant screening and placement</a> process, while also ensuring that all needed documentation is accurate, available, and properly coordinated.
+          </p>
+          <div className="w-full flex justify-center mt-10">
+            <a
+                href="/contact-us"
+                className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+            >
+                Start Lease Process
+            </a>
           </div>
         </div>
       </section>
-      <section>
-          <div>
-              <FAQ 
-              title="Frequently Asked Question"
-              data={faqData}
-              
-              />
-          </div>
-      </section>
+      
+      {/* FAQ */}
+      <FAQ 
+        title="Frequently Asked Question"
+        data={faqData}
+      />
+      
       {/* Footer CTA */}
       <FooterCTA 
           backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
           title={'Own Property? We Make Managing It Effortless.'}
           buttonText='Schedule Free Consultation'
-          buttonLink='/contact'
+          buttonLink='/contact-us'
       />
     </main>
   );

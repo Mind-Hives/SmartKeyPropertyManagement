@@ -299,6 +299,31 @@ html, body {
   }
 }
 
+@keyframes google-reviews-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-google-reviews {
+  animation: google-reviews-marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.google-reviews-container:hover .animate-google-reviews {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-google-reviews {
+    animation: none;
+    transform: none;
+  }
+}
 
 @keyframes marquee-forward {
   from {

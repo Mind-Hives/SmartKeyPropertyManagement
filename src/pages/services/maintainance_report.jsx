@@ -305,7 +305,7 @@ const MaintenanceServicesPage = () => {
               Maintenance requests from tenants require clear reporting, timely coordination and consistent follow-through. Smart Key manages tenant maintenance request management through an organized workflow that records repair requests, communicates with residents, schedules contractors and tracks each issue until completion. Our structured approach ensures reliable maintenance coordination for tenants, helping resolve problems efficiently while keeping property owners informed and maintenance operations organized.
             </p>
             <button className="mt-8 mb-10 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-              <a href="/contact">Get in Touch</a>
+              <a href="/contact-us">Get in Touch</a>
             </button>
           </section>
         </div>

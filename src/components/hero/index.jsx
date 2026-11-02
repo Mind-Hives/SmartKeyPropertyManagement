@@ -50,9 +50,9 @@ const Hero = ({
           className="w-full max-w-3xl"
         >
           {/* Title */}
-          <h1 className="max-w-4xl break-words text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <span className="max-w-4xl break-words text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             {title}
-          </h1>
+          </span>
 
           {/* Button */}
           {buttonText && (

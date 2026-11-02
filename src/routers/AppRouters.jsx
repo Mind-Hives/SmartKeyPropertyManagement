@@ -39,11 +39,11 @@ export default function AppRoutes() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/blogs" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<BlogDetails />} />
-        <Route path="/locations/Queens" element={<Queens />}/>
-        <Route path="/locations/Bronx" element={<Bronx />}/>
-        <Route path="/locations/Manhattan" element={<Manhattan />}/>
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
+        <Route path="/Queens" element={<Queens />}/>
+        <Route path="/Bronx" element={<Bronx />}/>
+        <Route path="/Manhattan" element={<Manhattan />}/>
+        <Route path="/contact-us" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

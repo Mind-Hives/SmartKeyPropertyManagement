@@ -35,7 +35,7 @@ const NotFound = () => {
           </Link>
 
           <Link
-            to="/contact"
+            to="/contact-us"
             className="border border-[#183b63] text-[#183b63] px-8 py-3 rounded-full text-sm md:text-base font-semibold hover:bg-[#183b63] hover:text-white transition-all duration-300"
           >
             Contact Us

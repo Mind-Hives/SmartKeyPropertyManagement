@@ -213,7 +213,7 @@ const LegalCompliancePage = () => {
           </h2>
 
           <p className="max-w-3xl mx-auto mt-3 text-sm text-gray-600">
-            Rental property regulations in New York and New Jersey are among the most complex in the United States. Laws governing lease agreements, tenant rights NYC, rent regulations, <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/blog/understanding-the-nyc-eviction-process-key-steps-and-legal-insights">eviction procedures and property standards</a> continue to evolve under strict rental laws New York enforces. Managing these landlord compliance requirements without a structured system can quickly create risk. <br /><br />
+            Rental property regulations in New York and New Jersey are among the most complex in the United States. Laws governing lease agreements, tenant rights NYC, rent regulations, <a className="text-blue-500 hover:underline" href="/blogs/understanding-the-nyc-eviction-process-key-steps-and-legal-insights">eviction procedures and property standards</a> continue to evolve under strict rental laws New York enforces. Managing these landlord compliance requirements without a structured system can quickly create risk. <br /><br />
             In high-regulation markets like New York City, even minor documentation errors can create serious legal exposure. A structured compliance system is no longer optional it's essential for protecting your property and your income
           </p>
 

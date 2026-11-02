@@ -164,7 +164,7 @@ const BlogCard = ({ blog }) => {
     : "/placeholder.jpg";
 
   return (
-    <Link to={`/blog/${encodeURIComponent(blog.id)}`}>
+    <Link to={`/blogs/${encodeURIComponent(blog.id)}`}>
       <article className="bg-white shadow-md border border-gray-100 overflow-hidden group h-full">
         <div className="w-full h-[190px] overflow-hidden">
           <img
