@@ -11,23 +11,25 @@ const API_URL = (
 const HERO_IMAGE =
   "https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6a6395ce80d2691903f841da_Smartkey%20Website%20Hero%20Images.avif";
 
-// Convert CMS image paths into usable URLs.
 const getImageUrl = (path) => {
   if (!path || typeof path !== "string") return "";
 
-  const value = path.trim();
+  const imagePath = path.trim();
 
-  if (/^https?:\/\//i.test(value)) return value;
-
-  if (
-    value.startsWith("data:") ||
-    value.startsWith("blob:")
-  ) {
-    return "";
+  // Already an absolute image URL
+  if (/^https?:\/\//i.test(imagePath)) {
+    return imagePath;
   }
 
-  return `${API_URL}/${value.replace(/^\/+/, "")}`;
+  // Protocol-relative URL
+  if (imagePath.startsWith("//")) {
+    return `https:${imagePath}`;
+  }
+
+  // Convert relative CMS path to absolute URL
+  return `${API_URL}/${imagePath.replace(/^\/+/, "")}`;
 };
+
 
 // Format blog publication date.
 const formatDate = (date) => {
@@ -286,16 +288,31 @@ export default function BlogDetails() {
           </h1>
         </header>
 
-        {/* Main Image */}
-        {blog.coverImage && (
-          <figure className="mb-12 md:mb-16">
-            <img
-              src={getImageUrl(blog.coverImage)}
-              alt={blog.imageAlt || blog.altText || blog.title}
-              className="w-full max-h-[500px] object-cover rounded-md"
-            />
-          </figure>
-        )}
+        
+{/* MAIN BLOG IMAGE */}
+{blog.coverImage && (
+  <figure className="mb-12 md:mb-16">
+    <img
+      src={getImageUrl(blog.coverImage)}
+      alt={blog.imageAlt || blog.title}
+      className="block w-full h-auto max-h-[500px] object-cover rounded-md"
+      loading="eager"
+      onLoad={() => {
+        console.log(
+          "Blog image loaded:",
+          getImageUrl(blog.coverImage)
+        );
+      }}
+      onError={(event) => {
+        console.error("Blog image failed to load:", {
+          originalPath: blog.coverImage,
+          resolvedUrl: event.currentTarget.src,
+        });
+      }}
+    />
+  </figure>
+)}
+
 
         {/* HTML Blog Content */}
         <div
