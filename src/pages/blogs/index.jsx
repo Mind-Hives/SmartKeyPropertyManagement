@@ -1,4 +1,5 @@
 
+import SEO from "@/components/seo/SEO";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
@@ -74,16 +75,16 @@ useEffect(() => {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="relative h-[250px] md:h-[320px] flex items-end overflow-hidden">
+      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6a6395ce80d2691903f841da_Smartkey%20Website%20Hero%20Images.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208122/6a6395ce80d2691903f841da_Smartkey_Website_Hero_Images.avif"
           alt="Blogs"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#06172a]/75" />
+        <div className="absolute inset-0 bg-[#06172a]/70" />
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
           <p className="text-white/80 text-xs mb-3">
             Home / Blogs
           </p>
@@ -151,6 +152,12 @@ useEffect(() => {
           )}
         </div>
       </section>
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Blog | SmartKey Property Management"
+      description="Explore expert insights, landlord tips, and property management guides from SmartKey Property Management your trusted partner for stress-free rental success."
+      />
     </main>
   );
 };

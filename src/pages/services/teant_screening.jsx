@@ -4,6 +4,7 @@ import FeatureBlock from "@/components/featureBlock/FeatureBlock";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import FAQ from "@/components/faq";
 import { motion } from "framer-motion";
+import SEO from "@/components/seo/SEO";
 
 
 const professionalItems = [
@@ -379,6 +380,12 @@ const TenantScreeningPage = () => {
           title={'Own Property? We Make Managing It Effortless.'}
           buttonText='Schedule Free Consultation'
           buttonLink='/contact-us'
+      />
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Tenant Screening & Placement Services NYC | Smart Key"
+      description="Smart Key provides tenant screening and placement services for NYC landlords, including applicant screening, income verification, rental history checks and move-in coordination."
       />
     </main>
   );

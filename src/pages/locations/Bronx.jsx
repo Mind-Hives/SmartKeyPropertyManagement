@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import FAQ from "@/components/faq";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
 import ScrollingNames from "@/components/scrollingName/ScrollingName";
+import SEO from "@/components/seo/SEO";
 
 function Bronx() {
 const names = [
@@ -392,11 +393,8 @@ const names = [
       </section>
 
       {/* FAQ */}
-      <section>
-        <div>
+      
           <FAQ title="Frequently Asked Question" data={faqData} />
-        </div>
-      </section>
 
       {/* Footer CTA */}
       <FooterCTA
@@ -406,6 +404,11 @@ const names = [
         title={"Own Property? We Make Managing It Effortless."}
         buttonText="Schedule Free Consultation"
         buttonLink="/contact"
+      />
+  
+      <SEO 
+      title="Bronx Property Management Company | Smart Key"
+      description="Professional property management in the Bronx for landlords and rental property owners. Smart Key handles tenant screening, maintenance, rent collection and day-to-day property operations."
       />
     </main>
   );

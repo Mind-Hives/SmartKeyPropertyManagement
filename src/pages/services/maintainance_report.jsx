@@ -12,6 +12,7 @@ import {
   CalendarCheck,
   Phone,
 } from "lucide-react";
+import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
@@ -310,23 +311,25 @@ const MaintenanceServicesPage = () => {
           </section>
         </div>
       </section>
-      <section>
-          <div>
-              <FAQ 
-              title="Frequently Asked Question"
-              data={faqData}
-              />
-          </div>
-      </section>
-      <section>
-            <Hero 
-            title={"Own Property? We Make Managing It Effortless."}
-            buttonText="Schedule Free Consultation"
-            backgroundType="image"
-            backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
-            buttonLink="/contact"
-            />
-      </section>
+      
+      <FAQ 
+      title="Frequently Asked Question"
+      data={faqData}
+      />
+
+      <Hero 
+      title={"Own Property? We Make Managing It Effortless."}
+      buttonText="Schedule Free Consultation"
+      backgroundType="image"
+      backgroundSrc={"https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"}
+      buttonLink="/contact"
+      />
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Property Management Maintenance Services NYC | Smart Key"
+      description="Keep rental repairs organized with Smart Key’s property management maintenance services in NYC, including tenant requests, vendor coordination, repair tracking and owner updates."
+      />
     </main>
   );
 };

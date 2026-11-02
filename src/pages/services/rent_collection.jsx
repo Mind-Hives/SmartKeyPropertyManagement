@@ -4,6 +4,7 @@ import FeatureBlock from "@/components/featureBlock/FeatureBlock";
 import FAQ from "@/components/faq";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
+import SEO from "@/components/seo/SEO";
 
 
 const costCards = [
@@ -400,6 +401,12 @@ const RentCollectionPage = () => {
                 title={'Own Property? We Make Managing It Effortless.'}
                 buttonText='Schedule Free Consultation'
                 buttonLink='/contact-us'
+            />
+            
+            {/* For SEO ranking */}
+            <SEO 
+            title="Rent Collection Services for Landlords in NYC & NJ | Smart Key"
+            description="Smart Key provides rent collection services for NYC & NJ landlords, including payment tracking, tenant follow-ups, arrears management and clear owner reporting."
             />
         </main>
     );
