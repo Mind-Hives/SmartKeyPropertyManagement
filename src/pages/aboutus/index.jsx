@@ -98,7 +98,7 @@ const TeamSection = () => {
 
   return (
     <main className="bg-white">
-      <section className="bg-[#bfbfbf] pt-28 pb-14 px-5 text-center">
+      <section className="bg-[#3e5c76] pt-48 pb-24 px-5 text-center">
         <h1 className="text-white text-2xl md:text-4xl font-medium leading-tight">
           "Meet the Experts Behind Smart Key
           <br className="hidden md:block" />

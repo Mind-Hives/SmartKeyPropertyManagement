@@ -10,7 +10,7 @@ import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
 
 const Feature = ({ cardBgColor, icon, title , discription }) => {
   return (
-    <div className={`flex flex-col items-center gap-3.5 p-6 rounded-xl shadow-sm relative border-2 transition-transform duration-300 ease-out [transform-style:preserve-3d] hover:-translate-x-2 hover:-translate-y-2 before:absolute before:inset-0 before:rounded-xl before:[transform:translate3d(8px,8px,-1px)] ${cardBgColor ? 'bg-[#dbf5fc]' : 'bg-[#fffff]'}`}>
+    <div className={`flex flex-col items-center gap-3.5 p-6 rounded-xl shadow-sm relative border-2 transition-transform duration-300 ease-out [transform-style:preserve-3d] hover:-translate-x-2 hover:-translate-y-2 before:absolute before:inset-0 before:rounded-xl before:[transform:translate3d(8px,8px,-1px)] ${cardBgColor ? 'bg-[#dbf5fc]' : 'bg-[#ffffff]'}`}>
 
       {/* Icon or Image */}
       <div className="flex h-23 w-23 shrink-0 items-center justify-center overflow-hidden rounded-lg text-[#1f83c5]">
@@ -97,25 +97,43 @@ const faqData = [
 const socialMediaPosts = [
   {
     id: 1,
-    image: "/images/social/post-1.jpg",
+    image: "",
     link: "https://www.instagram.com/your-company/",
     alt: "Company social media post",
   },
   {
     id: 2,
-    image: "/images/social/post-2.jpg",
+    image: "",
     link: "https://www.instagram.com/your-company/",
     alt: "Company social media post",
   },
   {
     id: 3,
-    image: "/images/social/post-3.jpg",
+    image: "",
     link: "https://www.linkedin.com/company/your-company/",
     alt: "Company LinkedIn post",
   },
   {
     id: 4,
-    image: "/images/social/post-4.jpg",
+    image: "",
+    link: "https://www.facebook.com/your-company/",
+    alt: "Company Facebook post",
+  },
+  {
+    id: 5,
+    image: "",
+    link: "https://www.facebook.com/your-company/",
+    alt: "Company Facebook post",
+  },
+  {
+    id: 6,
+    image: "",
+    link: "https://www.facebook.com/your-company/",
+    alt: "Company Facebook post",
+  },
+  {
+    id: 7,
+    image: "",
     link: "https://www.facebook.com/your-company/",
     alt: "Company Facebook post",
   },
@@ -205,7 +223,7 @@ const HomePage = () => {
 
         
         {/* Feature Section */}
-        <section className="bg-[#e9f8fb] py-12 mt-8">
+        <section className="bg-[#eff3ee] py-12 mt-8">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-xl md:text-3xl font-bold">
                Why NYC Landlords Trust Smart Key Property Management
@@ -262,12 +280,6 @@ const HomePage = () => {
       duration={40}
       />
 
-      {/* <SocialMediaGallery 
-        title="See what all the talk is about!"
-        subtitle="Transformative client experience from all around the globe"
-        cards={socialMediaPosts}
-      /> */}
-
       {/* FAQ */}
       <FAQ
         title="Frequently Asked Question"
@@ -275,7 +287,13 @@ const HomePage = () => {
         bgColor="bg-white"
         titleColor="text-[#2f4f73]"
       />
-      
+      {/* Social Media */}
+      <SocialMediaGallery 
+        title="See what all the talk is about!"
+        subtitle="Transformative client experience from all around the globe"
+        cards={socialMediaPosts}
+      />
+
       {/* Footer CTA */}
       <FooterCTA 
       // backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
