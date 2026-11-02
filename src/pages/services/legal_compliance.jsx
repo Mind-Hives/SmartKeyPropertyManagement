@@ -15,27 +15,27 @@ import SEO from "@/components/seo/SEO";
 
 const complianceItems = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6be4b58be22fa85753f0_penalty.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6be4b58be22fa85753f0_penalty-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6be4b58be22fa85753f0_penalty.png 512w"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208209/Legal_Penalty_SmartKey_result.avif"></img>,
     title: "Financial Penalties & Fines",
     text: "Failure to comply with regulations can result in significant financial penalties and fines. These costs can quickly add up and directly impact rental income and overall property profitability.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd8681050a57a313687a97_justice-scale.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd8681050a57a313687a97_justice-scale-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd8681050a57a313687a97_justice-scale.png 512w"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208213/Legal_Justice_SmartKey_result.avif"></img>,
     title: "Eviction Delays & Legal Disruption",
     text: "Non-compliance can delay legal proceedings such as evictions. Missed notices or incorrect documentation can extend timelines and make it harder to regain control of the property.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd698847c58bdd6cc50c90_claim.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd698847c58bdd6cc50c90_claim-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd698847c58bdd6cc50c90_claim.png 512w"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208206/Legal_Claim_SmartKey_result.avif"></img>,
     title: "Tenant Disputes & Claims",
     text: "Failure to follow compliance standards can result in increased scrutiny from regulatory authorities. This added pressure can disrupt operations and make property management more difficult to control.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6a14abd5ab8118f9a5a5_explore.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6a14abd5ab8118f9a5a5_explore-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd6a14abd5ab8118f9a5a5_explore.png 512w"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208207/Legal_Explore_SmartKey_result.avif"></img>,
     title: "Regulatory Scrutiny & Operational Pressure",
     text: "Failure to follow compliance standards can result in increased scrutiny from regulatory authorities. This added pressure can disrupt operations and make property management more difficult to control",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69c2b237fe2aaa0f0fc4c0a3_compliance.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69c2b237fe2aaa0f0fc4c0a3_compliance-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69c2b237fe2aaa0f0fc4c0a3_compliance.png 512w"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208210/Legal_compliance_SmartKey_result.avif"></img>,
     title: "DOB & HPD Compliance Risks",
     text: "Non-compliance with NYC Department of Buildings (DOB) rules on building codes, permits, and inspections, plus HPD requirements for housing maintenance, registration and violations, can lead to severe fines up to $10,000, daily penalties, and operational shutdowns.",
   },
@@ -43,17 +43,17 @@ const complianceItems = [
 
 const legalCards = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd75583a264e9e38e61de9_soft-skill.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208211/Legal_Soft-Skill_SmarKey_result.avif"></img>,
     title: "Proactive Compliance Oversight",
     text: "We continuously monitor lease structures, tenancy processes and operational workflows to maintain alignment with evolving rental laws New York and New Jersey requirements, helping landlords stay consistent with ongoing landlord compliance requirements.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69bd7585d69df7d646c96232_communication.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208214/Legal_Communication_SmartKey_result.avif"></img>,
     title: "Legal Coordination & Documentation Readiness",
     text: "When legal situations arise, we coordinate with experienced attorneys and ensure all notices, records and documentation are properly prepared, organized and aligned with property management legal requirements.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9bf6184a8a895e0d1ae4e_payment.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208212/Legal_Payment_SmartKey_result.avif"></img>,
     title: "Standardized Systems & Process Control",
     text: "Our structured management systems bring consistency to lease handling, tenant communication and record keeping, reducing errors and strengthening overall rental property compliance across operations.",
   },
@@ -166,7 +166,7 @@ const LegalCompliancePage = () => {
     <main className="bg-white text-[#17395f]">
       <section className="relative h-[540px] overflow-hidden flex items-center">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc10db1fc37a5bca77efa3_legal%20hero%20image.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208208/Legal-Hero-Image_SmartKey.avif"
           alt="Legal Compliance and Risk Management"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -468,7 +468,7 @@ const LegalCompliancePage = () => {
           title={"Own Property? We Make Managing It Effortless."}
           buttonText="Schedule Free Consultation"
           backgroundType="image"
-          backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
+          backgroundSrc={"https://res.cloudinary.com/kj98z6s1/video/upload/v1793374837/SmartkeyHeroVdo.mp4"}
           buttonLink="/contact"
           />
 

@@ -138,7 +138,7 @@ function Manhattan() {
       {/* Manhattan Hero */}
       <section className="relative aspect-[16/6] overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-28">
           <img
-              src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ac7a8c506a4f7be62e43421_Hero%20Image%20(1).avif"
+              src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208127/6ac7a8c506a4f7be62e43421_Hero_Image_1.avif"
               alt="Manhattan Hero"
               className="absolute inset-0 w-full h-full object-cover"
           />

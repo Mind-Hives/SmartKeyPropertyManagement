@@ -84,21 +84,21 @@ function Queens() {
         {
             title: "179-15 144th Ave",
             address: "179-15 144th Ave, Queens, NY 11434",
-            image: 'https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ab54b9faa40b5b2b09ca8ea_prop_three.avif',
+            image: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208131/6ab54b9faa40b5b2b09ca8ea_prop_three.avif',
             link: "/portfolio",
             alt: "Residential property at 179-15 144th Avenue, Queens",
         },
         {
             title: "186-11 122nd Ave",
             address: "186-11 122nd Ave, Queens, NY 11413",
-            image: 'https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ab54ba2519406c2520d5223_prop_two.avif',
+            image: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208134/6ab54ba2519406c2520d5223_prop_two.avif',
             link: "/portfolio",
             alt: "Residential property at 186-11 122nd Avenue, Queens",
         },
         {
             title: "114-33 194th St",
             address: "114-33 194th St, Queens, NY 11412",
-            image: 'https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ab54ba3402dff61b3346cc0_prop_one.avif',
+            image: 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208132/6ab54ba3402dff61b3346cc0_prop_one.avif',
             link: "/portfolio",
             alt: "Residential property at 114-33 194th Street, Queens",
         },
@@ -143,7 +143,7 @@ function Queens() {
         {/* Queens Hero */}
         <section className="relative aspect-[16/6] overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-28">
             <img
-                src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ac7a8c506a4f7be62e43421_Hero%20Image%20(1).avif"
+                src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208127/6ac7a8c506a4f7be62e43421_Hero_Image_1.avif"
                 alt="Queens Hero"
                 className="absolute inset-0 w-full h-full object-cover"
             />
@@ -223,7 +223,7 @@ function Queens() {
                     {/* Image */}
                     <div className="w-full overflow-hidden rounded-[28px] lg:w-1/2">
                         <img
-                            src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ac7a8c790984bfcf4683bcd_Section%203.avif"
+                            src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208132/6ac7a8c790984bfcf4683bcd_Section_3.avif"
                             alt="Property management in Queens"
                             loading="lazy"
                             className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-full"
@@ -315,7 +315,7 @@ function Queens() {
       {/* Center: Image */}
       <div className="relative min-h-[280px] overflow-hidden rounded-xl ">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6ac7a8c8072fd293dce0abe3_Section%204.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208133/6ac7a8c8072fd293dce0abe3_Section_4.avif"
           alt="Property management house in Queens"
           loading="lazy"
           className="absolute inset-0 h-full  object-cover"

@@ -16,17 +16,17 @@ import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9281bfc93cf72c3754e_software.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9281bfc93cf72c3754e_software-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9281bfc93cf72c3754e_software.png 512w"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208183/Maintenance_Software_SmartKey_result.avif"></img>,
     title: "Delayed Repairs & Rising Costs",
     text: "When maintenance issues are addressed late, minor problems can quickly turn into major repairs. Leaks, electrical issues, or equipment failures often become more expensive when ignored. Effective property maintenance for landlords ensures repairs are identified early and handled before costs escalate.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9289b4fccd2c7c523b6_reputation.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9289b4fccd2c7c523b6_reputation-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b1b9289b4fccd2c7c523b6_reputation.png 512w"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208181/Maintenance_Reputation_SmartKey_result.avif"></img>,
     title: "Tenant Satisfaction & Response Expectations",
     text: "Tenants expect maintenance requests to be handled promptly and professionally. Slow responses or unclear communication can create frustration and lead to higher tenant turnover. Organized maintenance coordination for rental properties helps ensure requests are tracked, scheduled, and resolved without unnecessary delays.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c20dbf28e2a261ffad64_earning.png" srcSet="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c20dbf28e2a261ffad64_earning-p-500.png 500w, https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69a9c20dbf28e2a261ffad64_earning.png 512w"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208177/Maintenance_Earning_SmartKey_result.avif"></img>,
     title: "Protecting Property Value & Operational Stability",
     text: "Consistent maintenance protects the long-term condition of rental units and common areas. A structured approach to property management maintenance services helps landlords maintain building standards, reduce operational stress and preserve the value of their investment over time.",
   },
@@ -34,17 +34,17 @@ const maintenanceItems = [
 
 const coordinationCards = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19da599b41b24a3d1bb85_rpa.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208182/Maintenance_Rpa_SmartKey_result.avif"></img>,
     title: "Maintenance Request Intake & Evaluation",
     text: "Every repair begins with a structured request intake process. Tenants report maintenance issues through our system, allowing us to document the problem, review details, and begin tenant maintenance request management quickly. This organized intake process helps ensure maintenance issues are properly recorded before repair coordination begins.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19dc66d363ccd0af351ca_constructor.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208180/Maintenance_Constructor_SmartKey_result.avif"></img>,
     title: "Contractor Scheduling & Property Repair Coordination",
     text: "Once a request is reviewed, we manage property repair coordination by scheduling qualified contractors for inspection or repair. Our team communicates with vendors, confirms availability and coordinates repair timelines to ensure work is completed efficiently while minimizing disruption to tenants and property operations.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19ddaa80af3efb75d8fc4_tracking%20(1).png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208179/Maintenance_Tracking_SmartKey_result.avif"></img>,
     title: "Repair Tracking & Owner Communication",
     text: "Throughout the repair process, maintenance progress is tracked and documented to ensure work moves forward without delays. Property owners receive clear updates on repair status, vendor activity and completion timelines, creating a transparent maintenance workflow that supports organized property management operations.",
   },
@@ -123,7 +123,7 @@ const MaintenanceServicesPage = () => {
     <main className="bg-white text-[#17395f]">
       <section className="relative h-[540px] overflow-hidden flex items-center">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc2fc5a5a6ed10469b92b7_maintainance.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208178/Maintainance-Hero-Image_SmartKey.avif"
           alt="Property Maintenance"
           className="absolute inset-0 w-full h-full object-cover"
         />

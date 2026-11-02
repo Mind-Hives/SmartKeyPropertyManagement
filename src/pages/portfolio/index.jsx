@@ -10,7 +10,7 @@ const API_URL = (
 const CARDS_PER_PAGE = 6;
 
 const HERO_IMAGE =
-  "https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/696e742f164325788fc86baa_Our%20Portfolio1.webp";
+  "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/SamrtKey_Our-Portfolio-Hero-Image_result.avif";
 
 // Convert CMS image path into full URL
 const getImageUrl = (path) => {

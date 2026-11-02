@@ -9,7 +9,7 @@ const API_URL = (
 ).replace(/\/+$/, "");
 
 const HERO_IMAGE =
-  "https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/6a6395ce80d2691903f841da_Smartkey%20Website%20Hero%20Images.avif";
+  "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208122/6a6395ce80d2691903f841da_Smartkey_Website_Hero_Images.avif";
 
 const getImageUrl = (path) => {
   if (!path || typeof path !== "string") return "";

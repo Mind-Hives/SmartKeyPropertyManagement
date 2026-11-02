@@ -17,27 +17,27 @@ import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69dd3740406f3667a52659b2_FinanceTransaction.png"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208186/Complience_Finance-Transaction_SmartKey_result.avif"></img>,
     title: "Missed Violations & Compliance Issues",
     text: "Unaddressed violations can lead to escalating penalties, inspection failures and unnecessary regulatory complications. Ongoing monitoring helps identify issues before they become costly problems.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69dd38b72549797bfc5b694f_IncomeTracking.png"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Income-Tracking_SmartKey_result.avif"></img>,
     title: "Missed Regulatory Deadlines",
     text: "Many landlord requirements involve specific deadlines for inspections, filings, certifications and corrective actions. Missing these deadlines can result in fines and additional administrative burdens.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69dd366a835cbb54a42ceef2_CostControl.png"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208185/Complience_Cost-Control_SmartKey_result.avif"></img>,
     title: "Unexpected Expenses & Penalties",
     text: "Compliance-related issues often create avoidable costs through fines, emergency repairs, legal concerns and delayed corrective work. Proactive oversight helps reduce these financial surprises.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69dd35484594e615d1896a06_PerformanceInsights.png"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Performance-Insights_SmartKey_result.avif"></img>,
     title: "Operational & Liability Risks",
     text: "Failure to maintain proper documentation, inspections and compliance records can expose property owners to unnecessary operational risks and potential disputes.",
   },
   {
-    icon: <img href="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69dd37ac9ae00ddce3a47e2d_AuditReadiness.png"></img>,
+    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Audit-Readiness_SmartKey_result.avif"></img>,
     title: "Protecting Long-Term Property Value",
     text: "Strong compliance practices support safer, better-maintained properties while helping landlords fulfill their ongoing responsibilities",
   },
@@ -45,27 +45,27 @@ const maintenanceItems = [
 
 const coordinationCards = [
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19da599b41b24a3d1bb85_rpa.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208189/Complience_Rpa_SmartKey_result.avif"></img>,
     title: "Compliance Monitoring & Violation Resolution",
     text: "Continuous compliance monitoring allows for the identification, tracking and resolution of issues before they become larger regulatory concerns. These include HPD compliance oversight, DOB, ECB, FDNY and DEP violations, support for required filings and corrective measures.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19dc66d363ccd0af351ca_constructor.png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208190/Complience_Constructor_SmartKey_result.avif"></img>,
     title: "Tenant & Property Compliance Management",
     text: "Rental Property Compliance Management Coordinating inspections, record keeping, resolving compliance issues with tenants and ensuring that the required documentation is organized and supporting lease administration and renewals. Proper documentation management makes audits, inspections and regulatory reviews easier.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19ddaa80af3efb75d8fc4_tracking%20(1).png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
     title: "Strategic Oversight & Asset Protection",
     text: "Long term property performance is all about proactive planning. This includes planning for preventive maintenance, overseeing vendors and contractors, coordinating capital improvements and planning reserves to protect assets while supporting operational stability.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19ddaa80af3efb75d8fc4_tracking%20(1).png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
     title: "Risk Management & Emergency Response",
     text: "One of the key aspects of good property management is knowing how to identify potential problems before they become costly headaches. This includes risk assessments, environmental and lead paint compliance awareness, mitigation planning and coordinated emergency response to urgent compliance issues.",
   },
   {
-    icon: <img src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/69b19ddaa80af3efb75d8fc4_tracking%20(1).png"></img>,
+    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
     title: "Cost Control & Performance Oversight",
     text: "Strategic oversight also includes overseeing operating expenses and improving performance over the long-term. Utility reviews, insurance compliance assistance, tax assessment coordination, accounting and financial reporting, expense audits and performance reporting help property owners to make better operational decisions.",
   },
@@ -141,7 +141,7 @@ const PropertyComplianceSection = () => {
     <main className="bg-white text-[#17395f]">
       <section className="relative h-[540px] overflow-hidden flex items-center">
         <img
-          src="https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc2fc5a5a6ed10469b92b7_maintainance.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208178/Maintainance-Hero-Image_SmartKey.avif"
           alt="Property Maintenance"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -355,7 +355,7 @@ const PropertyComplianceSection = () => {
             title={"Own Property? We Make Managing It Effortless."}
             buttonText="Schedule Free Consultation"
             backgroundType="image"
-            backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
+            backgroundSrc={"https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"}
             buttonLink="/contact"
             />
         
