@@ -1223,26 +1223,22 @@ export default function PricingPage() {
       <style>{internalStyles}</style>
 
       {/* HERO SECTION */}
-      <section className="relative bg-[#111f34] min-h-[310px] md:min-h-[360px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#111f34] via-[#13243d]/95 to-[#0d1a2b]" />
+      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
+        <img
+          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208102/Price-Package_Price.avif'
+          alt="Price Package"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#10213a]/70" />
 
-        <div className="absolute right-[10%] top-10 hidden md:flex gap-4 opacity-80">
-          <div className="w-28 h-44 bg-[#253349] shadow-2xl translate-y-12" />
-          <div className="w-28 h-56 bg-[#3b4c66] shadow-2xl" />
-          <div className="w-28 h-72 bg-[#00a8c8] shadow-2xl" />
-          <div className="w-28 h-72 bg-[#69c7c9] shadow-2xl" />
-        </div>
+        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
+          <p className="text-white/80 text-xs mb-3">
+            Home / Pricing and Packages
+          </p>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-5 pt-5">
-          <div className="mt-20 md:mt-24 text-white">
-            <p className="text-xs mb-4 opacity-80">
-              Home / Pricing and Packages
-            </p>
-
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Pricing & Packages
-            </h1>
-          </div>
+          <h1 className="text-white text-4xl md:text-5xl font-bold">
+            Pricing and Packages
+          </h1>
         </div>
       </section>
 

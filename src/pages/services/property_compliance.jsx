@@ -13,6 +13,7 @@ import {
   CalendarCheck,
   Phone,
 } from "lucide-react";
+import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
@@ -345,15 +346,11 @@ const PropertyComplianceSection = () => {
           </p>
         </div>
       </section>
-      <section>
-          <div>
+      
               <FAQ 
               title="Frequently Asked Question"
               data={faqData}
               />
-          </div>
-      </section>
-      <section>
             <Hero 
             title={"Own Property? We Make Managing It Effortless."}
             buttonText="Schedule Free Consultation"
@@ -361,7 +358,12 @@ const PropertyComplianceSection = () => {
             backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
             buttonLink="/contact"
             />
-      </section>
+        
+        {/* For SEO ranking */}
+        <SEO 
+        title="Smartkey Property Compliance & Strategic Oversight"
+        description="Manage your properties with confidence. Smart key provides expert property compliance services and proactive oversight to keep every detail in check."
+        />
     </main>
   );
 };

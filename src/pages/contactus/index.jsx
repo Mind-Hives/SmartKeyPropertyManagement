@@ -80,18 +80,21 @@ const ContactPage = () => {
 
   return (
     <main className="bg-white">
-      <section className="relative h-[280px] md:h-[360px] flex items-end overflow-hidden">
+      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
         <img
-          src="/contact/contact-hero.jpg"
-          alt="Contact Us"
+          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/Contact-Us_SmartKey.avif'
+          alt="SmartKey Property Portfolio"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#07172a]/65"></div>
+        <div className="absolute inset-0 bg-[#10213a]/70" />
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-16">
-          <p className="text-white/80 text-xs mb-3">Home / Contact Us</p>
-          <h1 className="text-white text-5xl md:text-7xl font-bold">
+        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
+          <p className="text-white/80 text-xs mb-3">
+            Home / Contact Us
+          </p>
+
+          <h1 className="text-white text-4xl md:text-5xl font-bold">
             Contact Us
           </h1>
         </div>

@@ -11,6 +11,7 @@ import {
   Home,
   Phone,
 } from "lucide-react";
+import SEO from "@/components/seo/SEO";
 
 const complianceItems = [
   {
@@ -458,13 +459,11 @@ const LegalCompliancePage = () => {
             </ul>
         </div>
       </section>
-      <section>
+
         <FAQ 
         title="Frequently Asked Question"
         data={faqData}
         />
-      </section>
-      <section>
           <Hero 
           title={"Own Property? We Make Managing It Effortless."}
           buttonText="Schedule Free Consultation"
@@ -472,7 +471,12 @@ const LegalCompliancePage = () => {
           backgroundSrc={"https://cdn.prod.website-files.com/685ee05b8ece331bff83d4b9/68dc4ab5f573a246b9215237_Footer%20main.avif"}
           buttonLink="/contact"
           />
-      </section>
+
+        {/* For SEO ranking */}
+        <SEO 
+        title="Legal Compliance for Landlords | Property Management Legal Requirements"
+        description="Smart Key ensures legal compliance for landlords, helping you meet property management legal requirements in NY & NJ with structured, reliable systems."
+        />
     </main>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import ScrollingNames from '@/components/scrollingName/ScrollingName';
 import FooterCTA from '@/components/footerCTA/FooterCTA';
 import FAQ from '@/components/faq';
+import SEO from '@/components/seo/SEO';
 
 
 function Queens() {
@@ -466,14 +467,10 @@ function Queens() {
         </section>
 
         {/* FAQ */}
-        <section>
-            <div>
                 <FAQ 
                 title="Frequently Asked Question"
                 data={faqData}
                 />
-            </div>
-        </section>
 
         {/* Footer CTA */}
         <FooterCTA 
@@ -483,6 +480,11 @@ function Queens() {
         buttonLink='/contact'
         />
 
+        {/* For SEO ranking */}
+        <SEO 
+        title="Queens Property Management for Landlords | Smart Key"
+        description="Smart Key provides Queens property management for landlords, including rent collection, maintenance, tenant support, plans from 5% and custom pricing."
+        />
     </main>
   )
 }

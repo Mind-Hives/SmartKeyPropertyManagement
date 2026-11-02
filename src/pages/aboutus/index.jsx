@@ -3,6 +3,7 @@ import { Phone, Mail } from "lucide-react";
 import imageOne from '../../assets/about/First_Group_Img.avif'
 import imageTwo from '../../assets/about/Second_Group_Img.avif'
 import imageThree from '../../assets/about/Third_Group_img.avif'
+import SEO from "@/components/seo/SEO";
 const leaders = [
   {
     name: "KAMLESH PATEL",
@@ -165,6 +166,12 @@ const TeamSection = () => {
           </section>
         )}
       </section>
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Introducing Our Team| Smartkey Property Management NYC"
+      description="Learn about the skilled people who run Smartkey Property Management. Our team is committed to helping property owners in NYC succeed by giving them expert help."
+      />
     </main>
   );
 };

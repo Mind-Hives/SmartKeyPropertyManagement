@@ -7,6 +7,7 @@ import FAQ from "../../components/faq/index.jsx";
 import { MyMap } from "@/components/ui";
 import GoogleReviews from "@/components/reviews/GoogleReviews";
 import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
+import SEO from "@/components/seo/SEO";
 
 const Feature = ({ cardBgColor, icon, title , discription }) => {
   return (
@@ -303,6 +304,12 @@ const HomePage = () => {
       title={'Own Property? We Make Managing It Effortless.'}
       buttonText='Schedule Free Consultation'
       buttonLink='/contact-us'
+      />
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Full-Service Property Management NYC | Smart Key"
+      description="Full-service property management in NYC for landlords and property owners. Get support with rent collection, tenant screening, maintenance, compliance and financial reporting."
       />
     </>
   );

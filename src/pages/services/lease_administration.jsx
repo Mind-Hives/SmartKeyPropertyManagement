@@ -3,6 +3,7 @@ import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FAQ from "@/components/faq";
 import FeatureBlock from "@/components/featureBlock/FeatureBlock";
 import { motion } from "framer-motion";
+import SEO from "@/components/seo/SEO";
 
 const includeItems = [
   {
@@ -397,6 +398,12 @@ const LeaseAdministrationPage = () => {
           title={'Own Property? We Make Managing It Effortless.'}
           buttonText='Schedule Free Consultation'
           buttonLink='/contact-us'
+      />
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Lease Administration Services NYC | Smart Key Property Management"
+      description="Smart Key provides lease administration services for NYC landlords, including lease tracking, renewal coordination, tenant communication and documentation management."
       />
     </main>
   );

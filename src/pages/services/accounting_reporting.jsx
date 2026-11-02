@@ -5,6 +5,7 @@ import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FAQ from "@/components/faq";
 import { motion } from "framer-motion";
 import { BarChart3,} from "lucide-react";
+import SEO from "@/components/seo/SEO";
 
 const includes = [
   {
@@ -448,6 +449,12 @@ const AccountingReportingPage = () => {
           title={'Own Property? We Make Managing It Effortless.'}
           buttonText='Schedule Free Consultation'
           buttonLink='/contact-us'
+      />
+
+      {/* For SEO ranking */}
+      <SEO 
+      title="Property Accounting Services for NYC & NJ Landlords | Smart Key"
+      description="Smart Key provides property accounting services for NYC & NJ landlords, including income and expense tracking, reconciliation, monthly financial reports and AppFolio owner access."
       />
     </main>
   );

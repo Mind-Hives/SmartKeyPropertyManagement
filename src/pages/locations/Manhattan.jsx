@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import FAQ from '@/components/faq';
 import FooterCTA from '@/components/footerCTA/FooterCTA';
 import ScrollingNames from '@/components/scrollingName/ScrollingName';
+import SEO from '@/components/seo/SEO';
 
 function Manhattan() {
 
@@ -418,14 +419,10 @@ function Manhattan() {
       </section>
 
       {/* FAQ */}
-      <section>
-          <div>
               <FAQ 
               title="Frequently Asked Question"
               data={faqData}
               />
-          </div>
-      </section>
 
       {/* Footer CTA */}
       <FooterCTA 
@@ -435,7 +432,11 @@ function Manhattan() {
       buttonLink='/contact'
       />
 
-
+    {/* For SEO ranking */}
+    <SEO 
+    title="Manhattan Property Management Company | Smart Key"
+    description="Professional property management in Manhattan for landlords and rental property owners. Smart Key handles tenant communication, maintenance, rent oversight and day-to-day property operations."
+    />
     </main>
   )
 }

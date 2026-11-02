@@ -129,9 +129,9 @@ const PortfolioPage = () => {
     <main className="bg-white">
 
       {/* HERO SECTION */}
-      <section className="relative h-[240px] md:h-[300px] flex items-end overflow-hidden">
+      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
         <img
-          src={HERO_IMAGE}
+          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/SamrtKey_Our-Portfolio-Hero-Image_result.avif'
           alt="SmartKey Property Portfolio"
           className="absolute inset-0 w-full h-full object-cover"
         />
