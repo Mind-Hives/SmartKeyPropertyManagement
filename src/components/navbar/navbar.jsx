@@ -207,7 +207,7 @@ const Navbar = () => {
             <img
               src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
               alt="Smart Key Property Management"
-              className="h-32 w-32 object-contain sm:h-28 sm:w-28 md:h-45 md:w-45"
+              className="h-32 w-32 object-contain sm:h-28 sm:w-28 md:h-45 md:w-45 lg:h-56 lg:w-56"
             />
           </Link>
         </div>

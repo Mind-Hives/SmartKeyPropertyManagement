@@ -165,7 +165,7 @@ function Manhattan() {
 
               <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
                   A Manhattan property requires more than basic oversight. From tenant communication and maintenance requests to rent tracking and property coordination, every detail needs consistent attention. Smart Key Property Management provides structured <a
-                    href="/blog/top-challenges-manhattan-landlords-face-and-how-property-managers-can-solve-them"
+                    href="/blogs/top-challenges-manhattan-landlords-face-and-how-property-managers-can-solve-them"
                     className="text-blue-500 hover:underline"
                   >
                       Manhattan property management support

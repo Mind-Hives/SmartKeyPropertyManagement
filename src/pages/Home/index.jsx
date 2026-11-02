@@ -97,43 +97,43 @@ const faqData = [
 const socialMediaPosts = [
   {
     id: 1,
-    image: "",
+    image: "/images/social/post-1.jpg",
     link: "https://www.instagram.com/your-company/",
     alt: "Company social media post",
   },
   {
     id: 2,
-    image: "",
+    image: "/images/social/post-2.jpg",
     link: "https://www.instagram.com/your-company/",
     alt: "Company social media post",
   },
   {
     id: 3,
-    image: "",
+    image: "/images/social/post-3.jpg",
     link: "https://www.linkedin.com/company/your-company/",
     alt: "Company LinkedIn post",
   },
   {
     id: 4,
-    image: "",
+    image: "/images/social/post-4.jpg",
     link: "https://www.facebook.com/your-company/",
     alt: "Company Facebook post",
   },
   {
     id: 5,
-    image: "",
+    image: "/images/social/post-4.jpg",
     link: "https://www.facebook.com/your-company/",
     alt: "Company Facebook post",
   },
   {
     id: 6,
-    image: "",
+    image: "/images/social/post-4.jpg",
     link: "https://www.facebook.com/your-company/",
     alt: "Company Facebook post",
   },
   {
     id: 7,
-    image: "",
+    image: "/images/social/post-4.jpg",
     link: "https://www.facebook.com/your-company/",
     alt: "Company Facebook post",
   },
@@ -274,6 +274,9 @@ const HomePage = () => {
         title="Our Property Management Process"
         description="Our property management process follows a defined, step-by-step structure designed to protect rental income and maintain operational control. From initial property review to system setup and daily execution, each stage is documented and coordinated. This structured approach ensures consistency, accountability and long-term stability for every property we manage."
         steps={steps}
+      />
+      
+      <MyMap 
       />
 
       <GoogleReviews 

@@ -221,7 +221,7 @@ export default function BlogDetails() {
         </p>
 
         <Link
-          to="/blog"
+          to="/blogs"
           className="bg-[#17395f] text-white px-6 py-3 rounded-full text-sm hover:bg-[#2f4f73] transition"
         >
           Back to Blogs
@@ -259,7 +259,7 @@ export default function BlogDetails() {
 
             <span className="mx-2">/</span>
 
-            <Link to="/blog" className="hover:text-white">
+            <Link to="/blogs" className="hover:text-white">
               Blog
             </Link>
 
