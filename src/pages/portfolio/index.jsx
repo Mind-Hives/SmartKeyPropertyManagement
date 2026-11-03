@@ -249,7 +249,7 @@ const PortfolioCard = ({ property }) => {
 
   return (
     <Link
-      // to={`/portfolio/${encodeURIComponent(property.id)}`}
+      // to={`/our-portfolio/${encodeURIComponent(property.id)}`}
       className="group block"
     >
       {/* PROPERTY IMAGE */}

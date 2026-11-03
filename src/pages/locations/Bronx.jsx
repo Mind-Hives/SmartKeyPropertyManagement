@@ -69,7 +69,7 @@ function Bronx() {
       address: "1743 Taylor Ave, Bronx, NY 10460",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208124/6a6ccb14354d3a7eb4404878_Bronx_prop2_result.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 1743 Taylor Ave, Bronx",
     },
     {
@@ -77,7 +77,7 @@ function Bronx() {
       address: "559 Claremont Pkwy, Bronx, NY 10457",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208125/6a6ccb16e2b1816f5cedd80b_Bronx_prop3_result.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 559 Claremont Pkwy, Bronx",
     },
     {
@@ -85,7 +85,7 @@ function Bronx() {
       address: "362 E 173rd St, Bronx, NY 10457",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208123/68642b8551c947ec2d0679cf_hero_section_result.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 362 E 173rd St, Bronx",
     },
   ];

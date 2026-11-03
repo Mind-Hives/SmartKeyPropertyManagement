@@ -87,7 +87,7 @@ function Manhattan() {
       address: "151 West 21st Street #5E, New York, NY 10011",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208129/6a85c511b46e28ec85288836_Manhattan_Prop2.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 151 West 21st Street #5E, New York",
     },
     {
@@ -95,7 +95,7 @@ function Manhattan() {
       address: "504 West 126th Street, New York, NY 10027",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208127/6a85d45e55c12f1d921ab6f4_3_2.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 504 West 126th Street, New York",
     },
     {
@@ -103,7 +103,7 @@ function Manhattan() {
       address: "136 William St, New York, NY 10038",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208128/6a85d45cb3786f1d4edcbdda_4.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 136 William St, New York",
     },
   ];
