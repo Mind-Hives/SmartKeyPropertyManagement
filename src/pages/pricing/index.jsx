@@ -1,145 +1,4 @@
-// import React from "react";
-// import { Crown, Flame, Sparkles, CheckCircle } from "lucide-react";
-// import Navbar from "../../components/navbar/navbar";
-
-// const packages = [
-//   {
-//     name: "Essential",
-//     icon: <Sparkles size={34} />,
-//     price: "5% of Monthly Rent",
-//     text: "Perfect for property owners who want the basics covered at an affordable rate.",
-//     btn: "Talk to an Expert",
-//     features: [
-//       "Rent Collection",
-//       "Maintenance Coordination",
-//       "Utility Bill Management",
-//       "Bookkeeping & Financial Reports",
-//       "Property Inspection: 1x Month",
-//       "24/7 Admin Assistance",
-//     ],
-//   },
-//   {
-//     name: "Prime",
-//     icon: <Crown size={36} />,
-//     price: "7.5% of Monthly Rent",
-//     text: "Ideal for landlords who want full support and faster response.",
-//     btn: "Talk to an Expert",
-//     recommended: true,
-//     features: [
-//       "All Essential Services",
-//       "Tenant Screening",
-//       "New Tenant Onboarding",
-//       "Vacancy Management",
-//       "Property Inspection: 2x Month",
-//       "24/7 Care Assistance",
-//     ],
-//   },
-//   {
-//     name: "Pinnacle",
-//     icon: <Flame size={34} />,
-//     price: "10% of Monthly Rent",
-//     text: "For owners who want complete property management with premium support.",
-//     btn: "Talk to an Expert",
-//     features: [
-//       "All Prime Features",
-//       "Rent & Legal Assistance",
-//       "Vendor Profit Rate Control",
-//       "Tax Leasing & Lease Renewals",
-//       "Property Inspection: 3x Month",
-//     ],
-//   },
-// ];
-
-// const PricingPage = () => {
-//   return (
-//     <main className="bg-white">
-//       {/* HERO */}
-//       <section className="relative bg-[#111f34] min-h-[310px] md:min-h-[360px] overflow-hidden">
-//         <div className="absolute inset-0 bg-gradient-to-r from-[#111f34] via-[#13243d]/95 to-[#0d1a2b]" />
-
-//         <div className="absolute right-[10%] top-10 hidden md:flex gap-4 opacity-80">
-//           <div className="w-28 h-44 bg-[#253349] shadow-2xl translate-y-12"></div>
-//           <div className="w-28 h-56 bg-[#3b4c66] shadow-2xl"></div>
-//           <div className="w-28 h-72 bg-[#00a8c8] shadow-2xl"></div>
-//           <div className="w-28 h-72 bg-[#69c7c9] shadow-2xl"></div>
-//         </div>
-
-//         <div className="relative z-10 max-w-6xl mx-auto px-5 pt-5">
-//           <div className="mt-20 md:mt-24 text-white">
-//             <p className="text-xs mb-4 opacity-80">Home / Pricing and Packages</p>
-//             <h1 className="text-4xl md:text-6xl font-bold">
-//               Pricing & Packages
-//             </h1>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* PRICING */}
-//       <section className="py-16 md:py-24 px-5 bg-white">
-//         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-//           {packages.map((item, index) => (
-//             <div
-//               key={index}
-//               className={`relative bg-white text-center px-8 py-10 shadow-xl shadow-gray-200/70 border border-gray-100 transition-all duration-300 hover:-translate-y-2 ${
-//                 item.recommended ? "md:scale-105" : ""
-//               }`}
-//             >
-//               {item.recommended && (
-//                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white border border-gray-200 px-5 py-1 rounded-full text-xs text-gray-500 shadow-sm">
-//                   Recommended
-//                 </span>
-//               )}
-
-//               <div className="text-[#ffb000] flex justify-center mb-4">
-//                 {item.icon}
-//               </div>
-
-//               <h3 className="text-2xl font-semibold text-[#2f4f73]">
-//                 {item.name}
-//               </h3>
-
-//               <p className="text-xs text-gray-400 mt-1">Plan A</p>
-
-//               <h4 className="text-lg font-bold text-[#1d3557] mt-5">
-//                 {item.price}
-//               </h4>
-
-//               <p className="text-sm text-gray-500 mt-3 leading-relaxed min-h-[70px]">
-//                 {item.text}
-//               </p>
-
-//               <a
-//                 href="/contact"
-//                 className={`inline-block mt-6 px-6 py-3 text-xs uppercase tracking-wide border transition ${
-//                   item.recommended
-//                     ? "bg-[#111f34] text-white border-[#111f34]"
-//                     : "text-[#111f34] border-[#111f34] hover:bg-[#111f34] hover:text-white"
-//                 }`}
-//               >
-//                 {item.btn}
-//               </a>
-
-//               <div className="mt-8 space-y-4 text-left">
-//                 {item.features.map((feature, i) => (
-//                   <div key={i} className="flex items-start gap-3">
-//                     <CheckCircle className="w-4 h-4 text-[#2f4f73] mt-0.5" />
-//                     <p className="text-sm text-gray-600">{feature}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-//     </main>
-//   );
-// };
-
-// export default PricingPage;
-
-
-
-
+import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import {
   Star,
@@ -148,6 +7,7 @@ import {
   House,
   SlidersHorizontal,
   ChevronDown,
+  ChevronRight,
   ChevronUp,
   Wallet,
   FileText,
@@ -238,11 +98,7 @@ const services = [
     id: "manager",
     label: "Dedicated On-ground Property Manager",
     icon: UserRound,
-    children: [
-      "1 hr/month",
-      "3 hrs/month",
-      "5 hrs/month",
-    ],
+    children: ["1 hr/month", "3 hrs/month", "5 hrs/month"],
   },
   {
     id: "agencies",
@@ -419,12 +275,7 @@ function CorePlan({ onGetStarted }) {
   return (
     <div className="sk-card px-6 py-8 md:px-7 md:py-9">
       <div className="flex flex-col items-center text-center">
-        <Star
-          size={40}
-          fill="#ffc83d"
-          color="#e2a51a"
-          strokeWidth={1.5}
-        />
+        <Star size={40} fill="#ffc83d" color="#e2a51a" strokeWidth={1.5} />
 
         <span className="mt-4 px-4 py-1 rounded-full bg-[#e9f7ed] text-[#349261] text-[11px]">
           Our Core Plan
@@ -434,17 +285,15 @@ function CorePlan({ onGetStarted }) {
           Core Plan
         </h2>
 
-        <p className="mt-1 text-[#8090aa] text-[13px]">
-          Only
-        </p>
+        <p className="mt-1 text-[#8090aa] text-[13px]">Only</p>
 
         <h3 className="mt-1 text-[#172846] text-[19px] font-bold">
           5% of Monthly Rent
         </h3>
 
         <p className="mt-4 text-[#8290aa] text-[12px] leading-6 max-w-[240px]">
-          Professional property management that covers
-          the essentials—at a great value.
+          Professional property management that covers the essentials—at a great
+          value.
         </p>
       </div>
 
@@ -493,10 +342,7 @@ function CorePlan({ onGetStarted }) {
 
         <div className="space-y-3.5">
           {coreFeatures.map((feature) => (
-            <div
-              key={feature}
-              className="flex items-start gap-3"
-            >
+            <div key={feature} className="flex items-start gap-3">
               <CheckCircle2
                 size={16}
                 className="text-[#203859] shrink-0 mt-[2px]"
@@ -538,10 +384,7 @@ function ServiceDropdown({ selected, onChange }) {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
@@ -549,10 +392,7 @@ function ServiceDropdown({ selected, onChange }) {
     document.addEventListener("pointerdown", handleOutsideClick);
 
     return () => {
-      document.removeEventListener(
-        "pointerdown",
-        handleOutsideClick
-      );
+      document.removeEventListener("pointerdown", handleOutsideClick);
     };
   }, []);
 
@@ -595,9 +435,7 @@ function ServiceDropdown({ selected, onChange }) {
   // Multiple maintenance services can be selected
   const toggleMaintenance = (item) => {
     onChange((prev) => {
-      const current = Array.isArray(prev.maintenance)
-        ? prev.maintenance
-        : [];
+      const current = Array.isArray(prev.maintenance) ? prev.maintenance : [];
 
       const updated = current.includes(item)
         ? current.filter((value) => value !== item)
@@ -615,11 +453,8 @@ function ServiceDropdown({ selected, onChange }) {
     });
   };
 
-  const selectedCount = Object.values(selected).filter(
-    (value) =>
-      Array.isArray(value)
-        ? value.length > 0
-        : Boolean(value)
+  const selectedCount = Object.values(selected).filter((value) =>
+    Array.isArray(value) ? value.length > 0 : Boolean(value),
   ).length;
 
   return (
@@ -633,9 +468,7 @@ function ServiceDropdown({ selected, onChange }) {
       >
         <span className="text-[12px] text-[#8c9ab4]">
           {selectedCount > 0
-            ? `${selectedCount} service${
-                selectedCount > 1 ? "s" : ""
-              } selected`
+            ? `${selectedCount} service${selectedCount > 1 ? "s" : ""} selected`
             : "Choose services to add..."}
         </span>
 
@@ -653,17 +486,11 @@ function ServiceDropdown({ selected, onChange }) {
             {services.map((service) => {
               const Icon = service.icon;
 
-              const hasChildren = Boolean(
-                service.children?.length
-              );
+              const hasChildren = Boolean(service.children?.length);
 
-              const isExpanded = Boolean(
-                expanded[service.id]
-              );
+              const isExpanded = Boolean(expanded[service.id]);
 
-              const isSelected = Boolean(
-                selected[service.id]
-              );
+              const isSelected = Boolean(selected[service.id]);
 
               return (
                 <div key={service.id}>
@@ -675,9 +502,7 @@ function ServiceDropdown({ selected, onChange }) {
                         : toggleService(service.id)
                     }
                     className={`sk-service-row w-full flex items-center gap-3 px-3 py-3 text-left rounded-md ${
-                      isSelected || isExpanded
-                        ? "bg-[#f1f5fb]"
-                        : ""
+                      isSelected || isExpanded ? "bg-[#f1f5fb]" : ""
                     }`}
                   >
                     <Icon
@@ -692,15 +517,9 @@ function ServiceDropdown({ selected, onChange }) {
 
                     {hasChildren ? (
                       isExpanded ? (
-                        <ChevronUp
-                          size={15}
-                          className="text-[#7387a7]"
-                        />
+                        <ChevronUp size={15} className="text-[#7387a7]" />
                       ) : (
-                        <ChevronDown
-                          size={15}
-                          className="text-[#7387a7]"
-                        />
+                        <ChevronDown size={15} className="text-[#7387a7]" />
                       )
                     ) : (
                       <span
@@ -716,85 +535,76 @@ function ServiceDropdown({ selected, onChange }) {
                   </button>
 
                   {/* MANAGER HOURS SUBDROPDOWN */}
-                  {service.id === "manager" &&
-                    isExpanded && (
-                      <div className="pl-8 pr-2 py-1 space-y-1">
-                        {service.children.map((hours) => {
-                          const checked =
-                            selected.manager === hours;
+                  {service.id === "manager" && isExpanded && (
+                    <div className="pl-8 pr-2 py-1 space-y-1">
+                      {service.children.map((hours) => {
+                        const checked = selected.manager === hours;
 
-                          return (
-                            <button
-                              type="button"
-                              key={hours}
-                              onClick={() =>
-                                selectManager(hours)
-                              }
-                              className={`w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[12px] ${
+                        return (
+                          <button
+                            type="button"
+                            key={hours}
+                            onClick={() => selectManager(hours)}
+                            className={`w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[12px] ${
+                              checked
+                                ? "bg-[#edf3ff] text-[#2865cf]"
+                                : "text-[#60708c] hover:bg-[#f4f7fc]"
+                            }`}
+                          >
+                            <span
+                              className={`w-4 h-4 rounded-full border flex items-center justify-center ${
                                 checked
-                                  ? "bg-[#edf3ff] text-[#2865cf]"
-                                  : "text-[#60708c] hover:bg-[#f4f7fc]"
+                                  ? "border-[#4381f2]"
+                                  : "border-[#cbd5e1]"
                               }`}
                             >
-                              <span
-                                className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                                  checked
-                                    ? "border-[#4381f2]"
-                                    : "border-[#cbd5e1]"
-                                }`}
-                              >
-                                {checked && (
-                                  <span className="w-2 h-2 bg-[#4381f2] rounded-full" />
-                                )}
-                              </span>
+                              {checked && (
+                                <span className="w-2 h-2 bg-[#4381f2] rounded-full" />
+                              )}
+                            </span>
 
-                              {hours}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    )}
+                            {hours}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
 
                   {/* PROPERTY MAINTENANCE SUBDROPDOWN */}
-                  {service.id === "maintenance" &&
-                    isExpanded && (
-                      <div className="pl-8 pr-2 py-1 space-y-1">
-                        {service.children.map((item) => {
-                          const checked = (
-                            selected.maintenance || []
-                          ).includes(item);
+                  {service.id === "maintenance" && isExpanded && (
+                    <div className="pl-8 pr-2 py-1 space-y-1">
+                      {service.children.map((item) => {
+                        const checked = (selected.maintenance || []).includes(
+                          item,
+                        );
 
-                          return (
-                            <button
-                              type="button"
-                              key={item}
-                              onClick={() =>
-                                toggleMaintenance(item)
-                              }
-                              className={`w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[12px] ${
+                        return (
+                          <button
+                            type="button"
+                            key={item}
+                            onClick={() => toggleMaintenance(item)}
+                            className={`w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[12px] ${
+                              checked
+                                ? "bg-[#edf3ff] text-[#2865cf]"
+                                : "text-[#60708c] hover:bg-[#f4f7fc]"
+                            }`}
+                          >
+                            <span
+                              className={`w-4 h-4 rounded border flex items-center justify-center ${
                                 checked
-                                  ? "bg-[#edf3ff] text-[#2865cf]"
-                                  : "text-[#60708c] hover:bg-[#f4f7fc]"
+                                  ? "bg-[#4381f2] border-[#4381f2] text-white"
+                                  : "border-[#cbd5e1]"
                               }`}
                             >
-                              <span
-                                className={`w-4 h-4 rounded border flex items-center justify-center ${
-                                  checked
-                                    ? "bg-[#4381f2] border-[#4381f2] text-white"
-                                    : "border-[#cbd5e1]"
-                                }`}
-                              >
-                                {checked && (
-                                  <Check size={12} />
-                                )}
-                              </span>
+                              {checked && <Check size={12} />}
+                            </span>
 
-                              {item}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    )}
+                            {item}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -845,9 +655,7 @@ function QuoteForm({ formRef }) {
     setSuccess(false);
 
     if (selected.other && !otherDetails.trim()) {
-      setMessage(
-        "Please describe your other service requirement."
-      );
+      setMessage("Please describe your other service requirement.");
       return;
     }
 
@@ -859,9 +667,7 @@ function QuoteForm({ formRef }) {
         }
 
         if (service.id === "maintenance") {
-          return `${service.label}: ${selected.maintenance.join(
-            ", "
-          )}`;
+          return `${service.label}: ${selected.maintenance.join(", ")}`;
         }
 
         if (service.id === "other") {
@@ -896,14 +702,12 @@ function QuoteForm({ formRef }) {
         const data = await response.json().catch(() => ({}));
 
         if (!response.ok) {
-          throw new Error(
-            data.error || "Unable to submit your quote request."
-          );
+          throw new Error(data.error || "Unable to submit your quote request.");
         }
 
         setSuccess(true);
         setMessage(
-          data.message || "Your quote request has been submitted successfully."
+          data.message || "Your quote request has been submitted successfully.",
         );
 
         setForm({
@@ -914,9 +718,7 @@ function QuoteForm({ formRef }) {
         setSelected({});
         setOtherDetails("");
       } catch (error) {
-        setMessage(
-          error.message || "Something went wrong."
-        );
+        setMessage(error.message || "Something went wrong.");
       } finally {
         setSubmitting(false);
       }
@@ -926,8 +728,7 @@ function QuoteForm({ formRef }) {
 
     // Email fallback
     if (CONTACT_EMAIL) {
-      const subject =
-        "SmartKey Custom Property Management Quote";
+      const subject = "SmartKey Custom Property Management Quote";
 
       const body = [
         `Full Name: ${payload.name}`,
@@ -936,9 +737,7 @@ function QuoteForm({ formRef }) {
         `Plan: ${payload.plan}`,
         "",
         "Selected Services:",
-        ...selectedServices.map(
-          (service) => `- ${service}`
-        ),
+        ...selectedServices.map((service) => `- ${service}`),
       ].join("\n");
 
       window.location.href =
@@ -946,36 +745,27 @@ function QuoteForm({ formRef }) {
         `?subject=${encodeURIComponent(subject)}` +
         `&body=${encodeURIComponent(body)}`;
 
-      setMessage(
-        "Your email application will open with your quote details."
-      );
+      setMessage("Your email application will open with your quote details.");
 
       return;
     }
 
     setMessage(
-      "Quote submission is not configured. Set VITE_PRICING_API_URL or VITE_CONTACT_EMAIL in your environment."
+      "Quote submission is not configured. Set VITE_PRICING_API_URL or VITE_CONTACT_EMAIL in your environment.",
     );
   };
 
   return (
-    <div
-      ref={formRef}
-      className="sk-card p-6 md:p-8 lg:p-9"
-    >
+    <div ref={formRef} className="sk-card p-6 md:p-8 lg:p-9">
       <div className="text-center">
         <h2 className="text-[#142644] text-[20px] md:text-[22px] font-semibold flex items-center justify-center gap-2">
-          <SlidersHorizontal
-            size={21}
-            className="text-[#4381e8]"
-          />
+          <SlidersHorizontal size={21} className="text-[#4381e8]" />
           Add Only What You Need.
         </h2>
 
         <p className="text-[#8493ae] text-[12px] leading-6 max-w-[410px] mx-auto mt-2">
-          Customize your management plan with additional
-          services. Tell us what you need and we'll
-          send you a tailored quote.
+          Customize your management plan with additional services. Tell us what
+          you need and we'll send you a tailored quote.
         </p>
       </div>
 
@@ -986,10 +776,7 @@ function QuoteForm({ formRef }) {
             Step 1: Select Additional Services
           </label>
 
-          <ServiceDropdown
-            selected={selected}
-            onChange={setSelected}
-          />
+          <ServiceDropdown selected={selected} onChange={setSelected} />
 
           {/* OTHER SERVICE INPUT */}
           {selected.other && (
@@ -1001,9 +788,7 @@ function QuoteForm({ formRef }) {
               <textarea
                 rows={3}
                 value={otherDetails}
-                onChange={(e) =>
-                  setOtherDetails(e.target.value)
-                }
+                onChange={(e) => setOtherDetails(e.target.value)}
                 placeholder="Describe your requirements..."
                 className="w-full bg-[#f7f9fd] rounded-md border border-[#e8edf5] p-3 text-[12px] outline-none focus:border-[#4381e8]"
               />
@@ -1016,18 +801,13 @@ function QuoteForm({ formRef }) {
               {services
                 .filter((service) => selected[service.id])
                 .map((service) => (
-                  <span
-                    key={service.id}
-                    className="sk-service-chip"
-                  >
+                  <span key={service.id} className="sk-service-chip">
                     {service.label}
 
                     <button
                       type="button"
                       aria-label={`Remove ${service.label}`}
-                      onClick={() =>
-                        removeService(service.id)
-                      }
+                      onClick={() => removeService(service.id)}
                     >
                       <X size={12} />
                     </button>
@@ -1058,9 +838,7 @@ function QuoteForm({ formRef }) {
                 required
                 autoComplete="name"
                 value={form.name}
-                onChange={(e) =>
-                  updateField("name", e.target.value)
-                }
+                onChange={(e) => updateField("name", e.target.value)}
                 placeholder="Enter your name"
                 className="sk-form-input"
               />
@@ -1080,9 +858,7 @@ function QuoteForm({ formRef }) {
                 required
                 autoComplete="email"
                 value={form.email}
-                onChange={(e) =>
-                  updateField("email", e.target.value)
-                }
+                onChange={(e) => updateField("email", e.target.value)}
                 placeholder="Enter your email"
                 className="sk-form-input"
               />
@@ -1102,9 +878,7 @@ function QuoteForm({ formRef }) {
                 required
                 autoComplete="tel"
                 value={form.phone}
-                onChange={(e) =>
-                  updateField("phone", e.target.value)
-                }
+                onChange={(e) => updateField("phone", e.target.value)}
                 placeholder="Enter your phone number"
                 className="sk-form-input"
               />
@@ -1116,13 +890,7 @@ function QuoteForm({ formRef }) {
                 disabled={submitting}
                 className="sk-primary-btn w-full h-11 font-bold text-[12px] tracking-wide uppercase flex items-center justify-center gap-2"
               >
-                {submitting && (
-                  <Loader2
-                    size={16}
-                    className="animate-spin"
-                  />
-                )}
-
+                {submitting && <Loader2 size={16} className="animate-spin" />}
                 Get My Custom Quote
               </button>
             </div>
@@ -1132,9 +900,7 @@ function QuoteForm({ formRef }) {
             <p
               role="status"
               className={`text-[12px] text-center mt-5 ${
-                success
-                  ? "text-green-600"
-                  : "text-amber-700"
+                success ? "text-green-600" : "text-amber-700"
               }`}
             >
               {message}
@@ -1143,8 +909,7 @@ function QuoteForm({ formRef }) {
 
           <p className="flex items-center justify-center gap-2 text-center text-[#a0adc3] text-[11px] mt-6">
             <LockKeyhole size={13} />
-            Your information will be used to respond to
-            your quote request.
+            Your information will be used to respond to your quote request.
           </p>
         </div>
       </form>
@@ -1164,21 +929,16 @@ function PortfolioCTA() {
 
       <div className="relative z-10 flex flex-col items-center">
         <div className="h-14 w-14 rounded-full bg-[#e8f0ff] text-[#4e83dc] flex items-center justify-center">
-          <MessageCircle
-            size={25}
-            strokeWidth={1.7}
-          />
+          <MessageCircle size={25} strokeWidth={1.7} />
         </div>
 
         <h2 className="mt-5 text-[#142644] text-[20px] md:text-[22px] font-semibold leading-snug">
-          Have Multiple Properties or Looking for
-          Portfolio Management?
+          Have Multiple Properties or Looking for Portfolio Management?
         </h2>
 
         <p className="text-[#8493ae] text-[12px] leading-6 max-w-[450px] mt-2">
-          We offer tailored portfolio management solutions
-          for landlords with multiple properties.
-          Let's discuss your needs directly.
+          We offer tailored portfolio management solutions for landlords with
+          multiple properties. Let's discuss your needs directly.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-5 mt-6">
@@ -1222,21 +982,31 @@ export default function PricingPage() {
       {/* ALL CUSTOM CSS IS INSIDE THIS FILE */}
       <style>{internalStyles}</style>
 
-      {/* HERO SECTION */}
-      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
+      {/* Pricing and Packages Hero */}
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
-          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208102/Price-Package_Price.avif'
-          alt="Price Package"
-          className="absolute inset-0 w-full h-full object-cover"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208102/Price-Package_Price.avif"
+          alt="Pricing and Packages"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#10213a]/70" />
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
-          <p className="text-white/80 text-xs mb-3">
-            Home / Pricing and Packages
-          </p>
+        <div className="absolute inset-0 bg-[#10213a]/70"></div>
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold">
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
+
+            <ChevronRight size={15} aria-hidden="true" />
+
+            <span className="text-[#9ddff5]">Pricing and Packages</span>
+          </nav>
+
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Pricing and Packages
           </h1>
         </div>
@@ -1245,7 +1015,6 @@ export default function PricingPage() {
       {/* PRICING SECTION */}
       <section className="bg-white py-16 md:py-24 px-5">
         <div className="max-w-[1120px] mx-auto">
-
           {/* SECTION HEADER */}
           <div className="text-center mb-12">
             <h2 className="text-[#142644] text-3xl md:text-[38px] font-semibold leading-tight">
@@ -1255,28 +1024,20 @@ export default function PricingPage() {
             </h2>
 
             <p className="text-[#8d9bb3] text-sm mt-4">
-              Simple pricing. Transparent management.
-              Tailored to your needs.
+              Simple pricing. Transparent management. Tailored to your needs.
             </p>
           </div>
 
           {/* TWO COLUMN LAYOUT */}
           <div className="grid grid-cols-1 lg:grid-cols-[350px_minmax(0,1fr)] gap-5 lg:gap-6 items-start">
-
             {/* LEFT */}
-            <CorePlan
-              onGetStarted={scrollToForm}
-            />
+            <CorePlan onGetStarted={scrollToForm} />
 
             {/* RIGHT */}
             <div className="flex flex-col gap-6 md:gap-10 min-w-0">
-
-              <QuoteForm
-                formRef={formRef}
-              />
+              <QuoteForm formRef={formRef} />
 
               <PortfolioCTA />
-
             </div>
           </div>
         </div>

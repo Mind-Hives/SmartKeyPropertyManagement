@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Phone, Mail } from "lucide-react";
-import imageOne from '../../assets/about/First_Group_Img.avif'
-import imageTwo from '../../assets/about/Second_Group_Img.avif'
-import imageThree from '../../assets/about/Third_Group_img.avif'
 import SEO from "@/components/seo/SEO";
 const leaders = [
   {
@@ -82,15 +79,15 @@ const leaders = [
 const teamGroups = [
   {
     title: "Our Collections Team",
-    image: imageOne,
+    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208147/6a0cc80d59b644e60f3b6b98_1.avif",
   },
   {
     title: "Our Operations Team",
-    image: imageTwo,
+    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208150/6a0dcdcce4010f4f5dcd0e38_Third_Group_img.avif",
   },
   {
     title: "Our Accounts Team",
-    image: imageThree,
+    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208145/6a0dcdc8a567c9f5ab0943d7_Second_Group_Img.avif",
   },
 ];
 
@@ -169,7 +166,7 @@ const TeamSection = () => {
 
       {/* For SEO ranking */}
       <SEO 
-      title="Introducing Our Team| Smartkey Property Management NYC"
+      title="Introducing Our Team | Smartkey Property Management NYC"
       description="Learn about the skilled people who run Smartkey Property Management. Our team is committed to helping property owners in NYC succeed by giving them expert help."
       />
     </main>

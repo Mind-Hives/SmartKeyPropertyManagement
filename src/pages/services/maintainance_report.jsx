@@ -2,31 +2,29 @@ import React from "react";
 import FAQ from "@/components/faq";
 import Hero from "@/components/hero";
 import { motion } from "framer-motion";
-import {
-  Wrench,
-  ClipboardCheck,
-  PhoneCall,
-  ShieldCheck,
-  Hammer,
-  Home,
-  CalendarCheck,
-  Phone,
-} from "lucide-react";
+import { Home, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208183/Maintenance_Software_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208183/Maintenance_Software_SmartKey_result.avif"></img>
+    ),
     title: "Delayed Repairs & Rising Costs",
     text: "When maintenance issues are addressed late, minor problems can quickly turn into major repairs. Leaks, electrical issues, or equipment failures often become more expensive when ignored. Effective property maintenance for landlords ensures repairs are identified early and handled before costs escalate.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208181/Maintenance_Reputation_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208181/Maintenance_Reputation_SmartKey_result.avif"></img>
+    ),
     title: "Tenant Satisfaction & Response Expectations",
     text: "Tenants expect maintenance requests to be handled promptly and professionally. Slow responses or unclear communication can create frustration and lead to higher tenant turnover. Organized maintenance coordination for rental properties helps ensure requests are tracked, scheduled, and resolved without unnecessary delays.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208177/Maintenance_Earning_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208177/Maintenance_Earning_SmartKey_result.avif"></img>
+    ),
     title: "Protecting Property Value & Operational Stability",
     text: "Consistent maintenance protects the long-term condition of rental units and common areas. A structured approach to property management maintenance services helps landlords maintain building standards, reduce operational stress and preserve the value of their investment over time.",
   },
@@ -34,17 +32,23 @@ const maintenanceItems = [
 
 const coordinationCards = [
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208182/Maintenance_Rpa_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208182/Maintenance_Rpa_SmartKey_result.avif"></img>
+    ),
     title: "Maintenance Request Intake & Evaluation",
     text: "Every repair begins with a structured request intake process. Tenants report maintenance issues through our system, allowing us to document the problem, review details, and begin tenant maintenance request management quickly. This organized intake process helps ensure maintenance issues are properly recorded before repair coordination begins.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208180/Maintenance_Constructor_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208180/Maintenance_Constructor_SmartKey_result.avif"></img>
+    ),
     title: "Contractor Scheduling & Property Repair Coordination",
     text: "Once a request is reviewed, we manage property repair coordination by scheduling qualified contractors for inspection or repair. Our team communicates with vendors, confirms availability and coordinates repair timelines to ensure work is completed efficiently while minimizing disruption to tenants and property operations.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208179/Maintenance_Tracking_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208179/Maintenance_Tracking_SmartKey_result.avif"></img>
+    ),
     title: "Repair Tracking & Owner Communication",
     text: "Throughout the repair process, maintenance progress is tracked and documented to ensure work moves forward without delays. Property owners receive clear updates on repair status, vendor activity and completion timelines, creating a transparent maintenance workflow that supports organized property management operations.",
   },
@@ -94,47 +98,68 @@ const whyCards = [
 const faqData = [
   {
     question: "How do property maintenance services work for landlords?",
-    answer: "Property maintenance services coordinate repairs, vendor scheduling, maintenance requests and repair tracking through a structured system that helps landlords manage property issues efficiently.",
+    answer:
+      "Property maintenance services coordinate repairs, vendor scheduling, maintenance requests and repair tracking through a structured system that helps landlords manage property issues efficiently.",
   },
   {
     question: "How does Smart Key handle maintenance requests from tenants?",
-    answer: "Smart Key records maintenance requests, evaluates urgency, schedules qualified contractors and tracks repairs until completion while keeping property owners informed throughout the process.",
+    answer:
+      "Smart Key records maintenance requests, evaluates urgency, schedules qualified contractors and tracks repairs until completion while keeping property owners informed throughout the process.",
   },
-   {
-    question: "What types of maintenance issues does Smart Key coordinate for rental properties?",
-    answer: "Smart Key coordinates plumbing, electrical, appliance and general building repairs while managing contractor scheduling, repair progress, and completion verification for rental properties.",
+  {
+    question:
+      "What types of maintenance issues does Smart Key coordinate for rental properties?",
+    answer:
+      "Smart Key coordinates plumbing, electrical, appliance and general building repairs while managing contractor scheduling, repair progress, and completion verification for rental properties.",
   },
-   {
+  {
     question: "How does maintenance coordination help reduce repair costs?",
-    answer: "Early repair coordination prevents small issues from becoming expensive problems, helping landlords reduce emergency repairs and manage maintenance more efficiently.",
+    answer:
+      "Early repair coordination prevents small issues from becoming expensive problems, helping landlords reduce emergency repairs and manage maintenance more efficiently.",
   },
   {
     question: "How does Smart Key coordinate contractors and repair vendors?",
-    answer: "Smart Key schedules qualified contractors, coordinates repair timelines, verifies work completion and documents maintenance activity so property owners maintain clear oversight of repairs.",
+    answer:
+      "Smart Key schedules qualified contractors, coordinates repair timelines, verifies work completion and documents maintenance activity so property owners maintain clear oversight of repairs.",
   },
   {
-    question: "Why is professional maintenance management important for rental properties?",
-    answer: "Professional maintenance management ensures repairs are handled quickly, communication stays organized and rental properties remain well-maintained while protecting long-term property value.",
+    question:
+      "Why is professional maintenance management important for rental properties?",
+    answer:
+      "Professional maintenance management ensures repairs are handled quickly, communication stays organized and rental properties remain well-maintained while protecting long-term property value.",
   },
 ];
 
 const MaintenanceServicesPage = () => {
   return (
     <main className="bg-white text-[#17395f]">
-      <section className="relative h-[540px] overflow-hidden flex items-center">
+      {/* Property Maintenance Hero */}
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
           src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208178/Maintainance-Hero-Image_SmartKey.avif"
           alt="Property Maintenance"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
+
         <div className="absolute inset-0 bg-[#07172a]/70"></div>
-        <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-          <p className="text-white/75 text-xs mb-4">
-            Home / Services / Property Maintenance
-          </p>
-          <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
+
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
+
+            <ChevronRight size={15} aria-hidden="true" />
+
+            <span className="text-[#9ddff5]">Property Maintenance</span>
+          </nav>
+
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Property Maintenance &
-            <br />
+            <br className="hidden sm:block" />
             Resident Services
           </h1>
         </div>
@@ -146,12 +171,28 @@ const MaintenanceServicesPage = () => {
             Property Maintenance & Resident Services for Rental Properties
           </p>
           <h2 className="text-2xl md:text-4xl font-extrabold leading-tight">
-            Property Maintenance & Resident Services for Rental
-            Properties
+            Property Maintenance & Resident Services for Rental Properties
           </h2>
           <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
-            Maintaining a rental property requires consistent coordination, timely repairs, and organized communication between owners, <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement">tenants</a>  and service providers. Without a structured system, maintenance issues can quickly lead to delays, rising repair costs, and tenant dissatisfaction. Reliable property maintenance services help landlords protect property conditions while keeping operations stable and predictable. <br /><br />
-            Smart Key provides professional rental property maintenance services designed specifically for residential landlords. As your property management partner, Smart Key facilitates all maintenance needs by dispatching our network of pre-vetted, experienced service providers to handle repairs efficiently and on schedule.
+            Maintaining a rental property requires consistent coordination,
+            timely repairs, and organized communication between owners,{" "}
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement"
+            >
+              tenants
+            </a>{" "}
+            and service providers. Without a structured system, maintenance
+            issues can quickly lead to delays, rising repair costs, and tenant
+            dissatisfaction. Reliable property maintenance services help
+            landlords protect property conditions while keeping operations
+            stable and predictable. <br />
+            <br />
+            Smart Key provides professional rental property maintenance services
+            designed specifically for residential landlords. As your property
+            management partner, Smart Key facilitates all maintenance needs by
+            dispatching our network of pre-vetted, experienced service providers
+            to handle repairs efficiently and on schedule.
           </p>
           <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
             <a href="/contact">Schedule Free Consultation</a>
@@ -165,7 +206,11 @@ const MaintenanceServicesPage = () => {
             Why Maintenance Management Matters for Rental Properties
           </h2>
           <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
-            Property maintenance is not simply a repair task handled when problems appear. It directly affects tenant satisfaction, operating costs and long-term property conditions. Without structured maintenance coordination, small issues can escalate into expensive repairs and operational disruptions for property owners.
+            Property maintenance is not simply a repair task handled when
+            problems appear. It directly affects tenant satisfaction, operating
+            costs and long-term property conditions. Without structured
+            maintenance coordination, small issues can escalate into expensive
+            repairs and operational disruptions for property owners.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -197,7 +242,17 @@ const MaintenanceServicesPage = () => {
             Our Property Maintenance Coordination System
           </h2>
           <p className="max-w-4xl mx-auto mt-4 text-sm text-gray-600 leading-relaxed">
-            Managing maintenance across rental properties requires more than responding to repair calls. <a className="text-blue-500 hover:underline" href="/">Smart Key</a> operates as a structured <strong>property maintenance company</strong> that coordinates maintenance requests, contractor scheduling and repair tracking through an organized workflow. Our system ensures maintenance issues are addressed efficiently while keeping property owners informed throughout the process.
+            Managing maintenance across rental properties requires more than
+            responding to repair calls.{" "}
+            <a className="text-blue-500 hover:underline" href="/">
+              Smart Key
+            </a>{" "}
+            operates as a structured{" "}
+            <strong>property maintenance company</strong> that coordinates
+            maintenance requests, contractor scheduling and repair tracking
+            through an organized workflow. Our system ensures maintenance issues
+            are addressed efficiently while keeping property owners informed
+            throughout the process.
           </p>
           <div className="flex grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             {coordinationCards.map((card, index) => (
@@ -303,7 +358,15 @@ const MaintenanceServicesPage = () => {
               Maintenance Request Handling & Resident Support
             </h2>
             <p className="max-w-4xl mx-auto mt-8 text-sm text-gray-600 leading-relaxed">
-              Maintenance requests from tenants require clear reporting, timely coordination and consistent follow-through. Smart Key manages tenant maintenance request management through an organized workflow that records repair requests, communicates with residents, schedules contractors and tracks each issue until completion. Our structured approach ensures reliable maintenance coordination for tenants, helping resolve problems efficiently while keeping property owners informed and maintenance operations organized.
+              Maintenance requests from tenants require clear reporting, timely
+              coordination and consistent follow-through. Smart Key manages
+              tenant maintenance request management through an organized
+              workflow that records repair requests, communicates with
+              residents, schedules contractors and tracks each issue until
+              completion. Our structured approach ensures reliable maintenance
+              coordination for tenants, helping resolve problems efficiently
+              while keeping property owners informed and maintenance operations
+              organized.
             </p>
             <button className="mt-8 mb-10 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
               <a href="/contact-us">Get in Touch</a>
@@ -311,24 +374,23 @@ const MaintenanceServicesPage = () => {
           </section>
         </div>
       </section>
-      
-      <FAQ 
-      title="Frequently Asked Question"
-      data={faqData}
-      />
 
-      <Hero 
-      title={"Own Property? We Make Managing It Effortless."}
-      buttonText="Schedule Free Consultation"
-      backgroundType="image"
-      backgroundSrc={"https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"}
-      buttonLink="/contact"
+      <FAQ title="Frequently Asked Question" data={faqData} />
+
+      <Hero
+        title={"Own Property? We Make Managing It Effortless."}
+        buttonText="Schedule Free Consultation"
+        backgroundType="image"
+        backgroundSrc={
+          "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"
+        }
+        buttonLink="/contact"
       />
 
       {/* For SEO ranking */}
-      <SEO 
-      title="Property Management Maintenance Services NYC | Smart Key"
-      description="Keep rental repairs organized with Smart Key’s property management maintenance services in NYC, including tenant requests, vendor coordination, repair tracking and owner updates."
+      <SEO
+        title="Property Management Maintenance Services NYC | Smart Key"
+        description="Keep rental repairs organized with Smart Key’s property management maintenance services in NYC, including tenant requests, vendor coordination, repair tracking and owner updates."
       />
     </main>
   );

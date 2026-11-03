@@ -1,12 +1,10 @@
-
 import SEO from "@/components/seo/SEO";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
-const API_URL = (
-  import.meta.env.VITE_API_URL 
-).replace(/\/+$/, "");
+const API_URL = import.meta.env.VITE_API_URL.replace(/\/+$/, "");
 const CARDS_PER_PAGE = 6;
 
 const BlogPage = () => {
@@ -15,48 +13,38 @@ const BlogPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
- 
-useEffect(() => {
-  const fetchBlogs = async () => {
-    try {
-      setLoading(true);
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        setLoading(true);
 
-      const response = await axios.get(
-        `${API_URL}/api/blogs`
-      );
+        const response = await axios.get(`${API_URL}/api/blogs`);
 
-      console.log("API Response:", response.data);
+        console.log("API Response:", response.data);
 
-      const blogData = response.data.data;
+        const blogData = response.data.data;
 
-      if (Array.isArray(blogData)) {
-        setBlogs(
-          blogData.filter((blog) => blog.published === true)
-        );
-      } else {
-        setBlogs([]);
+        if (Array.isArray(blogData)) {
+          setBlogs(blogData.filter((blog) => blog.published === true));
+        } else {
+          setBlogs([]);
+        }
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+        setError("Unable to load blogs.");
+      } finally {
+        setLoading(false);
       }
+    };
 
-    } catch (error) {
-      console.error("Failed to fetch blogs:", error);
-      setError("Unable to load blogs.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  fetchBlogs();
-}, []);
-
+    fetchBlogs();
+  }, []);
 
   const totalPages = Math.ceil(blogs.length / CARDS_PER_PAGE);
 
   const startIndex = (currentPage - 1) * CARDS_PER_PAGE;
 
-  const currentBlogs = blogs.slice(
-    startIndex,
-    startIndex + CARDS_PER_PAGE
-  );
+  const currentBlogs = blogs.slice(startIndex, startIndex + CARDS_PER_PAGE);
 
   const handlePrevious = () => {
     if (currentPage > 1) {
@@ -75,21 +63,28 @@ useEffect(() => {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
-          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208122/6a6395ce80d2691903f841da_Smartkey_Website_Hero_Images.avif"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793724757/worker-reading-news-with-tablet_result.avif"
           alt="Blogs"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-[#06172a]/70" />
+        <div className="absolute inset-0 bg-[#07172a]/75"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
-          <p className="text-white/80 text-xs mb-3">
-            Home / Blogs
-          </p>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
+            <ChevronRight size={15} aria-hidden="true" />
+            <span className="text-[#9ddff5]">Blogs</span>
+          </nav>
 
-          <h1 className="text-white text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Blogs
           </h1>
         </div>
@@ -98,18 +93,11 @@ useEffect(() => {
       {/* Blog Cards */}
       <section className="py-12 md:py-16 px-5">
         <div className="max-w-6xl mx-auto">
-
           {loading && (
-            <p className="text-center py-16 text-gray-500">
-              Loading blogs...
-            </p>
+            <p className="text-center py-16 text-gray-500">Loading blogs...</p>
           )}
 
-          {error && (
-            <p className="text-center py-16 text-red-500">
-              {error}
-            </p>
-          )}
+          {error && <p className="text-center py-16 text-red-500">{error}</p>}
 
           {!loading && !error && blogs.length === 0 && (
             <p className="text-center py-16 text-gray-500">
@@ -154,14 +142,13 @@ useEffect(() => {
       </section>
 
       {/* For SEO ranking */}
-      <SEO 
-      title="Blog | SmartKey Property Management"
-      description="Explore expert insights, landlord tips, and property management guides from SmartKey Property Management your trusted partner for stress-free rental success."
+      <SEO
+        title="Blog | SmartKey Property Management"
+        description="Explore expert insights, landlord tips, and property management guides from SmartKey Property Management your trusted partner for stress-free rental success."
       />
     </main>
   );
 };
-
 
 const BlogCard = ({ blog }) => {
   const image = blog.coverImage
@@ -185,7 +172,7 @@ const BlogCard = ({ blog }) => {
           <p className="text-[11px] text-gray-400 mb-2">
             {blog.publishDate || blog.createdAt
               ? new Date(
-                  blog.publishDate || blog.createdAt
+                  blog.publishDate || blog.createdAt,
                 ).toLocaleDateString()
               : ""}
           </p>
@@ -206,6 +193,5 @@ const BlogCard = ({ blog }) => {
     </Link>
   );
 };
-
 
 export default BlogPage;

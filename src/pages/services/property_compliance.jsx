@@ -1,43 +1,44 @@
-
 import React from "react";
 import FAQ from "@/components/faq";
 import Hero from "@/components/hero";
 import { motion } from "framer-motion";
-import {
-  Wrench,
-  ClipboardCheck,
-  PhoneCall,
-  ShieldCheck,
-  Hammer,
-  Home,
-  CalendarCheck,
-  Phone,
-} from "lucide-react";
+import { Home, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208186/Complience_Finance-Transaction_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208186/Complience_Finance-Transaction_SmartKey_result.avif"></img>
+    ),
     title: "Missed Violations & Compliance Issues",
     text: "Unaddressed violations can lead to escalating penalties, inspection failures and unnecessary regulatory complications. Ongoing monitoring helps identify issues before they become costly problems.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Income-Tracking_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Income-Tracking_SmartKey_result.avif"></img>
+    ),
     title: "Missed Regulatory Deadlines",
     text: "Many landlord requirements involve specific deadlines for inspections, filings, certifications and corrective actions. Missing these deadlines can result in fines and additional administrative burdens.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208185/Complience_Cost-Control_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208185/Complience_Cost-Control_SmartKey_result.avif"></img>
+    ),
     title: "Unexpected Expenses & Penalties",
     text: "Compliance-related issues often create avoidable costs through fines, emergency repairs, legal concerns and delayed corrective work. Proactive oversight helps reduce these financial surprises.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Performance-Insights_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Performance-Insights_SmartKey_result.avif"></img>
+    ),
     title: "Operational & Liability Risks",
     text: "Failure to maintain proper documentation, inspections and compliance records can expose property owners to unnecessary operational risks and potential disputes.",
   },
   {
-    icon: <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Audit-Readiness_SmartKey_result.avif"></img>,
+    icon: (
+      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208184/Complience_Audit-Readiness_SmartKey_result.avif"></img>
+    ),
     title: "Protecting Long-Term Property Value",
     text: "Strong compliance practices support safer, better-maintained properties while helping landlords fulfill their ongoing responsibilities",
   },
@@ -45,27 +46,37 @@ const maintenanceItems = [
 
 const coordinationCards = [
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208189/Complience_Rpa_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208189/Complience_Rpa_SmartKey_result.avif"></img>
+    ),
     title: "Compliance Monitoring & Violation Resolution",
     text: "Continuous compliance monitoring allows for the identification, tracking and resolution of issues before they become larger regulatory concerns. These include HPD compliance oversight, DOB, ECB, FDNY and DEP violations, support for required filings and corrective measures.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208190/Complience_Constructor_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208190/Complience_Constructor_SmartKey_result.avif"></img>
+    ),
     title: "Tenant & Property Compliance Management",
     text: "Rental Property Compliance Management Coordinating inspections, record keeping, resolving compliance issues with tenants and ensuring that the required documentation is organized and supporting lease administration and renewals. Proper documentation management makes audits, inspections and regulatory reviews easier.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>
+    ),
     title: "Strategic Oversight & Asset Protection",
     text: "Long term property performance is all about proactive planning. This includes planning for preventive maintenance, overseeing vendors and contractors, coordinating capital improvements and planning reserves to protect assets while supporting operational stability.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>
+    ),
     title: "Risk Management & Emergency Response",
     text: "One of the key aspects of good property management is knowing how to identify potential problems before they become costly headaches. This includes risk assessments, environmental and lead paint compliance awareness, mitigation planning and coordinated emergency response to urgent compliance issues.",
   },
   {
-    icon: <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>,
+    icon: (
+      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif"></img>
+    ),
     title: "Cost Control & Performance Oversight",
     text: "Strategic oversight also includes overseeing operating expenses and improving performance over the long-term. Utility reviews, insurance compliance assistance, tax assessment coordination, accounting and financial reporting, expense audits and performance reporting help property owners to make better operational decisions.",
   },
@@ -116,43 +127,63 @@ const whyCards = [
 const faqData = [
   {
     question: "How does property compliance help rental property owners?",
-    answer: "Property compliance helps rental property owners stay aligned with regulatory requirements, inspection obligations and documentation standards. A proactive compliance approach can reduce the risk of violations, avoid costly penalties, improve operational visibility and support stronger long-term property performance.",
+    answer:
+      "Property compliance helps rental property owners stay aligned with regulatory requirements, inspection obligations and documentation standards. A proactive compliance approach can reduce the risk of violations, avoid costly penalties, improve operational visibility and support stronger long-term property performance.",
   },
   {
     question: "Why is compliance monitoring important for landlords?",
-    answer: "Compliance monitoring helps landlords stay ahead of deadlines, inspections, regulatory changes and potential violations. A proactive approach can reduce costly penalties, improve operational visibility and support better long-term property management.",
+    answer:
+      "Compliance monitoring helps landlords stay ahead of deadlines, inspections, regulatory changes and potential violations. A proactive approach can reduce costly penalties, improve operational visibility and support better long-term property management.",
   },
-   {
+  {
     question: "What types of property violations does Smart Key help manage?",
-    answer: "Smart Key assists with monitoring and coordinating the resolution of various compliance-related issues, including HPD matters, DOB, ECB, FDNY, DEP violations, inspection-related concerns and other regulatory compliance requirements affecting rental properties.",
+    answer:
+      "Smart Key assists with monitoring and coordinating the resolution of various compliance-related issues, including HPD matters, DOB, ECB, FDNY, DEP violations, inspection-related concerns and other regulatory compliance requirements affecting rental properties.",
   },
-   {
+  {
     question: "How does strategic oversight help reduce operating costs?",
-    answer: "Strategic oversight helps identify inefficiencies before they become larger expenses. Through proactive planning, vendor coordination, compliance management, expense reviews and operational monitoring, property owners can reduce avoidable costs and improve overall performance.",
+    answer:
+      "Strategic oversight helps identify inefficiencies before they become larger expenses. Through proactive planning, vendor coordination, compliance management, expense reviews and operational monitoring, property owners can reduce avoidable costs and improve overall performance.",
   },
   {
     question: "How can proactive compliance management protect property value?",
-    answer: "Proactive compliance management helps prevent violations, supports timely maintenance, improves operational control and reduces long-term risk. By addressing issues early and maintaining regulatory alignment, property owners are better positioned to protect and preserve property value over time.",
+    answer:
+      "Proactive compliance management helps prevent violations, supports timely maintenance, improves operational control and reduces long-term risk. By addressing issues early and maintaining regulatory alignment, property owners are better positioned to protect and preserve property value over time.",
   },
 ];
 
 const PropertyComplianceSection = () => {
   return (
     <main className="bg-white text-[#17395f]">
-      <section className="relative h-[540px] overflow-hidden flex items-center">
+      {/* Property Maintenance Hero */}
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
           src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208178/Maintainance-Hero-Image_SmartKey.avif"
           alt="Property Maintenance"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
+
         <div className="absolute inset-0 bg-[#07172a]/70"></div>
-        <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-          <p className="text-white/75 text-xs mb-4">
-            Home / Services / Property Compliance & Strategic Oversight
-          </p>
-          <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
+
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
+
+            <ChevronRight size={15} aria-hidden="true" />
+
+            <span className="text-[#9ddff5]">
+              Property Compliance & Strategic Oversight
+            </span>
+          </nav>
+
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Property Maintenance &
-            <br />
+            <br className="hidden sm:block" />
             Resident Services
           </h1>
         </div>
@@ -164,11 +195,26 @@ const PropertyComplianceSection = () => {
             Property Maintenance & Resident Services for Rental Properties
           </p>
           <h2 className="text-2xl md:text-4xl font-extrabold leading-tight">
-            Property Compliance & Strategic Oversight Services for Rental Properties
+            Property Compliance & Strategic Oversight Services for Rental
+            Properties
           </h2>
           <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
-            Owning and operating rental property involves more than responding to violations when they appear. Effective property compliance requires ongoing oversight, regular monitoring, documentation management and proactive planning to help properties remain aligned with changing regulations and operational requirements. Without a structured approach, small compliance issues can quickly develop into larger risks that affect property performance, tenant satisfaction and long-term asset value. <br /><br />
-            Smart Key provides organized property compliance and strategic oversight services designed to help landlords stay ahead of potential issues rather than reacting to them after they occur. Through ongoing compliance monitoring, property inspections, risk management practices and operational oversight, we help support rental property compliance while reducing avoidable disruptions and maintaining greater stability across rental portfolios.
+            Owning and operating rental property involves more than responding
+            to violations when they appear. Effective property compliance
+            requires ongoing oversight, regular monitoring, documentation
+            management and proactive planning to help properties remain aligned
+            with changing regulations and operational requirements. Without a
+            structured approach, small compliance issues can quickly develop
+            into larger risks that affect property performance, tenant
+            satisfaction and long-term asset value. <br />
+            <br />
+            Smart Key provides organized property compliance and strategic
+            oversight services designed to help landlords stay ahead of
+            potential issues rather than reacting to them after they occur.
+            Through ongoing compliance monitoring, property inspections, risk
+            management practices and operational oversight, we help support
+            rental property compliance while reducing avoidable disruptions and
+            maintaining greater stability across rental portfolios.
           </p>
           <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
             <a href="/contact">Request a Free Property Consultation</a>
@@ -182,7 +228,12 @@ const PropertyComplianceSection = () => {
             Why Property Compliance Matters for Landlords
           </h2>
           <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
-            Property compliance is not simply about resolving violations after they appear. It plays a direct role in protecting property value, controlling operating costs and helping landlords meet ongoing regulatory obligations. Without structured oversight, small compliance issues can quickly turn into larger operational and financial challenges.
+            Property compliance is not simply about resolving violations after
+            they appear. It plays a direct role in protecting property value,
+            controlling operating costs and helping landlords meet ongoing
+            regulatory obligations. Without structured oversight, small
+            compliance issues can quickly turn into larger operational and
+            financial challenges.
           </p>
           <div className="mt-8 space-y-4">
             {maintenanceItems.map((card, index) => (
@@ -213,7 +264,10 @@ const PropertyComplianceSection = () => {
             What Property Compliance & Strategic Oversight Includes
           </h2>
           <p className="max-w-4xl mx-auto mt-4 text-sm text-gray-600 leading-relaxed">
-            Effective property compliance is more than just reacting to violations. It's ongoing monitoring, documentation, planning and oversight to ensure the properties remain compliant, protected and operationally stable over the long term.
+            Effective property compliance is more than just reacting to
+            violations. It's ongoing monitoring, documentation, planning and
+            oversight to ensure the properties remain compliant, protected and
+            operationally stable over the long term.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             {coordinationCards.map((card, index) => (
@@ -298,7 +352,8 @@ const PropertyComplianceSection = () => {
       <section className="px-5 py-10 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-xl md:text-3xl font-bold">
-            Why Choose Smart Key Property Management for Property Compliance & Strategic Oversight?
+            Why Choose Smart Key Property Management for Property Compliance &
+            Strategic Oversight?
           </h2>
           <div className="flex gap-4 mt-8">
             {whyCards.map((item, index) => (
@@ -319,8 +374,24 @@ const PropertyComplianceSection = () => {
               Protecting Property Value Through Strategic Oversight
             </h2>
             <p className="max-w-4xl mx-auto mt-8 text-sm text-gray-600 leading-relaxed">
-              Successful property ownership requires more than responding to issues as they occur. Long-term performance depends on proactive oversight, ongoing planning and effective compliance management. Staying ahead of regulatory obligations, monitoring compliance requirements and addressing potential concerns early helps reduce avoidable violations and operational disruptions. Strategic oversight also includes long-term asset planning, capital improvement coordination, vendor and contractor management and project supervision to help properties remain well-maintained and positioned for future growth. <br /><br />
-              Beyond operational coordination, structured oversight supports stronger financial performance through expense reviews, utility audits and the identification of cost-saving opportunities. By combining compliance monitoring, strategic planning and operational management, property owners gain better visibility into their assets while reducing risk and supporting long-term property value and performance.
+              Successful property ownership requires more than responding to
+              issues as they occur. Long-term performance depends on proactive
+              oversight, ongoing planning and effective compliance management.
+              Staying ahead of regulatory obligations, monitoring compliance
+              requirements and addressing potential concerns early helps reduce
+              avoidable violations and operational disruptions. Strategic
+              oversight also includes long-term asset planning, capital
+              improvement coordination, vendor and contractor management and
+              project supervision to help properties remain well-maintained and
+              positioned for future growth. <br />
+              <br />
+              Beyond operational coordination, structured oversight supports
+              stronger financial performance through expense reviews, utility
+              audits and the identification of cost-saving opportunities. By
+              combining compliance monitoring, strategic planning and
+              operational management, property owners gain better visibility
+              into their assets while reducing risk and supporting long-term
+              property value and performance.
             </p>
             <button className="mt-8 mb-10 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
               <a href="/contact">Start Lease Process</a>
@@ -334,36 +405,58 @@ const PropertyComplianceSection = () => {
             A Proactive Approach Helps Protect Property Value
           </h2>
           <p className="max-w-4xl mx-auto mt-4 text-md text-gray-600 leading-relaxed">
-            Effective property compliance is not just about avoiding violations it plays a critical role in protecting the long-term performance and value of a rental property. A proactive approach allows landlords to identify potential issues early, maintain stronger operational control and make more informed decisions before small problems become costly challenges. <br /><br />
+            Effective property compliance is not just about avoiding violations
+            it plays a critical role in protecting the long-term performance and
+            value of a rental property. A proactive approach allows landlords to
+            identify potential issues early, maintain stronger operational
+            control and make more informed decisions before small problems
+            become costly challenges. <br />
+            <br />
             <ul className="font-bold text-md text-left list-disc ml-39">
               <li>Reduced risk of violations, fines and regulatory issues.</li>
-              <li>Better visibility into compliance status and property operations.</li>
+              <li>
+                Better visibility into compliance status and property
+                operations.
+              </li>
               <li>Lower operating costs through proactive issue management.</li>
-              <li>Stronger control over documentation, inspections and oversight.</li>
-              <li>Protects long-term property value through consistent rental property compliance.</li>
-              <li>Supports stronger <a className="text-blue-500 hover:underline" href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement">tenant screening and placement</a> for greater tenancy stability.</li>
+              <li>
+                Stronger control over documentation, inspections and oversight.
+              </li>
+              <li>
+                Protects long-term property value through consistent rental
+                property compliance.
+              </li>
+              <li>
+                Supports stronger{" "}
+                <a
+                  className="text-blue-500 hover:underline"
+                  href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement"
+                >
+                  tenant screening and placement
+                </a>{" "}
+                for greater tenancy stability.
+              </li>
             </ul>
           </p>
         </div>
       </section>
-      
-              <FAQ 
-              title="Frequently Asked Question"
-              data={faqData}
-              />
-            <Hero 
-            title={"Own Property? We Make Managing It Effortless."}
-            buttonText="Schedule Free Consultation"
-            backgroundType="image"
-            backgroundSrc={"https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"}
-            buttonLink="/contact"
-            />
-        
-        {/* For SEO ranking */}
-        <SEO 
+
+      <FAQ title="Frequently Asked Question" data={faqData} />
+      <Hero
+        title={"Own Property? We Make Managing It Effortless."}
+        buttonText="Schedule Free Consultation"
+        backgroundType="image"
+        backgroundSrc={
+          "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"
+        }
+        buttonLink="/contact"
+      />
+
+      {/* For SEO ranking */}
+      <SEO
         title="Smartkey Property Compliance & Strategic Oversight"
         description="Manage your properties with confidence. Smart key provides expert property compliance services and proactive oversight to keep every detail in check."
-        />
+      />
     </main>
   );
 };

@@ -9,32 +9,32 @@ import GoogleReviews from "@/components/reviews/GoogleReviews";
 import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
 import SEO from "@/components/seo/SEO";
 
-const Feature = ({ cardBgColor, icon, title , discription }) => {
+const Feature = ({ cardBgColor, icon, title, discription }) => {
   return (
-    <div className={`flex flex-col items-center gap-3.5 p-6 rounded-xl shadow-sm relative border-2 transition-transform duration-300 ease-out [transform-style:preserve-3d] hover:-translate-x-2 hover:-translate-y-2 before:absolute before:inset-0 before:rounded-xl before:[transform:translate3d(8px,8px,-1px)] ${cardBgColor ? 'bg-[#dbf5fc]' : 'bg-[#ffffff]'}`}>
-
+    <div
+      className={`flex flex-col items-center gap-3.5 p-6 rounded-xl shadow-sm relative border-2 transition-transform duration-300 ease-out [transform-style:preserve-3d] hover:-translate-x-2 hover:-translate-y-2 before:absolute before:inset-0 before:rounded-xl before:[transform:translate3d(8px,8px,-1px)] ${cardBgColor ? "bg-[#dbf5fc]" : "bg-[#ffffff]"}`}
+    >
       {/* Icon or Image */}
       <div className="flex h-23 w-23 shrink-0 items-center justify-center overflow-hidden rounded-lg text-[#1f83c5]">
-          {typeof icon === "string" ? (
-              <img
-                  src={icon}
-                  alt=""
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-              />
-          ) : (
-              icon
-          )}
+        {typeof icon === "string" ? (
+          <img
+            src={icon}
+            alt=""
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          icon
+        )}
       </div>
 
       <div className="w-full min-w-0">
-        
         <h3 className="break-words text-base font-bold text-[#2f4f73] sm:text-lg md:text-xl lg:text-2xl">
           {title}
         </h3>
-        
+
         <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
-        {discription}
+          {discription}
         </p>
       </div>
     </div>
@@ -73,12 +73,12 @@ const faqData = [
     answer:
       "A property management company handles tenant screening, lease preparation, rent collection, maintenance coordination, compliance oversight, and financial reporting. Their role is to protect rental income, reduce vacancy risk, and manage daily operational responsibilities for property owners.",
   },
-   {
+  {
     question: "How do property management screen tenants?",
     answer:
       "Property managers screen tenants through background checks, credit evaluation, income verification, rental history review, and lease compliance assessment. This structured tenant screening process helps reduce payment risk, prevent disputes, and secure financially responsible renters.",
   },
-   {
+  {
     question: "Can a property manager help reduce vacancy?",
     answer:
       "Property managers screen tenants through background checks, credit evaluation, income verification, rental history review, and lease compliance assessment. This structured tenant screening process helps reduce payment risk, prevent disputes, and secure financially responsible renters.",
@@ -88,7 +88,7 @@ const faqData = [
     answer:
       "Yes. Property managers coordinate routine and emergency repairs through vetted vendors. They track maintenance requests, manage costs, verify completion, and document work to protect property value and maintain tenant satisfaction.",
   },
-   {
+  {
     question: "Do property managers handle legal compliance?",
     answer:
       "Yes. Property managers oversee lease enforcement, regulatory documentation, notice procedures, and compliance requirements. Structured compliance management helps landlords reduce legal exposure and maintain proper documentation standards.",
@@ -98,84 +98,95 @@ const faqData = [
 const socialMediaPosts = [
   {
     id: 1,
-    image: "/images/social/post-1.jpg",
-    link: "https://www.instagram.com/your-company/",
-    alt: "Company social media post",
+    image: "",
+    link: "https://www.instagram.com/reel/DefguYBvbsQ/",
+    alt: "Company instagram post",
   },
   {
     id: 2,
-    image: "/images/social/post-2.jpg",
-    link: "https://www.instagram.com/your-company/",
-    alt: "Company social media post",
+    image: "",
+    link: "https://www.instagram.com/reel/De-ZrsPgJIA/",
+    alt: "Company instagram post",
   },
   {
     id: 3,
-    image: "/images/social/post-3.jpg",
-    link: "https://www.linkedin.com/company/your-company/",
-    alt: "Company LinkedIn post",
+    image: "",
+    link: "https://www.instagram.com/reel/DXw15rpsQgT/",
+    alt: "Company instagram post",
   },
   {
     id: 4,
-    image: "/images/social/post-4.jpg",
-    link: "https://www.facebook.com/your-company/",
-    alt: "Company Facebook post",
+    image: "",
+    link: "https://www.instagram.com/reel/DZDmVeHzvWS/",
+    alt: "Company instagram post",
   },
   {
     id: 5,
-    image: "/images/social/post-4.jpg",
-    link: "https://www.facebook.com/your-company/",
-    alt: "Company Facebook post",
+    image: "",
+    link: "https://www.instagram.com/reel/DbZJkHaMotG/",
+    alt: "Company instagram post",
   },
   {
     id: 6,
-    image: "/images/social/post-4.jpg",
-    link: "https://www.facebook.com/your-company/",
-    alt: "Company Facebook post",
+    image: "",
+    link: "https://www.instagram.com/reel/DbEywo5MmOp/",
+    alt: "Company instagram post",
   },
   {
     id: 7,
-    image: "/images/social/post-4.jpg",
-    link: "https://www.facebook.com/your-company/",
-    alt: "Company Facebook post",
+    image: "",
+    link: "https://www.instagram.com/reel/Dec6lKnOA0f/",
+    alt: "Company instagram post",
+  },
+  {
+    id: 8,
+    image: "",
+    link: "https://www.instagram.com/reel/DUloyt_jIsj/",
+    alt: "Company instagram post",
   },
 ];
-
 
 const HomePage = () => {
   return (
     <>
-      <Hero 
-      backgroundType="video"
-      backgroundSrc='https://res.cloudinary.com/kj98z6s1/video/upload/v1793374837/SmartkeyHeroVdo.mp4'
-      title={"The Key to Hassle-Free Property Management"}
-      buttonText="Schedule Free Consultation"
-      buttonLink="/contact-us"
+      <Hero
+        backgroundType="video"
+        backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793374837/SmartkeyHeroVdo.mp4"
+        title={"The Key to Hassle-Free Property Management"}
+        buttonText="Schedule Free Consultation"
+        buttonLink="/contact-us"
       />
       <main className="bg-white text-[#0f2742]">
         {/* Home Page Property Management */}
         <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
-            <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
+          <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
+            <h1 className="w-full max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Full-Service Property Management in NYC for Landlords
+            </h1>
 
-                <h1 className="w-full max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    Full-Service Property Management in NYC for Landlords
-                </h1>
+            <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
+              Providing tenant screening, rent collection, maintenance
+              coordination and full-service property management for small and
+              mid-size residential properties across New York City.
+            </p>
+            <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
+              Smart Key Property Management delivers structured, process-driven
+              oversight designed to protect rental income and reduce operational
+              risk. From disciplined tenant placement to proactive maintenance
+              and organized financial tracking, we manage each stage of the
+              rental lifecycle with consistency, accountability and clear
+              communication.
+            </p>
 
-                <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
-                    Providing tenant screening, rent collection, maintenance coordination and full-service property management for small and mid-size residential properties across New York City.
-                </p>
-                <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
-                  Smart Key Property Management delivers structured, process-driven oversight designed to protect rental income and reduce operational risk. From disciplined tenant placement to proactive maintenance and organized financial tracking, we manage each stage of the rental lifecycle with consistency, accountability and clear communication.
-                </p>
-
-                <div className="mt-8 flex justify-center">
-                    <a
-                        href="/contact-us"
-                        className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
-                    >
-                        Request a Property Consultation
-                    </a>
-                </div>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="/contact-us"
+                className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
+              >
+                Request a Property Consultation
+              </a>
             </div>
+          </div>
         </section>
 
         {/* Service Block */}
@@ -186,85 +197,89 @@ const HomePage = () => {
           <div className="mt-10 space-y-10">
             {/* Services Card */}
             <ServiceBlock
-                title="Find Reliable Tenants Without Long Vacancies"
-                description="Smart Key Property Management helps landlords secure reliable tenants through structured background, credit, income and rental history screening. We reduce vacancy by leveraging NYC housing programs like CityFHEPS and managing unit approvals efficiently, with rent payments processed through DSS/HRA for added stability. Our strong network of brokers and real estate agents keeps a steady flow of prospects, so properties stay occupied and cash flow remains consistent."
-                image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208113/69ab558954d4c9c69e6c4bf2_result.avif"
-                imageAlt=""
-                buttonText="Learn More"
-                buttonLink="/services/tenant-screening-and-placement"
+              title="Find Reliable Tenants Without Long Vacancies"
+              description="Smart Key Property Management helps landlords secure reliable tenants through structured background, credit, income and rental history screening. We reduce vacancy by leveraging NYC housing programs like CityFHEPS and managing unit approvals efficiently, with rent payments processed through DSS/HRA for added stability. Our strong network of brokers and real estate agents keeps a steady flow of prospects, so properties stay occupied and cash flow remains consistent."
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208113/69ab558954d4c9c69e6c4bf2_result.avif"
+              imageAlt=""
+              buttonText="Learn More"
+              buttonLink="/services/tenant-screening-and-placement"
             />
             <ServiceBlock
-                reverse={true}
-                title="Proactive Maintenance That Protects Property Value"
-                description="We provide property maintenance services designed to protect asset value and maintain tenant satisfaction. Our team manages the full maintenance lifecycle, including repair coordination, emergency response, vendor oversight, and documented tracking. Every service request is handled through a structured process that supports accountability, cost control, and compliance standards."
-                image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208111/69a6026f328462fada4becb0.avif"
-                imageAlt=""
-                buttonText="Learn More"
-                buttonLink="/services/property-maintenance-and-resident-services"
+              reverse={true}
+              title="Proactive Maintenance That Protects Property Value"
+              description="We provide property maintenance services designed to protect asset value and maintain tenant satisfaction. Our team manages the full maintenance lifecycle, including repair coordination, emergency response, vendor oversight, and documented tracking. Every service request is handled through a structured process that supports accountability, cost control, and compliance standards."
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208111/69a6026f328462fada4becb0.avif"
+              imageAlt=""
+              buttonText="Learn More"
+              buttonLink="/services/property-maintenance-and-resident-services"
             />
             <ServiceBlock
-                title="Stay Legally Protected in Rental Market"
-                description="Navigating landlord-tenant regulations in NYC requires precision and experience. We assist with lease enforcement, proper documentation, housing court coordination, and structured communication aligned with New York rental laws. Our compliance-focused approach helps property owners reduce legal exposure, avoid procedural mistakes, and maintain organized records throughout the tenancy lifecycle."
-                image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/69a602bd6093c9f4ef875a2a.avif"
-                imageAlt=""
-                buttonText="Learn More"
-                buttonLink="/services/legal-compliances-and-risk-management"
+              title="Stay Legally Protected in Rental Market"
+              description="Navigating landlord-tenant regulations in NYC requires precision and experience. We assist with lease enforcement, proper documentation, housing court coordination, and structured communication aligned with New York rental laws. Our compliance-focused approach helps property owners reduce legal exposure, avoid procedural mistakes, and maintain organized records throughout the tenancy lifecycle."
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/69a602bd6093c9f4ef875a2a.avif"
+              imageAlt=""
+              buttonText="Learn More"
+              buttonLink="/services/legal-compliances-and-risk-management"
             />
             <ServiceBlock
-                reverse={true}
-                title="Reliable Rent Collection & Arrears Recovery"
-                description="Smart Key Property Management ensures timely rent collection through structured tracking systems, automated reminders and consistent follow-ups. When payments become overdue, we initiate a clear arrears recovery process that includes documented notices, payment coordination, and escalation procedures when necessary. Our transparent financial reporting keeps owners fully informed while protecting steady cash flow and reducing prolonged delinquencies."
-                image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208112/69a60301f89490be5b43c7aa.avif"
-                imageAlt=""
-                buttonText="Learn More"
-                buttonLink="/services/rent-collection-and-arrears-recovery"
+              reverse={true}
+              title="Reliable Rent Collection & Arrears Recovery"
+              description="Smart Key Property Management ensures timely rent collection through structured tracking systems, automated reminders and consistent follow-ups. When payments become overdue, we initiate a clear arrears recovery process that includes documented notices, payment coordination, and escalation procedures when necessary. Our transparent financial reporting keeps owners fully informed while protecting steady cash flow and reducing prolonged delinquencies."
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208112/69a60301f89490be5b43c7aa.avif"
+              imageAlt=""
+              buttonText="Learn More"
+              buttonLink="/services/rent-collection-and-arrears-recovery"
             />
           </div>
         </section>
 
-        
         {/* Feature Section */}
         <section className="bg-[#eff3ee] py-12 mt-8">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-xl md:text-3xl font-bold">
-               Why NYC Landlords Trust Smart Key Property Management
+              Why NYC Landlords Trust Smart Key Property Management
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-9">
-              
-              <Feature 
-              cardBgColor = {true}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208110/Home-page_Tracking_SmartKey_result.avif'
-              title="AppFolio-Powered" 
-              discription="Operates through AppFolio, providing real-time tracking for maintenance, rent collection, documentation and clear communication between owners and tenants." />
-              
-              <Feature 
-              cardBgColor = {false}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Support_SmartKey_result.avif'
-              title="24/7 Tenant & Owner Support" 
-              discription="Our round-the-clock support ensures urgent issues are resolved quickly, protecting rental income and preventing small problems from escalating." />
-              
-              <Feature 
-              cardBgColor = {true}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208114/Home-page_Tools_SmartKey_result.avif'
-              title="Fast, Cost-Controlled Maintenance" 
-              discription="Our trusted vendor network delivers prompt repairs, helping control expenses while maintaining property condition and tenant satisfaction." />
+              <Feature
+                cardBgColor={true}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208110/Home-page_Tracking_SmartKey_result.avif"
+                title="AppFolio-Powered"
+                discription="Operates through AppFolio, providing real-time tracking for maintenance, rent collection, documentation and clear communication between owners and tenants."
+              />
 
-              <Feature 
-              cardBgColor = {false}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/Home-page_Vendor_SmartKey_result.avif'
-              title="NYC Compliance Expertise (DOB & HPD)" 
-              discription="We handle DOB and HPD compliance requirements, inspections and violations to keep NYC rental properties legally protected." />
-              <Feature 
-              cardBgColor = {true}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Acquisition_SmartKey_result.avif'
-              title="Strategic Vacancy & Housing Partnerships" 
-              discription="We reduce vacancy through structured tenant placement, including housing voucher coordination and compliance management across New York City." />
+              <Feature
+                cardBgColor={false}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Support_SmartKey_result.avif"
+                title="24/7 Tenant & Owner Support"
+                discription="Our round-the-clock support ensures urgent issues are resolved quickly, protecting rental income and preventing small problems from escalating."
+              />
 
-              <Feature 
-              cardBgColor = {false}
-              icon = 'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Certification_SmartKey_result.avif'
-              title="Reliable Rent Tracking & Collection" 
-              discription="We monitor rent status, communicate with tenants and maintain accurate records to support smooth monthly collections." />
+              <Feature
+                cardBgColor={true}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208114/Home-page_Tools_SmartKey_result.avif"
+                title="Fast, Cost-Controlled Maintenance"
+                discription="Our trusted vendor network delivers prompt repairs, helping control expenses while maintaining property condition and tenant satisfaction."
+              />
+
+              <Feature
+                cardBgColor={false}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/Home-page_Vendor_SmartKey_result.avif"
+                title="NYC Compliance Expertise (DOB & HPD)"
+                discription="We handle DOB and HPD compliance requirements, inspections and violations to keep NYC rental properties legally protected."
+              />
+              <Feature
+                cardBgColor={true}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Acquisition_SmartKey_result.avif"
+                title="Strategic Vacancy & Housing Partnerships"
+                discription="We reduce vacancy through structured tenant placement, including housing voucher coordination and compliance management across New York City."
+              />
+
+              <Feature
+                cardBgColor={false}
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Certification_SmartKey_result.avif"
+                title="Reliable Rent Tracking & Collection"
+                discription="We monitor rent status, communicate with tenants and maintain accurate records to support smooth monthly collections."
+              />
             </div>
           </div>
         </section>
@@ -276,13 +291,10 @@ const HomePage = () => {
         description="Our property management process follows a defined, step-by-step structure designed to protect rental income and maintain operational control. From initial property review to system setup and daily execution, each stage is documented and coordinated. This structured approach ensures consistency, accountability and long-term stability for every property we manage."
         steps={steps}
       />
-      
-      <MyMap 
-      />
 
-      <GoogleReviews 
-      duration={40}
-      />
+      <MyMap />
+
+      <GoogleReviews duration={40} />
 
       {/* FAQ */}
       <FAQ
@@ -292,24 +304,24 @@ const HomePage = () => {
         titleColor="text-[#2f4f73]"
       />
       {/* Social Media */}
-      <SocialMediaGallery 
-        title="See what all the talk is about!"
-        subtitle="Transformative client experience from all around the globe"
+      <SocialMediaGallery
+        title="Liked What You See? There's More on Instagram!"
+        subtitle="Get a closer look at Smart Key through real property transformations, behind-the-scenes moments, and insights you won't want to miss. Follow along!"
         cards={socialMediaPosts}
       />
 
       {/* Footer CTA */}
-      <FooterCTA 
-      // backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
-      title={'Own Property? We Make Managing It Effortless.'}
-      buttonText='Schedule Free Consultation'
-      buttonLink='/contact-us'
+      <FooterCTA
+        // backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
+        title={"Own Property? We Make Managing It Effortless."}
+        buttonText="Schedule Free Consultation"
+        buttonLink="/contact-us"
       />
 
       {/* For SEO ranking */}
-      <SEO 
-      title="Full-Service Property Management NYC | Smart Key"
-      description="Full-service property management in NYC for landlords and property owners. Get support with rent collection, tenant screening, maintenance, compliance and financial reporting."
+      <SEO
+        title="Full-Service Property Management NYC | Smart Key"
+        description="Full-service property management in NYC for landlords and property owners. Get support with rent collection, tenant screening, maintenance, compliance and financial reporting."
       />
     </>
   );

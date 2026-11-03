@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // Default reviews
@@ -69,8 +68,8 @@ const GoogleLogo = () => (
 
 const GoogleReviews = ({
   reviews = defaultReviews,
-  title = "What People Say on Google Reviews",
-  subtitle = "Many job seekers highlight positive work culture, a transparent recruitment process, and real career growth.",
+  title = "What Makes Property Owners Stay With Us?",
+  subtitle = "Property management is more than collecting rent. Discover why owners trust Smart Key for reliable service and peace of mind.",
   duration = 40,
 }) => {
   if (!reviews.length) return null;
@@ -80,10 +79,8 @@ const GoogleReviews = ({
 
   return (
     <section className="overflow-hidden bg-[#eaf6fc] py-16 sm:py-20 lg:py-24">
-
       {/* Header */}
       <div className="mx-auto max-w-7xl px-5 text-center sm:px-8">
-
         <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#1f83c5] sm:text-sm">
           Google Reviews
         </span>
@@ -95,24 +92,20 @@ const GoogleReviews = ({
         <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#647b91] sm:text-base">
           {subtitle}
         </p>
-
       </div>
 
       {/* Reviews Carousel */}
       <div className="google-reviews-container relative mt-12 w-full overflow-hidden">
-
         <div
           className="animate-google-reviews flex w-max gap-5 sm:gap-6"
           style={{ animationDuration: `${duration}s` }}
         >
-
           {duplicatedReviews.map((item, index) => (
             <article
               key={`${item.id}-${index}`}
               aria-hidden={index >= reviews.length}
               className="flex min-h-[320px] w-[300px] shrink-0 flex-col rounded-3xl bg-white p-7 shadow-[0_8px_30px_rgba(23,57,95,0.08)] sm:min-h-[340px] sm:w-[350px] sm:p-8"
             >
-
               {/* Star Rating */}
               <div className="flex gap-1 text-xl text-[#FBBF24]">
                 {Array.from({ length: 5 }).map((_, starIndex) => (
@@ -128,9 +121,7 @@ const GoogleReviews = ({
               </h3>
 
               {item.date && (
-                <p className="mt-1 text-xs text-gray-400">
-                  {item.date}
-                </p>
+                <p className="mt-1 text-xs text-gray-400">{item.date}</p>
               )}
 
               {/* Review Text */}
@@ -143,19 +134,15 @@ const GoogleReviews = ({
                 <GoogleLogo />
 
                 <div>
-                  <p className="text-sm font-bold text-gray-800">
-                    Google
-                  </p>
+                  <p className="text-sm font-bold text-gray-800">Google</p>
 
                   <p className="text-xs font-semibold tracking-wide text-gray-500">
                     Reviews ★★★★★
                   </p>
                 </div>
               </div>
-
             </article>
           ))}
-
         </div>
 
         {/* Left Fade */}
@@ -169,7 +156,6 @@ const GoogleReviews = ({
           aria-hidden="true"
           className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#eaf6fc] to-transparent sm:w-12 md:w-20"
         />
-
       </div>
     </section>
   );

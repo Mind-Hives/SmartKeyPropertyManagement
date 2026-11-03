@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { Send, User, Phone, Mail, MessageSquare, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Send,
+  User,
+  Phone,
+  Mail,
+  MessageSquare,
+  Loader2,
+  CheckCircle2,
+  AlertCircle,
+  ChevronRight,
+} from "lucide-react";
 
 const CONTACT_API = import.meta.env.VITE_CONTACT_API_URL || "/api/send-email";
 
@@ -26,10 +37,14 @@ const ContactPage = () => {
     e.preventDefault();
     setStatus({ type: "", message: "" });
 
-    if (!formData.name.trim() || (!formData.phone.trim() && !formData.email.trim())) {
+    if (
+      !formData.name.trim() ||
+      (!formData.phone.trim() && !formData.email.trim())
+    ) {
       setStatus({
         type: "error",
-        message: "Please enter your name and either a phone number or email address.",
+        message:
+          "Please enter your name and either a phone number or email address.",
       });
       return;
     }
@@ -54,12 +69,15 @@ const ContactPage = () => {
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(data.error || "Unable to send your message. Please try again.");
+        throw new Error(
+          data.error || "Unable to send your message. Please try again.",
+        );
       }
 
       setStatus({
         type: "success",
-        message: data.message || "Thank you! Your message has been sent successfully.",
+        message:
+          data.message || "Thank you! Your message has been sent successfully.",
       });
 
       setFormData({
@@ -71,7 +89,8 @@ const ContactPage = () => {
     } catch (error) {
       setStatus({
         type: "error",
-        message: error.message || "Failed to send message. Please try again later.",
+        message:
+          error.message || "Failed to send message. Please try again later.",
       });
     } finally {
       setSubmitting(false);
@@ -80,21 +99,28 @@ const ContactPage = () => {
 
   return (
     <main className="bg-white">
-      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
-          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/Contact-Us_SmartKey.avif'
-          alt="SmartKey Property Portfolio"
-          className="absolute inset-0 w-full h-full object-cover"
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/Contact-Us_SmartKey.avif"
+          alt="Contact us"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-[#10213a]/70" />
+        <div className="absolute inset-0 bg-[#07172a]/75"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
-          <p className="text-white/80 text-xs mb-3">
-            Home / Contact Us
-          </p>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
+            <ChevronRight size={15} aria-hidden="true" />
+            <span className="text-[#9ddff5]">Contact Us</span>
+          </nav>
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Contact Us
           </h1>
         </div>

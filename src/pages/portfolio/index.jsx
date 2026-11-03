@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 const API_URL = (
   import.meta.env.VITE_API_URL || "http://localhost:3000"
@@ -54,13 +54,10 @@ const PortfolioPage = () => {
         setLoading(true);
         setError("");
 
-        const response = await axios.get(
-          `${API_URL}/api/properties`,
-          {
-            signal: controller.signal,
-            timeout: 15000,
-          }
-        );
+        const response = await axios.get(`${API_URL}/api/properties`, {
+          signal: controller.signal,
+          timeout: 15000,
+        });
 
         console.log("Properties API:", response.data);
 
@@ -76,9 +73,7 @@ const PortfolioPage = () => {
         if (axios.isCancel(err)) return;
 
         console.error("Failed to fetch properties:", err);
-        setError(
-          "Unable to load properties. Please try again."
-        );
+        setError("Unable to load properties. Please try again.");
       } finally {
         if (!controller.signal.aborted) {
           setLoading(false);
@@ -92,15 +87,13 @@ const PortfolioPage = () => {
   }, []);
 
   // Pagination
-  const totalPages = Math.ceil(
-    properties.length / CARDS_PER_PAGE
-  );
+  const totalPages = Math.ceil(properties.length / CARDS_PER_PAGE);
 
   const startIndex = (currentPage - 1) * CARDS_PER_PAGE;
 
   const currentCards = properties.slice(
     startIndex,
-    startIndex + CARDS_PER_PAGE
+    startIndex + CARDS_PER_PAGE,
   );
 
   const handleNext = () => {
@@ -127,23 +120,31 @@ const PortfolioPage = () => {
 
   return (
     <main className="bg-white">
-
-      {/* HERO SECTION */}
-      <section className="relative h-[240px] md:h-[300px] lg:h-[420px] flex items-end overflow-hidden">
+      {/* Portfolio Hero */}
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
-          src='https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/SamrtKey_Our-Portfolio-Hero-Image_result.avif'
+          src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208095/SamrtKey_Our-Portfolio-Hero-Image_result.avif"
           alt="SmartKey Property Portfolio"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-[#10213a]/70" />
+        <div className="absolute inset-0 bg-[#10213a]/70"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-5 pb-10 md:pb-14">
-          <p className="text-white/80 text-xs mb-3">
-            Home / Portfolio
-          </p>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold">
+            <ChevronRight size={15} aria-hidden="true" />
+
+            <span className="text-[#9ddff5]">Portfolio</span>
+          </nav>
+
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Our Portfolio
           </h1>
         </div>
@@ -152,24 +153,19 @@ const PortfolioPage = () => {
       {/* PORTFOLIO GRID */}
       <section className="py-14 md:py-20 px-5">
         <div className="max-w-5xl mx-auto">
-
           {/* LOADING STATE */}
           {loading && (
             <div className="flex flex-col items-center justify-center py-20">
               <div className="w-9 h-9 border-[3px] border-[#17395f]/20 border-t-[#17395f] rounded-full animate-spin mb-4" />
 
-              <p className="text-gray-500 text-sm">
-                Loading properties...
-              </p>
+              <p className="text-gray-500 text-sm">Loading properties...</p>
             </div>
           )}
 
           {/* ERROR STATE */}
           {!loading && error && (
             <div className="text-center py-20">
-              <p className="text-red-500 text-sm">
-                {error}
-              </p>
+              <p className="text-red-500 text-sm">{error}</p>
 
               <button
                 onClick={() => window.location.reload()}
@@ -181,36 +177,30 @@ const PortfolioPage = () => {
           )}
 
           {/* EMPTY STATE */}
-          {!loading &&
-            !error &&
-            properties.length === 0 && (
-              <div className="text-center py-20">
-                <h2 className="text-[#17395f] text-xl font-semibold">
-                  No Properties Available
-                </h2>
+          {!loading && !error && properties.length === 0 && (
+            <div className="text-center py-20">
+              <h2 className="text-[#17395f] text-xl font-semibold">
+                No Properties Available
+              </h2>
 
-                <p className="text-gray-500 text-sm mt-3">
-                  Check back soon for our latest properties.
-                </p>
-              </div>
-            )}
+              <p className="text-gray-500 text-sm mt-3">
+                Check back soon for our latest properties.
+              </p>
+            </div>
+          )}
 
           {/* PROPERTY CARDS */}
           {!loading && !error && properties.length > 0 && (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
                 {currentCards.map((property) => (
-                  <PortfolioCard
-                    key={property.id}
-                    property={property}
-                  />
+                  <PortfolioCard key={property.id} property={property} />
                 ))}
               </div>
 
               {/* PAGINATION */}
               {totalPages > 1 && (
                 <div className="flex justify-center items-center gap-4 mt-14">
-
                   <button
                     onClick={handlePrevious}
                     disabled={currentPage === 1}
@@ -238,12 +228,10 @@ const PortfolioPage = () => {
                   >
                     Next →
                   </button>
-
                 </div>
               )}
             </>
           )}
-
         </div>
       </section>
     </main>
@@ -253,10 +241,7 @@ const PortfolioPage = () => {
 // PROPERTY CARD COMPONENT
 const PortfolioCard = ({ property }) => {
   // Your CMS stores thumbnailImage separately from images
-  const image =
-    property.thumbnailImage ||
-    property.images?.[0] ||
-    "";
+  const image = property.thumbnailImage || property.images?.[0] || "";
 
   const imageUrl = getImageUrl(image);
 

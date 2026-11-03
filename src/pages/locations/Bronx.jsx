@@ -1,35 +1,36 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import FAQ from "@/components/faq";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
 import ScrollingNames from "@/components/scrollingName/ScrollingName";
 import SEO from "@/components/seo/SEO";
 
 function Bronx() {
-const names = [
-  "Astoria",
-  "Long Island City",
-  "Sunnyside",
-  "Woodside",
-  "Jackson Heights",
-  "Elmhurst",
-  "Flushing",
-  "Forest Hills",
-  "Rego Park",
-  "Jamaica",
-  "Kew Gardens",
-  "Ridgewood",
-  "Bayside",
-  "Fresh Meadows",
-  "Astoria",
-  "Sunnyside",
-  "Woodside",
-  "Elmhurst",
-  "Flushing",
-  "Jamaica",
-  "Forest Hills",
-  "Bayside",
-];
+  const names = [
+    "Astoria",
+    "Long Island City",
+    "Sunnyside",
+    "Woodside",
+    "Jackson Heights",
+    "Elmhurst",
+    "Flushing",
+    "Forest Hills",
+    "Rego Park",
+    "Jamaica",
+    "Kew Gardens",
+    "Ridgewood",
+    "Bayside",
+    "Fresh Meadows",
+    "Astoria",
+    "Sunnyside",
+    "Woodside",
+    "Elmhurst",
+    "Flushing",
+    "Jamaica",
+    "Forest Hills",
+    "Bayside",
+  ];
 
   const services = [
     {
@@ -124,19 +125,30 @@ const names = [
   return (
     <main className="bg-white text-[#17395f]">
       {/* Bronx Hero */}
-      <section className="relative aspect-[14/6] overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-28">
+      <section className="relative flex h-[300px] items-center overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
         <img
           src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208122/6a6395ce80d2691903f841da_Smartkey_Website_Hero_Images.avif"
           alt="Bronx Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-[#07172a]/75"></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 flex flex-col">
-          <p className="text-white/70 text-sm sm:text-base">Home / Bronx</p>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-5 pt-16 sm:px-6 sm:pt-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-300"
+          >
+            <Link to="/" className="transition hover:text-[#9ddff5]">
+              Home
+            </Link>
 
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <ChevronRight size={15} aria-hidden="true" />
+
+            <span className="text-[#9ddff5]">Bronx</span>
+          </nav>
+
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Bronx
           </h1>
         </div>
@@ -194,8 +206,7 @@ const names = [
             duration={40}
             pauseOnHover={true}
           />
-
-         </div>
+        </div>
       </section>
 
       {/* New Service Section */}
@@ -393,8 +404,8 @@ const names = [
       </section>
 
       {/* FAQ */}
-      
-          <FAQ title="Frequently Asked Question" data={faqData} />
+
+      <FAQ title="Frequently Asked Question" data={faqData} />
 
       {/* Footer CTA */}
       <FooterCTA
@@ -405,10 +416,10 @@ const names = [
         buttonText="Schedule Free Consultation"
         buttonLink="/contact"
       />
-  
-      <SEO 
-      title="Bronx Property Management Company | Smart Key"
-      description="Professional property management in the Bronx for landlords and rental property owners. Smart Key handles tenant screening, maintenance, rent collection and day-to-day property operations."
+
+      <SEO
+        title="Bronx Property Management Company | Smart Key"
+        description="Professional property management in the Bronx for landlords and rental property owners. Smart Key handles tenant screening, maintenance, rent collection and day-to-day property operations."
       />
     </main>
   );

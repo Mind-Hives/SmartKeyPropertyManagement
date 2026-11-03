@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 const SocialMediaGallery = ({
   title = "See what all the talk is about!",
-  subtitle = "Transformative client experience from all around the globe",
+  subtitle = "Get a closer look at Smart Key through real property transformations, behind-the-scenes moments, and insights you won't want to miss. Follow along!",
   cards = [],
 }) => {
   const sliderRef = useRef(null);
