@@ -25,7 +25,7 @@ export default function AppRoutes() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<TeamSection />} />
+        <Route path="/our-team" element={<TeamSection />} />
 
         <Route path="/services/rent-collection-and-arrears-recovery" element={<RentCollectionPage />} />
         <Route path="/services/lease-administration-and-renewals" element={<LeaseAdministrationPage />} />
@@ -37,7 +37,7 @@ export default function AppRoutes() {
 
 
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/our-portfolio" element={<PortfolioPage />} />
         <Route path="/blogs" element={<BlogPage />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/Queens" element={<Queens />}/>

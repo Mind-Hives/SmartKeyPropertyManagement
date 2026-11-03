@@ -90,7 +90,7 @@ function Queens() {
       address: "179-15 144th Ave, Queens, NY 11434",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208131/6ab54b9faa40b5b2b09ca8ea_prop_three.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 179-15 144th Avenue, Queens",
     },
     {
@@ -98,7 +98,7 @@ function Queens() {
       address: "186-11 122nd Ave, Queens, NY 11413",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208134/6ab54ba2519406c2520d5223_prop_two.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 186-11 122nd Avenue, Queens",
     },
     {
@@ -106,7 +106,7 @@ function Queens() {
       address: "114-33 194th St, Queens, NY 11412",
       image:
         "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208132/6ab54ba3402dff61b3346cc0_prop_one.avif",
-      link: "/portfolio",
+      link: "/our-portfolio",
       alt: "Residential property at 114-33 194th Street, Queens",
     },
   ];

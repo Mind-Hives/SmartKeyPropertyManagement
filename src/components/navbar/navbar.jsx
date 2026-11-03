@@ -4,7 +4,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 
 const aboutLinks = [
   { name: "Our Company", path: "" },
-  { name: "Our Team", path: "/about" },
+  { name: "Our Team", path: "/our-team" },
 ];
 
 const servicesLinks = [
@@ -247,7 +247,7 @@ const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
 
           {/* Portfolio */}
           <li>
-            <NavLink to="/portfolio" className={getNavLinkClass}>
+            <NavLink to="/our-portfolio" className={getNavLinkClass}>
               Portfolio
             </NavLink>
           </li>
@@ -345,7 +345,7 @@ const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
 
           {/* Portfolio */}
           <NavLink
-            to="/portfolio"
+            to="/our-portfolio"
             className={({ isActive }) =>
               `block transition-colors duration-300 hover:text-[#12a8ff] ${
                 isActive ? "text-[#12a8ff] underline underline-offset-4" : ""
