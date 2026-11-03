@@ -1,6 +1,8 @@
 import React from "react";
 import FAQ from "@/components/faq";
-import Hero from "@/components/hero";
+import FooterCTA from "@/components/footerCTA/FooterCTA";
+import FeatureBlock from "@/components/featureBlock/FeatureBlock";
+import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import { motion } from "framer-motion";
 import { Home, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,23 +10,17 @@ import SEO from "@/components/seo/SEO";
 
 const maintenanceItems = [
   {
-    icon: (
-      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208183/Maintenance_Software_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208183/Maintenance_Software_SmartKey_result.avif",
     title: "Delayed Repairs & Rising Costs",
     text: "When maintenance issues are addressed late, minor problems can quickly turn into major repairs. Leaks, electrical issues, or equipment failures often become more expensive when ignored. Effective property maintenance for landlords ensures repairs are identified early and handled before costs escalate.",
   },
   {
-    icon: (
-      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208181/Maintenance_Reputation_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208181/Maintenance_Reputation_SmartKey_result.avif",
     title: "Tenant Satisfaction & Response Expectations",
     text: "Tenants expect maintenance requests to be handled promptly and professionally. Slow responses or unclear communication can create frustration and lead to higher tenant turnover. Organized maintenance coordination for rental properties helps ensure requests are tracked, scheduled, and resolved without unnecessary delays.",
   },
   {
-    icon: (
-      <img href="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208177/Maintenance_Earning_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208177/Maintenance_Earning_SmartKey_result.avif",
     title: "Protecting Property Value & Operational Stability",
     text: "Consistent maintenance protects the long-term condition of rental units and common areas. A structured approach to property management maintenance services helps landlords maintain building standards, reduce operational stress and preserve the value of their investment over time.",
   },
@@ -32,23 +28,17 @@ const maintenanceItems = [
 
 const coordinationCards = [
   {
-    icon: (
-      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208182/Maintenance_Rpa_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208182/Maintenance_Rpa_SmartKey_result.avif",
     title: "Maintenance Request Intake & Evaluation",
     text: "Every repair begins with a structured request intake process. Tenants report maintenance issues through our system, allowing us to document the problem, review details, and begin tenant maintenance request management quickly. This organized intake process helps ensure maintenance issues are properly recorded before repair coordination begins.",
   },
   {
-    icon: (
-      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208180/Maintenance_Constructor_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208180/Maintenance_Constructor_SmartKey_result.avif",
     title: "Contractor Scheduling & Property Repair Coordination",
     text: "Once a request is reviewed, we manage property repair coordination by scheduling qualified contractors for inspection or repair. Our team communicates with vendors, confirms availability and coordinates repair timelines to ensure work is completed efficiently while minimizing disruption to tenants and property operations.",
   },
   {
-    icon: (
-      <img src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208179/Maintenance_Tracking_SmartKey_result.avif"></img>
-    ),
+    icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208179/Maintenance_Tracking_SmartKey_result.avif",
     title: "Repair Tracking & Owner Communication",
     text: "Throughout the repair process, maintenance progress is tracked and documented to ensure work moves forward without delays. Property owners receive clear updates on repair status, vendor activity and completion timelines, creating a transparent maintenance workflow that supports organized property management operations.",
   },
@@ -157,28 +147,25 @@ const MaintenanceServicesPage = () => {
             <span className="text-[#9ddff5]">Property Maintenance</span>
           </nav>
 
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Property Maintenance &
             <br className="hidden sm:block" />
             Resident Services
-          </h1>
+          </span>
         </div>
       </section>
 
       <section className="px-5 pt-14 pb-10 text-center">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs text-[#2f79b7] font-semibold mb-3">
+          <h1 className="w-full max-w-7xl text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
             Property Maintenance & Resident Services for Rental Properties
-          </p>
-          <h2 className="text-2xl md:text-4xl font-extrabold leading-tight">
-            Property Maintenance & Resident Services for Rental Properties
-          </h2>
-          <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
+          </h1>
+          <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
             Maintaining a rental property requires consistent coordination,
-            timely repairs, and organized communication between owners,{" "}
+            timely repairs, and organized communication between owners{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement"
+              href="/services/tenant-screening-and-placement"
             >
               tenants
             </a>{" "}
@@ -186,93 +173,88 @@ const MaintenanceServicesPage = () => {
             issues can quickly lead to delays, rising repair costs, and tenant
             dissatisfaction. Reliable property maintenance services help
             landlords protect property conditions while keeping operations
-            stable and predictable. <br />
-            <br />
+            stable and predictable.
+          </p>
+          <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
             Smart Key provides professional rental property maintenance services
             designed specifically for residential landlords. As your property
             management partner, Smart Key facilitates all maintenance needs by
             dispatching our network of pre-vetted, experienced service providers
             to handle repairs efficiently and on schedule.
           </p>
-          <button className="mt-7 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-            <a href="/contact">Schedule Free Consultation</a>
-          </button>
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/contact-us"
+              className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
+            >
+              Schedule Free Consultation
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Why Maintenance Management Matters for Rental Properties
-          </h2>
-          <p className="max-w-4xl mx-auto mt-5 text-sm text-gray-600 leading-relaxed">
-            Property maintenance is not simply a repair task handled when
-            problems appear. It directly affects tenant satisfaction, operating
-            costs and long-term property conditions. Without structured
-            maintenance coordination, small issues can escalate into expensive
-            repairs and operational disruptions for property owners.
-          </p>
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+          <div className="text-center">
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl lg:text-4xl">
+              Why Maintenance Management Matters for Rental Properties
+            </h2>
+            <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
+              Property maintenance is not simply a repair task handled when
+              problems appear. It directly affects tenant satisfaction,
+              operating costs and long-term property conditions. Without
+              structured maintenance coordination, small issues can escalate
+              into expensive repairs and operational disruptions for property
+              owners.
+            </p>
+          </div>
 
           <div className="mt-8 space-y-4">
             {maintenanceItems.map((card, index) => (
-              <div
+              // Feature component used
+              <FeatureBlock
                 key={index}
-                className="bg-[#dff6ff] border border-[#7ed8ff] rounded-md p-4 md:p-5 flex flex-col md:flex-row gap-4 items-start text-left"
-              >
-                <div className="w-23 h-23 rounded bg-white text-[#1f83c5] flex items-center justify-center shrink-0">
-                  {card.icon}
-                </div>
-                <div>
-                  <h3 className="text-base md:text-lg font-bold">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                    {card.text}
-                  </p>
-                </div>
-              </div>
+                icon={card.icon}
+                title={card.title}
+                text={card.text}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
-            Our Property Maintenance Coordination System
-          </h2>
-          <p className="max-w-4xl mx-auto mt-4 text-sm text-gray-600 leading-relaxed">
-            Managing maintenance across rental properties requires more than
-            responding to repair calls.{" "}
-            <a className="text-blue-500 hover:underline" href="/">
-              Smart Key
-            </a>{" "}
-            operates as a structured{" "}
-            <strong>property maintenance company</strong> that coordinates
-            maintenance requests, contractor scheduling and repair tracking
-            through an organized workflow. Our system ensures maintenance issues
-            are addressed efficiently while keeping property owners informed
-            throughout the process.
-          </p>
-          <div className="flex grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            {coordinationCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-[#dff6ff] border border-[#7ed8ff] rounded-md p-4 md:p-5 flex flex-col gap-4 items-start text-left"
-              >
-                <div className="w-32 h-32 flex text-[#1f83c5] items-center justify-center shrink-0">
-                  {card.icon}
+      <section className="bg-white px-5 py-10 sm:px-8 sm:py-12">
+        <div className="mx-auto w-full max-w-5xl">
+          <div className="text-center">
+            <h2 className="text-xl font-bold text-[#2f4f73] sm:text-2xl md:text-3xl">
+              Our Property Maintenance Coordination System
+            </h2>
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+              Managing maintenance across rental properties requires more than
+              responding to repair calls.{" "}
+              <a className="text-blue-500 hover:underline" href="/">
+                Smart Key
+              </a>{" "}
+              operates as a structured{" "}
+              <strong>property maintenance company</strong> that coordinates
+              maintenance requests, contractor scheduling and repair tracking
+              through an organized workflow. Our system ensures maintenance
+              issues are addressed efficiently while keeping property owners
+              informed throughout the process.
+            </p>
+          </div>
+
+          <div className="mt-8 space-y-4">
+            <div className="flex flex-wrap justify-center gap-6">
+              {coordinationCards.map((feature, index) => (
+                <div
+                  key={index}
+                  className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                >
+                  <FeatureBlockVertical {...feature} />
                 </div>
-                <div>
-                  <h3 className="text-base md:text-lg font-semibold">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                    {card.text}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -334,57 +316,75 @@ const MaintenanceServicesPage = () => {
         </div>
       </section>
 
-      <section className="px-5 py-10 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold">
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+        <div className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
+          <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
             Why Landlords Choose Smart Key Property Management
           </h2>
-          <div className="flex gap-4 mt-8">
+
+          {/* Why Choose Smart Key Cards */}
+          <div className="w-full flex flex-wrap justify-center gap-4 mt-8">
             {whyCards.map((item, index) => (
               <div
                 key={index}
-                className="border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md"
+                className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] border border-[#9ddff5] bg-white shadow-sm p-5 rounded-md flex items-center justify-center"
               >
-                <Home className="mx-auto text-[#1f83c5]" size={26} />
-                <h3 className="mt-4 text-sm font-semibold">{item}</h3>
+                <h3 className="m-2 text-base font-semibold text-center">
+                  {item}
+                </h3>
               </div>
             ))}
           </div>
-          <button className="mt-8 mb-10 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-            <a href="/contact">Get Started Today</a>
-          </button>
-          <section>
-            <h2 className=" text-xl md:text-3xl font-bold">
-              Maintenance Request Handling & Resident Support
-            </h2>
-            <p className="max-w-4xl mx-auto mt-8 text-sm text-gray-600 leading-relaxed">
-              Maintenance requests from tenants require clear reporting, timely
-              coordination and consistent follow-through. Smart Key manages
-              tenant maintenance request management through an organized
-              workflow that records repair requests, communicates with
-              residents, schedules contractors and tracks each issue until
-              completion. Our structured approach ensures reliable maintenance
-              coordination for tenants, helping resolve problems efficiently
-              while keeping property owners informed and maintenance operations
-              organized.
-            </p>
-            <button className="mt-8 mb-10 inline-flex items-center gap-2 bg-[#1f83c5] text-white text-xs md:text-sm px-7 py-3 rounded hover:bg-[#176da6] transition">
-              <a href="/contact-us">Get in Touch</a>
-            </button>
-          </section>
+          {/* Call to Action */}
+          <div className="w-full flex justify-center mt-10">
+            <a
+              href="/contact-us"
+              className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+            >
+              Get Started Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Info */}
+      <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
+          <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
+            Maintenance Request Handling & Resident Support
+          </h2>
+
+          <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
+            Maintenance requests from tenants require clear reporting, timely
+            coordination and consistent follow-through. Smart Key manages tenant
+            maintenance request management through an organized workflow that
+            records repair requests, communicates with residents, schedules
+            contractors and tracks each issue until completion. Our structured
+            approach ensures reliable maintenance coordination for tenants,
+            helping resolve problems efficiently while keeping property owners
+            informed and maintenance operations organized.
+          </p>
+          <div className="w-full flex justify-center mt-10">
+            <a
+              href="/contact-us"
+              className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </section>
 
       <FAQ title="Frequently Asked Question" data={faqData} />
 
-      <Hero
-        title={"Own Property? We Make Managing It Effortless."}
-        buttonText="Schedule Free Consultation"
-        backgroundType="image"
+      {/* Footer CTA */}
+      <FooterCTA
         backgroundSrc={
           "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif"
         }
-        buttonLink="/contact"
+        title={"Own Property? We Make Managing It Effortless."}
+        buttonText="Schedule Free Consultation"
+        buttonLink="/contact-us"
       />
 
       {/* For SEO ranking */}

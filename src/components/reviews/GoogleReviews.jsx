@@ -4,43 +4,84 @@ import React from "react";
 const defaultReviews = [
   {
     id: 1,
-    name: "Rahul Sharma",
+    name: "Shanaya",
     rating: 5,
     review:
-      "A great experience overall. The team was professional, supportive, and maintained clear communication throughout the process.",
-    date: "2 weeks ago",
+      "Excellent service and very professional. The team at Smart Key Management has always been very responsive, organized, and makes the entire process smooth and stress-free from start to finish. Highly recommend for anyone looking for reliable property management services.",
+    date: "May 14, 2026",
+    source: "Google",
   },
   {
     id: 2,
-    name: "Priya Patel",
+    name: "Pathik",
     rating: 5,
     review:
-      "The recruitment process was transparent and well organized. I really appreciate the guidance and support provided by the team.",
-    date: "1 month ago",
+      "I had an amazing experience with Smart Key property management team! They are professional, responsive, and always handle maintenance requests promptly. Their attention to detail ensures everything runs smoothly, and they make renting stress-free.",
+    date: "April 9, 2026",
+    source: "Google",
   },
   {
     id: 3,
-    name: "Amit Verma",
+    name: "Vedangi - White Wave",
     rating: 5,
     review:
-      "A positive work environment with helpful people. The team provides good opportunities to learn and grow professionally.",
-    date: "1 month ago",
+      "I had an excellent experience with Smart Key Property Management. Their team is professional, responsive, and truly cares about both property owners and tenants.",
+    date: "April 9, 2026",
+    source: "Google",
   },
   {
     id: 4,
-    name: "Sneha Gupta",
+    name: "Victoria",
     rating: 5,
     review:
-      "The overall experience was smooth. Communication was clear, and the team was approachable and helpful.",
-    date: "2 months ago",
+      "One of the best apartments I have lived in the Bronx, the landlord is super reliable and understanding. The management handles all necessary problems on time.",
+    date: "April 1, 2026",
+    source: "Google",
   },
   {
     id: 5,
-    name: "Karan Mehta",
+    name: "Sara",
     rating: 5,
     review:
-      "Good experience with a supportive team and a professional approach. I would recommend them.",
-    date: "2 months ago",
+      "I am very satisfied with the work team. Everyone is always willing to help solve the problems we have and respond quickly to any questions.",
+    date: "April 1, 2026",
+    source: "Google",
+  },
+  {
+    id: 6,
+    name: "Erika Bueno",
+    rating: 5,
+    review:
+      "My husband and I can highly recommend this company due to the great experience we've encountered with them. Smart Key has made our property management seamless.",
+    date: "April 1, 2026",
+    source: "Google",
+  },
+  {
+    id: 7,
+    name: "Colby Franklin",
+    rating: 5,
+    review:
+      "Amazing!!! The entire team is simply amazing. They have went above and beyond to make sure my children and I had what we needed and comfortable in our home.",
+    date: "April 1, 2026",
+    source: "Google",
+  },
+  {
+    id: 8,
+    name: "Ashley Araujo",
+    rating: 5,
+    review:
+      "It has been a comfortable, quiet, and well-maintained place, which has made my stay here very enjoyable. It truly feels like home.",
+    date: "April 1, 2026",
+    source: "Google",
+  },
+  {
+    id: 9,
+    name: "Sandrine Abbe",
+    rating: 5,
+    review:
+      "It's a very professional company. Fast, attentive to the customer's needs, respects appointments, respectful.",
+    date: "April 1, 2026",
+    source: "Google",
   },
 ];
 
@@ -119,10 +160,6 @@ const GoogleReviews = ({
               <h3 className="mt-5 text-lg font-bold text-gray-900">
                 {item.name}
               </h3>
-
-              {item.date && (
-                <p className="mt-1 text-xs text-gray-400">{item.date}</p>
-              )}
 
               {/* Review Text */}
               <p className="mt-4 flex-1 text-sm leading-7 text-gray-600">

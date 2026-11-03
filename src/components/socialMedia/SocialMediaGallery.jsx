@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
@@ -43,10 +42,10 @@ const SocialMediaGallery = ({
           )}
         </div>
 
-        {/* Slider */}
+        {/* Video Slider */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+          className="flex snap-x snap-mandatory gap-6 overflow-hidden scroll-smooth scrollbar-hide"
         >
           {cards.map((card, index) => (
             <a
@@ -58,17 +57,41 @@ const SocialMediaGallery = ({
               aria-label={`View social media post ${index + 1}`}
               className="group relative block aspect-[2/3] w-[85%] shrink-0 snap-start overflow-hidden rounded-2xl bg-gray-900 sm:w-[48%] lg:w-[21.5%]"
             >
-              {/* Image */}
-              <img
-                src={card.image}
-                alt={card.alt || `Social media post ${index + 1}`}
-                loading="lazy"
-                draggable="false"
-                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-              />
+              {/* Direct Video */}
+              {card.video && (
+                <video
+                  src={card.video}
+                  poster={card.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
+
+              {/* Social Media Embed */}
+              {!card.video && card.embedUrl && (
+                <iframe
+                  src={card.embedUrl}
+                  title={`Social media video ${index + 1}`}
+                  className="h-full w-full border-0"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              )}
+
+              {/* Fallback */}
+              {!card.video && !card.embedUrl && (
+                <div className="flex h-full items-center justify-center text-sm text-white">
+                  Video unavailable
+                </div>
+              )}
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
                 <span className="flex h-16 w-16 scale-75 items-center justify-center rounded-full bg-white/90 text-black opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
                   <Play size={27} fill="currentColor" />
                 </span>
@@ -82,7 +105,7 @@ const SocialMediaGallery = ({
           <button
             type="button"
             onClick={() => scrollSlider(-1)}
-            aria-label="Previous cards"
+            aria-label="Previous videos"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1d3557] text-[#1d3557] transition hover:bg-[#03045e] hover:text-white sm:h-12 sm:w-12"
           >
             <ChevronLeft size={24} />
@@ -91,7 +114,7 @@ const SocialMediaGallery = ({
           <button
             type="button"
             onClick={() => scrollSlider(1)}
-            aria-label="Next cards"
+            aria-label="Next videos"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1d3557] text-[#1d3557] transition hover:bg-[#03045e] hover:text-white sm:h-12 sm:w-12"
           >
             <ChevronRight size={24} />

@@ -82,43 +82,47 @@ const Navbar = () => {
     links.some((item) => item.path === location.pathname);
 
   // Desktop dropdown component
-  const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
-    const isActive = isDropdownActive(links);
-    const isDropdownOpen = activeDropdown === name;
+  
+// Desktop dropdown component
+const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
+  const isActive = isDropdownActive(links);
+  const isDropdownOpen = activeDropdown === name;
 
-    return (
-      <li className="relative">
-        <button
-          type="button"
-          onClick={() => toggleDropdown(name)}
-          aria-expanded={isDropdownOpen}
-          className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
-            isActive
-              ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
-              : ""
+  return (
+    <li
+      className="relative"
+      onMouseEnter={() => setActiveDropdown(name)}
+      onMouseLeave={() => setActiveDropdown(null)}
+    >
+      <button
+        type="button"
+        onClick={() => toggleDropdown(name)}
+        aria-expanded={isDropdownOpen}
+        className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
+          isActive
+            ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
+            : ""
+        }`}
+      >
+        {name}
+
+        <ChevronDown
+          size={16}
+          className={`transition-transform duration-300 ${
+            isDropdownOpen ? "rotate-180" : ""
           }`}
-        >
-          {name}
+        />
+      </button>
 
-          <ChevronDown
-            size={16}
-            className={`transition-transform duration-300 ${
-              isDropdownOpen ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-
-        {/* Dropdown spacing */}
-        <div className="absolute left-0 top-full h-5 w-full" />
-
-        {/* Dropdown list */}
-        <div
-          className={`absolute left-0 top-[145%] ${width} rounded-xl bg-[#f7f4ee] p-4 shadow-2xl transition-all duration-300 ${
-            isDropdownOpen
-              ? "visible translate-y-0 opacity-100"
-              : "invisible translate-y-4 opacity-0"
-          }`}
-        >
+      {/* Dropdown list */}
+      <div
+        className={`absolute left-0 top-full ${width} pt-5 transition-all duration-300 ${
+          isDropdownOpen
+            ? "visible translate-y-0 opacity-100"
+            : "invisible translate-y-4 opacity-0"
+        }`}
+      >
+        <div className="rounded-xl bg-[#f7f4ee] p-4 shadow-2xl">
           <div
             className={`flex flex-col ${
               name === "Services" ? "gap-3 text-left" : "gap-2"
@@ -140,9 +144,11 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-      </li>
-    );
-  };
+      </div>
+    </li>
+  );
+};
+
 
   // Mobile dropdown component
   const MobileDropdown = ({

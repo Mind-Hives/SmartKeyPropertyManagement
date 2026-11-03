@@ -253,8 +253,7 @@ const LeaseAdministrationPage = () => {
               href="/services/rent-collection-and-arrears-recovery"
             >
               rental
-            </a>{" "}
-            properties on a concise basis relies heavily on the rental lease
+            </a> properties on a concise basis relies heavily on the rental lease
             administration process. Many landlords experience delays in renewal
             responses, communication gaps with tenants, unsuccessful
             documentation of lease documents and failures in lease coordination

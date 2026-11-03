@@ -98,49 +98,56 @@ const faqData = [
 const socialMediaPosts = [
   {
     id: 1,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739054/igexport-DefguYBvbsQ.mp4",
     link: "https://www.instagram.com/reel/DefguYBvbsQ/",
     alt: "Company instagram post",
   },
   {
     id: 2,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739051/igexport-De-ZrsPgJIA.mp4",
     link: "https://www.instagram.com/reel/De-ZrsPgJIA/",
     alt: "Company instagram post",
   },
   {
     id: 3,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739047/igexport-DXw15rpsQgT.mp4",
     link: "https://www.instagram.com/reel/DXw15rpsQgT/",
     alt: "Company instagram post",
   },
   {
     id: 4,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739048/igexport-DZDmVeHzvWS.mp4",
     link: "https://www.instagram.com/reel/DZDmVeHzvWS/",
     alt: "Company instagram post",
   },
-  {
-    id: 5,
-    image: "",
-    link: "https://www.instagram.com/reel/DbZJkHaMotG/",
-    alt: "Company instagram post",
-  },
+  // {
+  //   id: 5,
+  //   video: "",
+  //   link: "https://www.instagram.com/reel/DbZJkHaMotG/",
+  //   alt: "Company instagram post",
+  // },
   {
     id: 6,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739051/igexport-DbEywo5MmOp.mp4",
     link: "https://www.instagram.com/reel/DbEywo5MmOp/",
     alt: "Company instagram post",
   },
   {
     id: 7,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739057/igexport-Dec6lKnOA0f.mp4",
     link: "https://www.instagram.com/reel/Dec6lKnOA0f/",
     alt: "Company instagram post",
   },
   {
     id: 8,
-    image: "",
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739050/igexport-DUloyt_jIsj.mp4",
     link: "https://www.instagram.com/reel/DUloyt_jIsj/",
     alt: "Company instagram post",
   },
@@ -292,9 +299,16 @@ const HomePage = () => {
         steps={steps}
       />
 
+      <GoogleReviews duration={40} />
+
       <MyMap />
 
-      <GoogleReviews duration={40} />
+      {/* Social Media */}
+      <SocialMediaGallery
+        title="Liked What You See? There's More on Instagram!"
+        subtitle="Get a closer look at Smart Key through real property transformations, behind-the-scenes moments, and insights you won't want to miss. Follow along!"
+        cards={socialMediaPosts}
+      />
 
       {/* FAQ */}
       <FAQ
@@ -302,12 +316,6 @@ const HomePage = () => {
         data={faqData}
         bgColor="bg-white"
         titleColor="text-[#2f4f73]"
-      />
-      {/* Social Media */}
-      <SocialMediaGallery
-        title="Liked What You See? There's More on Instagram!"
-        subtitle="Get a closer look at Smart Key through real property transformations, behind-the-scenes moments, and insights you won't want to miss. Follow along!"
-        cards={socialMediaPosts}
       />
 
       {/* Footer CTA */}
