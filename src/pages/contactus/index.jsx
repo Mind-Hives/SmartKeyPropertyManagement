@@ -37,14 +37,10 @@ const ContactPage = () => {
     e.preventDefault();
     setStatus({ type: "", message: "" });
 
-    if (
-      !formData.name.trim() ||
-      (!formData.phone.trim() && !formData.email.trim())
-    ) {
+    if (!formData.name.trim() || !formData.phone.trim()) {
       setStatus({
         type: "error",
-        message:
-          "Please enter your name and either a phone number or email address.",
+        message: "Please enter your name and phone number.",
       });
       return;
     }
