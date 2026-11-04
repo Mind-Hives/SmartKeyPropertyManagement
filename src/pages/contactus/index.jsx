@@ -66,13 +66,19 @@ const ContactPage = () => {
         }),
       });
 
-      const data = await response.json().catch(() => ({}));
+      const contentType = response.headers.get("content-type") || "";
 
-      if (!response.ok) {
-        throw new Error(
-          data.error || "Unable to send your message. Please try again.",
-        );
-      }
+if (!contentType.includes("application/json")) {
+  throw new Error("Invalid API response: Expected JSON.");
+}
+
+const data = await response.json();
+
+if (!response.ok || data.success !== true) {
+  throw new Error(
+    data.error || data.message || "Unable to send your message."
+  );
+}
 
       setStatus({
         type: "success",
