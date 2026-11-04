@@ -9,12 +9,14 @@ const FooterCTA = ({
     buttonLink = "#",
 }) => {
     return (
-        <section className="relative flex aspect-[4/5] w-full items-center overflow-hidden pt-20 sm:aspect-[16/9] sm:pt-24 lg:aspect-[14/6] lg:pt-28">
+        <section className="relative flex aspect-[4/5] w-full items-center overflow-hidden pt-20 sm:aspect-[16/9] sm:pt-24 lg:aspect-[14/5] lg:pt-28">
 
             {/* Background Image */}
             <img
                 src={backgroundSrc}
-                alt=""
+                srcSet={backgroundSrc}
+                loading="lazy"
+                alt="Cta Background"
                 className="absolute inset-0 h-full w-full object-cover"
             />
 

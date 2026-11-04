@@ -19,7 +19,7 @@ const Feature = ({ cardBgColor, icon, title, discription }) => {
         {typeof icon === "string" ? (
           <img
             src={icon}
-            alt=""
+            alt="Feature icons"
             className="h-full w-full object-cover"
             loading="lazy"
           />
@@ -99,55 +99,49 @@ const socialMediaPosts = [
   {
     id: 1,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739054/igexport-DefguYBvbsQ.mp4",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819428/insta_video1.mp4",
     link: "https://www.instagram.com/reel/DefguYBvbsQ/",
     alt: "Company instagram post",
   },
   {
     id: 2,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739051/igexport-De-ZrsPgJIA.mp4",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819429/insta_video2.mp4",
     link: "https://www.instagram.com/reel/De-ZrsPgJIA/",
     alt: "Company instagram post",
   },
   {
     id: 3,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739047/igexport-DXw15rpsQgT.mp4",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819430/insta_video3.mp4",
     link: "https://www.instagram.com/reel/DXw15rpsQgT/",
     alt: "Company instagram post",
   },
   {
     id: 4,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739048/igexport-DZDmVeHzvWS.mp4",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819431/insta_video4.mp4",
     link: "https://www.instagram.com/reel/DZDmVeHzvWS/",
     alt: "Company instagram post",
   },
-  // {
-  //   id: 5,
-  //   video: "",
-  //   link: "https://www.instagram.com/reel/DbZJkHaMotG/",
-  //   alt: "Company instagram post",
-  // },
+  {
+    id: 5,
+    video:
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819432/insta_video5.mp4",
+    link: "https://www.instagram.com/reel/DbEywo5MmOp/",
+    alt: "Company instagram post",
+  },
   {
     id: 6,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739051/igexport-DbEywo5MmOp.mp4",
-    link: "https://www.instagram.com/reel/DbEywo5MmOp/",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819434/insta_video6.mp4",
+    link: "https://www.instagram.com/reel/Dec6lKnOA0f/",
     alt: "Company instagram post",
   },
   {
     id: 7,
     video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739057/igexport-Dec6lKnOA0f.mp4",
-    link: "https://www.instagram.com/reel/Dec6lKnOA0f/",
-    alt: "Company instagram post",
-  },
-  {
-    id: 8,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793739050/igexport-DUloyt_jIsj.mp4",
+      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819432/insta_video7.mp4",
     link: "https://www.instagram.com/reel/DUloyt_jIsj/",
     alt: "Company instagram post",
   },
@@ -158,7 +152,7 @@ const HomePage = () => {
     <>
       <Hero
         backgroundType="video"
-        backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793374837/SmartkeyHeroVdo.mp4"
+        backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793819431/SmartkeyHeroVdo.mp4"
         title={"The Key to Hassle-Free Property Management"}
         buttonText="Schedule Free Consultation"
         buttonLink="/contact-us"
@@ -207,7 +201,6 @@ const HomePage = () => {
               title="Find Reliable Tenants Without Long Vacancies"
               description="Smart Key Property Management helps landlords secure reliable tenants through structured background, credit, income and rental history screening. We reduce vacancy by leveraging NYC housing programs like CityFHEPS and managing unit approvals efficiently, with rent payments processed through DSS/HRA for added stability. Our strong network of brokers and real estate agents keeps a steady flow of prospects, so properties stay occupied and cash flow remains consistent."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208113/69ab558954d4c9c69e6c4bf2_result.avif"
-              imageAlt=""
               buttonText="Learn More"
               buttonLink="/services/tenant-screening-and-placement"
             />
@@ -216,7 +209,6 @@ const HomePage = () => {
               title="Proactive Maintenance That Protects Property Value"
               description="We provide property maintenance services designed to protect asset value and maintain tenant satisfaction. Our team manages the full maintenance lifecycle, including repair coordination, emergency response, vendor oversight, and documented tracking. Every service request is handled through a structured process that supports accountability, cost control, and compliance standards."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208111/69a6026f328462fada4becb0.avif"
-              imageAlt=""
               buttonText="Learn More"
               buttonLink="/services/property-maintenance-and-resident-services"
             />
@@ -224,7 +216,6 @@ const HomePage = () => {
               title="Stay Legally Protected in Rental Market"
               description="Navigating landlord-tenant regulations in NYC requires precision and experience. We assist with lease enforcement, proper documentation, housing court coordination, and structured communication aligned with New York rental laws. Our compliance-focused approach helps property owners reduce legal exposure, avoid procedural mistakes, and maintain organized records throughout the tenancy lifecycle."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/69a602bd6093c9f4ef875a2a.avif"
-              imageAlt=""
               buttonText="Learn More"
               buttonLink="/services/legal-compliances-and-risk-management"
             />
@@ -233,7 +224,6 @@ const HomePage = () => {
               title="Reliable Rent Collection & Arrears Recovery"
               description="Smart Key Property Management ensures timely rent collection through structured tracking systems, automated reminders and consistent follow-ups. When payments become overdue, we initiate a clear arrears recovery process that includes documented notices, payment coordination, and escalation procedures when necessary. Our transparent financial reporting keeps owners fully informed while protecting steady cash flow and reducing prolonged delinquencies."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208112/69a60301f89490be5b43c7aa.avif"
-              imageAlt=""
               buttonText="Learn More"
               buttonLink="/services/rent-collection-and-arrears-recovery"
             />
@@ -320,7 +310,6 @@ const HomePage = () => {
 
       {/* Footer CTA */}
       <FooterCTA
-        // backgroundSrc={'https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/Footer_SamrtKey.avif'}
         title={"Own Property? We Make Managing It Effortless."}
         buttonText="Schedule Free Consultation"
         buttonLink="/contact-us"
