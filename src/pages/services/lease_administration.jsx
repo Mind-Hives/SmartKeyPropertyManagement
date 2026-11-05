@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import SEO from "@/components/seo/SEO";
+import ScrollingSec from "@/components/scrollingSec/ScrollingSec";
 
 const includeItems = [
   {
@@ -151,9 +152,9 @@ const LeaseAdministrationPage = () => {
             </span>
           </nav>
 
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Lease Administration & Renewals
-          </h1>
+          </span>
         </div>
       </section>
 
@@ -292,9 +293,9 @@ const LeaseAdministrationPage = () => {
                 key={index}
                 className="bg-[#dff6ff] border border-[#7ed8ff] rounded-md p-4 md:p-5 flex flex-col gap-4 items-start text-left"
               >
-                <div className="flex text-5xl text-[#1f83c5] items-center justify-center shrink-0">
+                <span className="flex text-5xl text-[#1f83c5] items-center justify-center shrink-0">
                   {card.icon}
-                </div>
+                </span>
                 <div>
                   <h3 className="text-base md:text-lg font-semibold">
                     {card.title}
@@ -310,80 +311,20 @@ const LeaseAdministrationPage = () => {
       </section>
 
       {/* Process */}
-      <section className="w-full bg-white py-14 md:py-20 px-5">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold text-[#243c5a]">
-            How the Lease Administration Process Should
-            <br /> Work
-          </h2>
-        </div>
-        <div className="relative max-w-4xl mx-auto mt-14 md:mt-20">
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[3px] bg-[#0078d7] -translate-x-1/2">
-            {processSteps.map((_, index) => (
-              <span
-                key={index}
-                className="absolute left-1/2 w-3 h-3 bg-[#0078d7] rounded-full -translate-x-1/2"
-                style={{
-                  top: `${(index / (processSteps.length - 1)) * 100}%`,
-                }}
-              ></span>
-            ))}
-          </div>
-
-          <div className="space-y-16 md:space-y-20">
-            {processSteps.map((step, index) => (
-              <div
-                key={index}
-                className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-8"
-              >
-                <div
-                  className={`text-5xl md:text-6xl font-light text-[#405b7b] ${
-                    step.side === "right"
-                      ? "md:text-right md:pr-20"
-                      : "md:order-2 md:text-left md:pl-20"
-                  }`}
-                >
-                  {step.no}
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  className={`bg-white border border-[#6ed3ff] rounded-md shadow-lg shadow-blue-100 p-6 max-w-[310px] mx-auto md:mx-0 ${
-                    step.side === "right"
-                      ? "md:ml-12"
-                      : "md:order-1 md:ml-auto md:mr-12"
-                  }`}
-                >
-                  <h3 className="text-sm md:text-base font-bold text-black mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-black leading-relaxed">
-                    {step.text}
-                  </p>
-                </motion.div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ScrollingSec 
+      title="How the Lease Administration Process Should Work"
+      steps={processSteps}
+      />
 
       {/* Smart Key Handles */}
       <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
           <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
-            How Smart Key Handles Lease Administration & <br />
-            Renewals
+            How Smart Key Handles Lease Administration & <br />Renewals
           </h2>
 
           <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
-            Smart Key manages lease administration through a structured system
-            designed to keep renewals, tenant communication and documentation
-            organized across rental properties. Our process helps landlords
-            maintain operational consistency, reduce missed timelines and
-            simplify day-to-day lease coordination.
+            Smart Key manages lease administration through a structured system designed to keep renewals, tenant communication and documentation organized across rental properties. Our process helps landlords maintain operational consistency, reduce missed timelines and simplify day-to-day lease coordination.
           </p>
 
           {/* Why Choose Smart Key Cards */}
@@ -478,6 +419,7 @@ const LeaseAdministrationPage = () => {
       <SEO
         title="Lease Administration Services NYC | Smart Key Property Management"
         description="Smart Key provides lease administration services for NYC landlords, including lease tracking, renewal coordination, tenant communication and documentation management."
+        canonical='/services/lease-administration-and-renewals'
       />
     </main>
   );

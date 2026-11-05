@@ -7,6 +7,7 @@ import FAQ from "@/components/faq";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import SEO from "@/components/seo/SEO";
+import ScrollingSec from "@/components/scrollingSec/ScrollingSec";
 
 const costCards = [
   {
@@ -165,44 +166,25 @@ const RentCollectionPage = () => {
             <span className="text-[#9ddff5]">Rent Collection</span>
           </nav>
 
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Rent Collection & Arrears Recovery
-          </h1>
+          </span>
         </div>
       </section>
 
       {/* Rent Property Management */}
       <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
         <div className="w-full max-w-9xl mx-auto flex flex-col items-center text-center">
+          
           <h1 className="w-full max-w-7xl text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
-            Rent Collection & Arrears Recovery for Landlords in NYC and New
-            Jersey
+            Rent Collection & Arrears Recovery for Landlords in NYC and New Jersey
           </h1>
-
+          
           <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
-            Rent collection is a fundamental aspect of property management that
-            directly influences rental income and long-term business stability.
-            In highly-regulated markets like New York City and New Jersey,
-            managing rent payments requires much more than a basic tracking
-            system it demands a robust, compliance-driven approach to ensure
-            timely payments and avoid costly legal disputes.
+            Rent collection is a fundamental aspect of property management that directly influences rental income and long-term business stability. In highly-regulated markets like New York City and New Jersey, managing rent payments requires much more than a basic tracking system it demands a robust, compliance-driven approach to ensure timely payments and avoid costly legal disputes.
           </p>
           <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
-            At{" "}
-            <a href="/" className="text-blue-500 hover:underline">
-              Smart Key Property Management
-            </a>
-            , we assist landlords in navigating the complexities of rental
-            property compliance. With ever-evolving landlord legal
-            responsibilities in both NYC and NJ, it's essential to have a
-            structured system that not only tracks rent but also addresses
-            overdue payments in a compliant and efficient manner. We work
-            closely with legal professionals to ensure that all arrears recovery
-            actions adhere to local regulations, are well-organized and are
-            fully documented. This process helps minimize financial risks,
-            maintains consistent cash flow and ensures transparency for both
-            landlords and tenants, so everyone stays informed and aligned
-            throughout the lease cycle.
+            At <a href="/" className="text-blue-500 hover:underline">Smart Key Property Management</a>, we assist landlords in navigating the complexities of rental property compliance. With ever-evolving landlord legal responsibilities in both NYC and NJ, it's essential to have a structured system that not only tracks rent but also addresses overdue payments in a compliant and efficient manner. We work closely with legal professionals to ensure that all arrears recovery actions adhere to local regulations, are well-organized and are fully documented. This process helps minimize financial risks, maintains consistent cash flow and ensures transparency for both landlords and tenants, so everyone stays informed and aligned throughout the lease cycle.
           </p>
 
           <div className="mt-8 flex justify-center">
@@ -226,8 +208,7 @@ const RentCollectionPage = () => {
             </h2>
 
             <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
-              Managing rent collection in NYC and New Jersey is crucial for
-              maintaining a profitable and legally compliant property portfolio.
+              Managing rent collection in NYC and New Jersey is crucial for maintaining a profitable and legally compliant property portfolio.
             </p>
           </div>
 
@@ -279,63 +260,10 @@ const RentCollectionPage = () => {
       </section>
 
       {/* Process */}
-      <section className="w-full bg-white py-14 md:py-20 px-5">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold text-[#243c5a]">
-            Our Rent Collection & Arrears Recovery Process
-          </h2>
-        </div>
-        <div className="relative max-w-4xl mx-auto mt-14 md:mt-20">
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[3px] bg-[#0078d7] -translate-x-1/2">
-            {processSteps.map((_, index) => (
-              <span
-                key={index}
-                className="absolute left-1/2 w-3 h-3 bg-[#0078d7] rounded-full -translate-x-1/2"
-                style={{
-                  top: `${(index / (processSteps.length - 1)) * 100}%`,
-                }}
-              ></span>
-            ))}
-          </div>
-
-          <div className="space-y-16 md:space-y-20">
-            {processSteps.map((step, index) => (
-              <div
-                key={index}
-                className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-8"
-              >
-                <div
-                  className={`text-5xl md:text-6xl font-light text-[#405b7b] ${
-                    step.side === "right"
-                      ? "md:text-right md:pr-20"
-                      : "md:order-2 md:text-left md:pl-20"
-                  }`}
-                >
-                  {step.no}
-                </div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  className={`bg-white border border-[#6ed3ff] rounded-md shadow-lg shadow-blue-100 p-6 max-w-[310px] mx-auto md:mx-0 ${
-                    step.side === "right"
-                      ? "md:ml-12"
-                      : "md:order-1 md:ml-auto md:mr-12"
-                  }`}
-                >
-                  <h3 className="text-sm md:text-base font-bold text-black mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-black leading-relaxed">
-                    {step.text}
-                  </p>
-                </motion.div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ScrollingSec 
+      title=" Our Rent Collection & Arrears Recovery Process"
+      steps={processSteps}
+      />
 
       {/* Why Choose */}
       <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
@@ -467,6 +395,7 @@ const RentCollectionPage = () => {
       <SEO
         title="Rent Collection Services for Landlords in NYC & NJ | Smart Key"
         description="Smart Key provides rent collection services for NYC & NJ landlords, including payment tracking, tenant follow-ups, arrears management and clear owner reporting."
+        canonical='/services/rent-collection-and-arrears-recovery'
       />
     </main>
   );

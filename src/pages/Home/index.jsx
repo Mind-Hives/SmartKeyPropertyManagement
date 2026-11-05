@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../../components/hero";
 import ServiceBlock from "@/components/serviceBlock/ServiceBlock";
-import ScrollingSec from "../../components/scrollingSec/index.jsx";
+import ScrollingSec from "../../components/scrollingSec/ScrollingSec.jsx";
 import FooterCTA from "@/components/footerCTA/FooterCTA";
 import FAQ from "../../components/faq/index.jsx";
 import { MyMap } from "@/components/ui";
@@ -98,50 +98,43 @@ const faqData = [
 const socialMediaPosts = [
   {
     id: 1,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819428/insta_video1.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919144/Insta-video-1.mp4",
     link: "https://www.instagram.com/reel/DefguYBvbsQ/",
     alt: "Company instagram post",
   },
   {
     id: 2,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819429/insta_video2.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919144/Insta-video-2.mp4",
     link: "https://www.instagram.com/reel/De-ZrsPgJIA/",
     alt: "Company instagram post",
   },
   {
     id: 3,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819430/insta_video3.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919147/Insta-video-3.mp4",
     link: "https://www.instagram.com/reel/DXw15rpsQgT/",
     alt: "Company instagram post",
   },
   {
     id: 4,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819431/insta_video4.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919151/Insta-video-4.mp4",
     link: "https://www.instagram.com/reel/DZDmVeHzvWS/",
     alt: "Company instagram post",
   },
   {
     id: 5,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819432/insta_video5.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919151/Insta-video-5.mp4",
     link: "https://www.instagram.com/reel/DbEywo5MmOp/",
     alt: "Company instagram post",
   },
   {
     id: 6,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819434/insta_video6.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919152/Insta-video-6.mp4",
     link: "https://www.instagram.com/reel/Dec6lKnOA0f/",
     alt: "Company instagram post",
   },
   {
     id: 7,
-    video:
-      "https://res.cloudinary.com/kj98z6s1/video/upload/v1793819432/insta_video7.mp4",
+    video: "https://res.cloudinary.com/kj98z6s1/video/upload/v1793919160/Insta-video-7.mp4",
     link: "https://www.instagram.com/reel/DUloyt_jIsj/",
     alt: "Company instagram post",
   },
@@ -152,7 +145,7 @@ const HomePage = () => {
     <>
       <Hero
         backgroundType="video"
-        backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793819431/SmartkeyHeroVdo.mp4"
+        backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793918917/Smartkey-Hero-Video.mp4"
         title={"The Key to Hassle-Free Property Management"}
         buttonText="Schedule Free Consultation"
         buttonLink="/contact-us"
@@ -200,7 +193,8 @@ const HomePage = () => {
             <ServiceBlock
               title="Find Reliable Tenants Without Long Vacancies"
               description="Smart Key Property Management helps landlords secure reliable tenants through structured background, credit, income and rental history screening. We reduce vacancy by leveraging NYC housing programs like CityFHEPS and managing unit approvals efficiently, with rent payments processed through DSS/HRA for added stability. Our strong network of brokers and real estate agents keeps a steady flow of prospects, so properties stay occupied and cash flow remains consistent."
-              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208113/69ab558954d4c9c69e6c4bf2_result.avif"
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895723/Property-manager-welcoming-approved-tenants-after-successful-tenant-screening-and-placement_result.avif"
+              imageAlt="Property manager welcoming approved tenants after successful tenant screening and placement"
               buttonText="Learn More"
               buttonLink="/services/tenant-screening-and-placement"
             />
@@ -208,14 +202,16 @@ const HomePage = () => {
               reverse={true}
               title="Proactive Maintenance That Protects Property Value"
               description="We provide property maintenance services designed to protect asset value and maintain tenant satisfaction. Our team manages the full maintenance lifecycle, including repair coordination, emergency response, vendor oversight, and documented tracking. Every service request is handled through a structured process that supports accountability, cost control, and compliance standards."
-              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208111/69a6026f328462fada4becb0.avif"
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-maintenance-technician-inspecting-kitchen-sink-for-rental-property-repair_result.avif"
+              imageAlt="Property maintenance technician inspecting kitchen sink for rental property repair"
               buttonText="Learn More"
               buttonLink="/services/property-maintenance-and-resident-services"
             />
             <ServiceBlock
               title="Stay Legally Protected in Rental Market"
               description="Navigating landlord-tenant regulations in NYC requires precision and experience. We assist with lease enforcement, proper documentation, housing court coordination, and structured communication aligned with New York rental laws. Our compliance-focused approach helps property owners reduce legal exposure, avoid procedural mistakes, and maintain organized records throughout the tenancy lifecycle."
-              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/69a602bd6093c9f4ef875a2a.avif"
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-reviewing-lease-documents-with-tenants-for-rental-compliance_result.avif"
+              imageAlt="Property manager reviewing lease documents with tenants for rental compliance"
               buttonText="Learn More"
               buttonLink="/services/legal-compliances-and-risk-management"
             />
@@ -223,7 +219,8 @@ const HomePage = () => {
               reverse={true}
               title="Reliable Rent Collection & Arrears Recovery"
               description="Smart Key Property Management ensures timely rent collection through structured tracking systems, automated reminders and consistent follow-ups. When payments become overdue, we initiate a clear arrears recovery process that includes documented notices, payment coordination, and escalation procedures when necessary. Our transparent financial reporting keeps owners fully informed while protecting steady cash flow and reducing prolonged delinquencies."
-              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208112/69a60301f89490be5b43c7aa.avif"
+              image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-discussing-rent-payment-report-with-tenants-during-collection-review_result.avif"
+              imageAlt="Property manager discussing rent payment report with tenants during collection review"
               buttonText="Learn More"
               buttonLink="/services/rent-collection-and-arrears-recovery"
             />
@@ -239,41 +236,41 @@ const HomePage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-9">
               <Feature
                 cardBgColor={true}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208110/Home-page_Tracking_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898109/Home-page-Tracking-SmartKey_result.avif"
                 title="AppFolio-Powered"
                 discription="Operates through AppFolio, providing real-time tracking for maintenance, rent collection, documentation and clear communication between owners and tenants."
               />
 
               <Feature
                 cardBgColor={false}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Support_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898107/Home-page-Support-SmartKey_result.avif"
                 title="24/7 Tenant & Owner Support"
                 discription="Our round-the-clock support ensures urgent issues are resolved quickly, protecting rental income and preventing small problems from escalating."
               />
 
               <Feature
                 cardBgColor={true}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208114/Home-page_Tools_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898108/Home-page-Tools-SmartKey_result.avif"
                 title="Fast, Cost-Controlled Maintenance"
                 discription="Our trusted vendor network delivers prompt repairs, helping control expenses while maintaining property condition and tenant satisfaction."
               />
 
               <Feature
                 cardBgColor={false}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208115/Home-page_Vendor_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898112/Home-page-Vendor-SmartKey_result.avif"
                 title="NYC Compliance Expertise (DOB & HPD)"
                 discription="We handle DOB and HPD compliance requirements, inspections and violations to keep NYC rental properties legally protected."
               />
               <Feature
                 cardBgColor={true}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Acquisition_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898107/Home-page-Acquisition-SmartKey_result.avif"
                 title="Strategic Vacancy & Housing Partnerships"
                 discription="We reduce vacancy through structured tenant placement, including housing voucher coordination and compliance management across New York City."
               />
 
               <Feature
                 cardBgColor={false}
-                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208109/Home-page_Certification_SmartKey_result.avif"
+                icon="https://res.cloudinary.com/kj98z6s1/image/upload/v1793898107/Home-page-Certification-SmartKey_result.avif"
                 title="Reliable Rent Tracking & Collection"
                 discription="We monitor rent status, communicate with tenants and maintain accurate records to support smooth monthly collections."
               />
