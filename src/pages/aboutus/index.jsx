@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Phone, Mail } from "lucide-react";
 import SEO from "@/components/seo/SEO";
+
 const leaders = [
   {
     name: "KAMLESH PATEL",
