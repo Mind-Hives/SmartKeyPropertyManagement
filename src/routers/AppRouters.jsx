@@ -18,7 +18,8 @@ import Queens from "@/pages/locations/Queens.jsx";
 import Bronx from "@/pages/locations/Bronx.jsx";
 import Manhattan from "@/pages/locations/Manhattan.jsx";
 import BlogDetails from "@/pages/blogs/blogDetails.jsx";
-import LegalPrivacyPolicy from "@/pages/privacyPolicy/LegalPrivacyPolicy.jsx";
+import LegalPrivacyPolicy from "@/pages/legal/PrivacyPolicy.jsx";
+import TermsAndComditions from "@/pages/legal/TermsAndConditions.jsx";
 
 export default function AppRoutes() {
   return (
@@ -45,6 +46,7 @@ export default function AppRoutes() {
         <Route path="/Manhattan" element={<Manhattan />}/>
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<LegalPrivacyPolicy />}/>
+        <Route path="/terms-and-conditions" element={<TermsAndComditions />}/>
 
         <Route path="*" element={<NotFound />} />
       </Route>

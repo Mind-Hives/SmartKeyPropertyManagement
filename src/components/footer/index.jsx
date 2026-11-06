@@ -51,7 +51,8 @@ const Footer = () => {
                 ["Home", "/"],
                 ["Pricing", "/pricing"],
                 ["Contact Us", "/contact-us"],
-                ["Legal & Policies", "/privacy-policy"],
+                ["Privacies & Policies", "/privacy-policy"],
+                ["Terms & Comditions", "/terms-and-conditions"],
                 ["Blogs", "/blogs"],
               ].map(([label, path]) => (
                 <Link
@@ -131,17 +132,6 @@ const Footer = () => {
             <span className="text-white font-semibold"><a className="hover:text-amber-200" href="https://mindhives.co/">@MindHives</a></span>
           </p>
         </div>
-
-        {/* Privacy Policy */}
-        <div className="text-center pb-6">
-          <Link
-            to="/privacy-policy"
-            className="text-[11px] text-[#a9bdd2] hover:text-white transition-colors"
-          >
-            Privacy Policy
-          </Link>
-        </div>
-
       </div>
     </footer>
   );
