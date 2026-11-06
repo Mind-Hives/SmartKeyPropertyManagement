@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ScrollingSec = ({
-  title = "Our Property Management Process",
-  description = "Our property management process follows a defined step-by-step structure designed to protect rental income and maintain operational control.",
+  title = "",
+  description = "",
   steps = [],
   lineColor = "#0078d7",
   titleColor = "#243c5a",
