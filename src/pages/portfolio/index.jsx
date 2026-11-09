@@ -151,8 +151,8 @@ const PortfolioPage = () => {
       </section>
 
       {/* PORTFOLIO GRID */}
-      <section className="py-14 md:py-20 px-5">
-        <div className="max-w-5xl mx-auto">
+      <section className=" px-5 py-14 sm:px-6 md:py-20">
+        <div className="mx-auto max-w-6xl">
           {/* LOADING STATE */}
           {loading && (
             <div className="flex flex-col items-center justify-center py-20">
@@ -192,7 +192,7 @@ const PortfolioPage = () => {
           {/* PROPERTY CARDS */}
           {!loading && !error && properties.length > 0 && (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+              <div className="grid grid-cols-1 gap-x-7 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
                 {currentCards.map((property) => (
                   <PortfolioCard key={property.id} property={property} />
                 ))}
@@ -240,37 +240,61 @@ const PortfolioPage = () => {
 
 // PROPERTY CARD COMPONENT
 const PortfolioCard = ({ property }) => {
-  // Your CMS stores thumbnailImage separately from images
+  // Get property thumbnail
   const image = property.thumbnailImage || property.images?.[0] || "";
 
   const imageUrl = getImageUrl(image);
-
   const address = getPropertyAddress(property);
 
   return (
     <Link
       // to={`/our-portfolio/${encodeURIComponent(property.id)}`}
-      className="group block"
+      className="group block overflow-hidden rounded-xl bg-white transition-all duration-300 hover:-translate-y-1"
     >
       {/* PROPERTY IMAGE */}
-      <div className="w-full aspect-[4/5] rounded-md overflow-hidden bg-gray-100">
+      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#f1f5f9]">
         <img
           src={imageUrl}
           alt={property.imageAlt || property.name}
           loading="lazy"
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
+
+        {/* Image overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07172a]/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </div>
 
       {/* PROPERTY DETAILS */}
-      <div className="mt-4">
-        <h3 className="text-[#2f4f73] text-sm md:text-base font-semibold group-hover:text-blue-500 transition">
+      <div className="px-1 pb-2 pt-4">
+        <h3 className="text-base font-semibold leading-snug text-[#17395f] transition-colors duration-300 group-hover:text-blue-500 sm:text-lg">
           {property.name}
         </h3>
 
-        <p className="text-gray-500 text-xs mt-1 leading-relaxed">
-          {address || property.location || ""}
-        </p>
+        <div className="mt-2 flex items-start gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="mt-0.5 shrink-0 text-[#7b91a8]"
+            aria-hidden="true"
+          >
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+
+          <p className="text-sm leading-relaxed text-[#64748b]">
+            {address || property.location || "Location not available"}
+          </p>
+        </div>
+
+        {/* Bottom separator */}
+        <div className="mt-4 h-px w-full bg-[#e7edf3] transition-colors duration-300 group-hover:bg-blue-500" />
       </div>
     </Link>
   );
