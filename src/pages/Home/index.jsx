@@ -8,6 +8,7 @@ import { MyMap } from "@/components/ui";
 import GoogleReviews from "@/components/reviews/GoogleReviews";
 import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
 import SEO from "@/components/seo/SEO";
+import PropertyMap from "@/components/PropertyMap";
 
 const Feature = ({ cardBgColor, icon, title, discription }) => {
   return (
@@ -288,7 +289,7 @@ const HomePage = () => {
 
       <GoogleReviews duration={40} />
 
-      {/* <MyMap /> */}
+      <PropertyMap />
 
       {/* Social Media */}
       <SocialMediaGallery

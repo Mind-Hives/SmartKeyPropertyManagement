@@ -288,6 +288,7 @@ function MapMarker({
   onClick,
   onMouseEnter,
   onMouseLeave,
+  openPopupOnHover = false,
   onDragStart,
   onDrag,
   onDragEnd,
@@ -303,6 +304,7 @@ function MapMarker({
     onDragStart,
     onDrag,
     onDragEnd,
+    openPopupOnHover,
   });
   callbacksRef.current = {
     onClick,
@@ -311,6 +313,7 @@ function MapMarker({
     onDragStart,
     onDrag,
     onDragEnd,
+    openPopupOnHover,
   };
 
   const marker = useMemo(() => {
@@ -321,8 +324,18 @@ function MapMarker({
     }).setLngLat([longitude, latitude]);
 
     const handleClick = (e) => callbacksRef.current.onClick?.(e);
-    const handleMouseEnter = (e) =>
+    
+    const handleMouseEnter = (e) => {
       callbacksRef.current.onMouseEnter?.(e);
+
+      if (callbacksRef.current.openPopupOnHover) {
+        const popup = markerInstance.getPopup();
+
+        if (popup && !popup.isOpen()) {
+          markerInstance.togglePopup();
+        }
+      }
+    };
     const handleMouseLeave = (e) =>
       callbacksRef.current.onMouseLeave?.(e);
 
