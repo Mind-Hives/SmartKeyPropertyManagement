@@ -37,14 +37,10 @@ const ContactPage = () => {
     e.preventDefault();
     setStatus({ type: "", message: "" });
 
-    if (
-      !formData.name.trim() ||
-      (!formData.phone.trim() && !formData.email.trim())
-    ) {
+    if (!formData.name.trim() || !formData.phone.trim()) {
       setStatus({
         type: "error",
-        message:
-          "Please enter your name and either a phone number or email address.",
+        message: "Please enter your name and phone number.",
       });
       return;
     }
@@ -66,13 +62,19 @@ const ContactPage = () => {
         }),
       });
 
-      const data = await response.json().catch(() => ({}));
+      const contentType = response.headers.get("content-type") || "";
 
-      if (!response.ok) {
-        throw new Error(
-          data.error || "Unable to send your message. Please try again.",
-        );
-      }
+if (!contentType.includes("application/json")) {
+  throw new Error("Invalid API response: Expected JSON.");
+}
+
+const data = await response.json();
+
+if (!response.ok || data.success !== true) {
+  throw new Error(
+    data.error || data.message || "Unable to send your message."
+  );
+}
 
       setStatus({
         type: "success",
