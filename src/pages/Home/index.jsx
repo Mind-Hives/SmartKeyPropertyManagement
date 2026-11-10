@@ -288,7 +288,7 @@ const HomePage = () => {
 
       <GoogleReviews duration={40} />
 
-      <MyMap />
+      {/* <MyMap /> */}
 
       {/* Social Media */}
       <SocialMediaGallery
