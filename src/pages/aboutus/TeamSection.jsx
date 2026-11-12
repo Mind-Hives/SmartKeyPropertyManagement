@@ -45,9 +45,9 @@ const leaders = [
   },
   {
     name: "GARY K.",
-    role: "Collection Lead",
+    role: "Building Manager",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208141/697ce47f8fbbb11689874625_Gary_K.avif",
-    desc: "Collection Lead managing tenant rent collections, reminders, and payment follow-ups.",
+    desc: "",
         phNumber:"+1 (646) 412-5838",
     email:"gary@smartkeypropertymanagement.com"
   },
@@ -68,12 +68,12 @@ const leaders = [
     email:"danny@smartkeypropertymanagement.com"
   },
   {
-    name: "LINDA",
-    role: "Sales Representative",
-    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208152/697b7a7febc4c89079513bdb_linda.avif",
-    desc: "Sales Representative assisting clients with service questions, onboarding, and consultations.",
-        phNumber:"+1 (646) 412-5559",
-    email:"linda@smartkeypropertymanagement.com"
+    name: "RACHEL",
+    role: "Collection Lead",
+    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1794518504/Gemini_Generated_Image_xefnsuxefnsuxefn_Edited.png",
+    desc: "Collection Lead managing tenant rent collections, reminders, and payment follow-ups.",
+        phNumber:"",
+    email:""
   },
 ];
 
@@ -126,7 +126,7 @@ const TeamSection = () => {
             Our Experts
           </button>
 
-          <button
+          {/* <button
             onClick={() => setActiveTab("groups")}
             className={`px-6 py-2 rounded text-sm transition ${
               activeTab === "groups"
@@ -135,7 +135,7 @@ const TeamSection = () => {
             }`}
           >
             Our Teams
-          </button>
+          </button> */}
         </div>
 
         {activeTab === "leaders" ? (
@@ -185,7 +185,7 @@ const TeamCard = ({ member }) => {
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-[300px] object-cover object-top"
+          className="w-full h-[450px] object-cover object-top"
         />
       </div>
 

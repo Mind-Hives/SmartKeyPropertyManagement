@@ -1,8 +1,8 @@
 import React from "react";
-import FeatureBlock from "@/components/featureBlock/FeatureBlock";
+import FeatureBlock from "@/components/featureBlock/FeatureBlockHorizontal";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import FAQ from "@/components/faq";
+import FooterCTA from "@/components/common/FooterCTA";
+import FAQ from "@/components/common/FAQ";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BarChart3, ChevronRight } from "lucide-react";

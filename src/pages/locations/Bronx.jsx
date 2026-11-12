@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import FAQ from "@/components/faq";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import ScrollingNames from "@/components/scrollingName/ScrollingName";
+import FAQ from "@/components/common/FAQ";
+import FooterCTA from "@/components/common/FooterCTA";
+import ScrollingNames from "@/components/scrolling/ScrollingName";
 import SEO from "@/components/seo/SEO";
 
 function Bronx() {

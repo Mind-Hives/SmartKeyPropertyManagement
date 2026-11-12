@@ -1,7 +1,7 @@
 
-import Navbar from "../components/navbar/navbar.jsx";
-import Footer from "../components/footer/index.jsx" 
-import HomePage from "../pages/Home/index.jsx";
+import Navbar from "../components/common/Navbar.jsx";
+import Footer from "../components/common/Footer.jsx" 
+import HomePage from "../pages/HomePage.jsx";
 import { Outlet } from "react-router";
 
 export default function Layout() {

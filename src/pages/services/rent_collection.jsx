@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import FeatureBlock from "@/components/featureBlock/FeatureBlock";
-import FAQ from "@/components/faq";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
+import FeatureBlock from "@/components/featureBlock/FeatureBlockHorizontal";
+import FAQ from "@/components/common/FAQ";
+import FooterCTA from "@/components/common/FooterCTA";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import SEO from "@/components/seo/SEO";
-import ScrollingSec from "@/components/scrollingSec/ScrollingSec";
+import ScrollingSec from "@/components/scrolling/ScrollingSection";
 
 const costCards = [
   {

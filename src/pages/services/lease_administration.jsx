@@ -1,12 +1,12 @@
 import React from "react";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import FAQ from "@/components/faq";
-import FeatureBlock from "@/components/featureBlock/FeatureBlock";
+import FooterCTA from "@/components/common/FooterCTA";
+import FAQ from "@/components/common/FAQ";
+import FeatureBlock from "@/components/featureBlock/FeatureBlockHorizontal";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import SEO from "@/components/seo/SEO";
-import ScrollingSec from "@/components/scrollingSec/ScrollingSec";
+import ScrollingSec from "@/components/scrolling/ScrollingSection";
 
 const includeItems = [
   {

@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../../components/hero";
+import Hero from "../components/HeroSection";
 import ServiceBlock from "@/components/serviceBlock/ServiceBlock";
-import ScrollingSec from "../../components/scrollingSec/ScrollingSec.jsx";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import FAQ from "../../components/faq/index.jsx";
+import ScrollingSec from "../components/scrolling/ScrollingSection.jsx";
+import FooterCTA from "@/components/common/FooterCTA";
+import FAQ from "../components/common/FAQ.jsx";
 import { MyMap } from "@/components/ui";
 import GoogleReviews from "@/components/reviews/GoogleReviews";
 import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
@@ -143,7 +143,7 @@ const socialMediaPosts = [
 
 const HomePage = () => {
   return (
-    <>
+    <main className="bg-white text-[#0f2742]">
       <Hero
         backgroundType="video"
         backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793918917/Smartkey-Hero-Video.mp4"
@@ -151,9 +151,8 @@ const HomePage = () => {
         buttonText="Schedule Free Consultation"
         buttonLink="/contact-us"
       />
-      <main className="bg-white text-[#0f2742]">
         {/* Home Page Property Management */}
-        <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
+        <section id="our-company" className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
           <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
             <h1 className="w-full max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Full-Service Property Management in NYC for Landlords
@@ -278,7 +277,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-      </main>
+
 
       {/* ScrollingSec */}
       <ScrollingSec
@@ -318,7 +317,7 @@ const HomePage = () => {
         title="Full-Service Property Management NYC | Smart Key"
         description="Full-service property management in NYC for landlords and property owners. Get support with rent collection, tenant screening, maintenance, compliance and financial reporting."
       />
-    </>
+    </main>
   );
 };
 

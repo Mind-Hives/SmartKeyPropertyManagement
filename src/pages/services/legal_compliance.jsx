@@ -1,7 +1,7 @@
 import React from "react";
-import FAQ from "@/components/faq";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import FeatureBlock from "@/components/featureBlock/FeatureBlock";
+import FAQ from "@/components/common/FAQ";
+import FooterCTA from "@/components/common/FooterCTA";
+import FeatureBlock from "@/components/featureBlock/FeatureBlockHorizontal";
 import FeatureBlockVertical from "@/components/featureBlock/FeatureBlockVertical";
 import { motion } from "framer-motion";
 import { Home, ChevronRight } from "lucide-react";

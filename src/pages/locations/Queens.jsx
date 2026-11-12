@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
 import { ChevronRight } from "lucide-react";
-import ScrollingNames from "@/components/scrollingName/ScrollingName";
-import FooterCTA from "@/components/footerCTA/FooterCTA";
-import FAQ from "@/components/faq";
+import ScrollingNames from "@/components/scrolling/ScrollingName";
+import FooterCTA from "@/components/common/FooterCTA";
+import FAQ from "@/components/common/FAQ";
 import SEO from "@/components/seo/SEO";
 
 function Queens() {

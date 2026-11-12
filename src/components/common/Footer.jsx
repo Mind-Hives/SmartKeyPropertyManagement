@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,10 +16,10 @@ const Footer = () => {
             <img
               src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
               alt="Smart Key Property Management"
-              className="w-[150px] mb-5"
+              className="w-[200px] mb-5"
             />
 
-            <p className="text-[13px] leading-7 text-[#a9bdd2] max-w-[310px]">
+            <p className="text-[15px] leading-7 text-[#a9bdd2] max-w-[310px]">
               Smart Key Property Management manages small to mid-size rental
               properties with dedicated local support for peace of mind and
               long-term value.
@@ -27,26 +27,26 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex items-center gap-3 mt-6">
-              <a href="https://www.instagram.com/smartkey_property_management" aria-label="Instagram" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
-                <Instagram size={16} />
+              <a href="https://www.instagram.com/smartkey_property_management" aria-label="Instagram" className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
+                <Instagram size={19} />
               </a>
-              <a href="https://facebook.com/profile.php?id=61587468783938" aria-label="Facebook" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
-                <Facebook size={16} />
+              <a href="https://facebook.com/profile.php?id=61587468783938" aria-label="Facebook" className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
+                <Facebook size={19} />
               </a>
-              <a href="https://x.com/SmartkeyPM" aria-label="X" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
-                <span className="text-sm font-semibold">𝕏</span>
+              <a href="https://x.com/SmartkeyPM" aria-label="X" className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
+                <span className="text-xl font-semibold">𝕏</span>
               </a>
-              <a href="https://www.linkedin.com/company/smartkey-property-management" aria-label="LinkedIn" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
-                <Linkedin size={16} />
+              <a href="https://www.linkedin.com/company/smartkey-property-management" aria-label="LinkedIn" className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#162238] transition-all duration-300">
+                <Linkedin size={19} />
               </a>
             </div>
           </div>
 
           {/* Pages */}
           <div>
-            <h4 className="text-[15px] font-bold mb-6">Quick Links</h4>
+            <h4 className="text-[21px] font-bold mb-6">Quick Links</h4>
 
-            <div className="flex flex-col gap-3">
+            <div className=" flex flex-col gap-3 ">
               {[
                 ["Home", "/"],
                 ["Pricing", "/pricing"],
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Link
                   key={label}
                   to={path}
-                  className="w-fit text-[13px] text-[#a9bdd2] hover:text-white hover:translate-x-1 transition-all duration-300"
+                  className="w-fit text-[15px] text-[#a9bdd2] hover:text-white hover:translate-x-1 transition-all duration-300"
                 >
                   {label}
                 </Link>
@@ -68,9 +68,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[15px] font-bold mb-6">Get in Touch</h4>
+            <h4 className="text-[21px] font-bold mb-6">Get in Touch</h4>
 
-            <div className="space-y-5 text-[13px] text-[#a9bdd2]">
+            <div className="space-y-5 text-[15px] text-[#a9bdd2]">
 
               <a href="tel:+16464325559" className="flex items-start gap-3 hover:text-white transition-colors">
                 <Phone size={17} className="mt-0.5 shrink-0" />
@@ -107,17 +107,17 @@ const Footer = () => {
               Do You Own a Property? Let Us Handle It for You.
             </h3>
 
-            <p className="text-[13px] md:text-sm text-[#a9bdd2] leading-6 max-w-[650px]">
+            <p className="text-[13px] md:text-[15px] text-[#a9bdd2] leading-6 max-w-[650px]">
               Find out how Smart Key can simplify your property management by
-              setting up a free consultation.
+              <br/> setting up a free consultation.
             </p>
           </div>
 
           <Link
             to="/contact-us"
-            className="inline-flex items-center justify-center gap-3 w-fit bg-white text-[#162238] text-[13px] font-bold px-7 py-3.5 rounded-full hover:bg-[#dff6ff] hover:-translate-y-1 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-3 w-fit bg-white text-[#162238] text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-[#dff6ff] hover:-translate-x-1.5 transition-all duration-300"
           >
-            Get in Touch <span className="text-lg">→</span>
+            Get in Touch <span className="px-1.5 py-1.5 border rounded-full"><ArrowRight /></span>
           </Link>
         </div>
 
