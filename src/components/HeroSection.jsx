@@ -1,48 +1,33 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const Hero = ({
-  backgroundType = "image",
+const HeroSection = ({
   backgroundSrc,
   title,
   buttonText = "Learn More",
-  buttonLink = "#",
+  buttonLink = "",
 }) => {
-  const heroHeight =
-    backgroundType === "video"
-      ? "min-h-screen"
-      : "min-h-[520px] sm:min-h-[580px] lg:min-h-[650px]";
-
   return (
-    <section
-      className={`relative ${heroHeight} w-full overflow-hidden flex items-center`}
-    >
-      {/* Background */}
-      {backgroundType === "video" ? (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-          src={backgroundSrc}
-        >
-          Your browser does not support the video element.
-        </video>
-      ) : (
-        <img
-          src={backgroundSrc}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-      )}
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+        src={backgroundSrc}
+      >
+        Your browser does not support the video element.
+      </video>
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-slate-900/80" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 py-16 sm:py-20 lg:py-24">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 lg:pt-40 lg:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,9 +35,9 @@ const Hero = ({
           className="w-full max-w-3xl"
         >
           {/* Title */}
-          <span className="max-w-4xl break-words text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <h1 className="max-w-4xl break-words text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             {title}
-          </span>
+          </h1>
 
           {/* Button */}
           {buttonText && (
@@ -85,4 +70,4 @@ const Hero = ({
   );
 };
 
-export default Hero;
+export default HeroSection;
