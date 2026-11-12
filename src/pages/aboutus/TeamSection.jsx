@@ -47,7 +47,7 @@ const leaders = [
     name: "GARY K.",
     role: "Building Manager",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208141/697ce47f8fbbb11689874625_Gary_K.avif",
-    desc: "",
+    desc: "Building Manager - Responsible for overseeing collections, accounts, maintenance, tenant relations, and all day-to-day operations.",
         phNumber:"+1 (646) 412-5838",
     email:"gary@smartkeypropertymanagement.com"
   },
@@ -70,10 +70,10 @@ const leaders = [
   {
     name: "RACHEL",
     role: "Collection Lead",
-    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1794518504/Gemini_Generated_Image_xefnsuxefnsuxefn_Edited.png",
+    image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1794521516/Gemini_Generated_Image_kxs5ggkxs5ggkxs5_Edited.png",
     desc: "Collection Lead managing tenant rent collections, reminders, and payment follow-ups.",
         phNumber:"",
-    email:""
+    email:"rachel@smartkeypropertymanagement.com"
   },
 ];
 
