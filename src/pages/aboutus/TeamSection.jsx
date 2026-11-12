@@ -47,7 +47,7 @@ const leaders = [
     name: "GARY K.",
     role: "Building Manager",
     image: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208141/697ce47f8fbbb11689874625_Gary_K.avif",
-    desc: "Building Manager - Responsible for overseeing collections, accounts, maintenance, tenant relations, and all day-to-day operations.",
+    desc: "Responsible for overseeing collections, accounts, maintenance, tenant relations, and all day-to-day operations.",
         phNumber:"+1 (646) 412-5838",
     email:"gary@smartkeypropertymanagement.com"
   },
