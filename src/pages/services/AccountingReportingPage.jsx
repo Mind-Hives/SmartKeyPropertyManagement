@@ -294,7 +294,7 @@ const AccountingReportingPage = () => {
             accounting, every transaction from{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/rent-collection-and-arrears-recovery"
+              href="/services/rent-collection-arrears-recovery"
             >
               rent collection
             </a>{" "}

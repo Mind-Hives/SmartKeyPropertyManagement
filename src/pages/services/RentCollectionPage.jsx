@@ -24,7 +24,7 @@ const costCards = [
       "Smart Key's rent collection services for landlords streamline the payment process, ensuring landlords receive payments on time. By prioritizing ",
       <a
         className="text-blue-500 hover:underline"
-        href="https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement"
+        href="/services/tenant-screening-placement"
         target="_blank"
         rel="noreferrer"
       >
@@ -309,7 +309,7 @@ const RentCollectionPage = () => {
             Risk management is crucial for landlords to protect their rental
             income and prevent{" "}
             <a
-              href="/services/legal-compliances-and-risk-management"
+              href="/services/legal-compliances-risk-management"
               className="font-semibold hover:underline text-[#1f83c5]"
             >
               legal complications
@@ -395,7 +395,7 @@ const RentCollectionPage = () => {
       <SEO
         title="Rent Collection Services for Landlords in NYC & NJ | Smart Key"
         description="Smart Key provides rent collection services for NYC & NJ landlords, including payment tracking, tenant follow-ups, arrears management and clear owner reporting."
-        canonical='/services/rent-collection-and-arrears-recovery'
+        canonical='/services/rent-collection-arrears-recovery'
       />
     </main>
   );

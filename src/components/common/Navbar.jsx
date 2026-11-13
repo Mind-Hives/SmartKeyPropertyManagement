@@ -8,13 +8,34 @@ const aboutLinks = [
 ];
 
 const servicesLinks = [
-  { name: "Rent Collection & Arrears Recovery", path: "/services/rent-collection-and-arrears-recovery" },
-  { name: "Lease Administration & Renewals", path: "/services/lease-administration-and-renewals" },
-  { name: "Tenant Screening & Placements", path: "/services/tenant-screening-and-placement" },
-  { name: "Accounting & Financial Reporting", path: "/services/accounting-financial-reporting" },
-  { name: "Maintenance & Resident Services", path: "/services/property-maintenance-and-resident-services" },
-  { name: "Compliance & Strategic Oversight", path: "/services/property-compliance-and-strategic-oversight" },
-  { name: "Legal Compliances & Risk Management", path: "/services/legal-compliances-and-risk-management" },
+  {
+    name: "Rent Collection & Arrears Recovery",
+    path: "/services/rent-collection-arrears-recovery",
+  },
+  {
+    name: "Lease Administration & Renewals",
+    path: "/services/lease-administration-renewals",
+  },
+  {
+    name: "Tenant Screening & Placements",
+    path: "/services/tenant-screening-placement",
+  },
+  {
+    name: "Accounting & Financial Reporting",
+    path: "/services/accounting-financial-reporting",
+  },
+  {
+    name: "Maintenance & Resident Services",
+    path: "/services/property-maintenance-resident-services",
+  },
+  {
+    name: "Compliance & Strategic Oversight",
+    path: "/services/property-compliance-strategic-oversight",
+  },
+  {
+    name: "Legal Compliances & Risk Management",
+    path: "/services/legal-compliances-risk-management",
+  },
 ];
 
 const appFolioLinks = [
@@ -64,9 +85,7 @@ const Navbar = () => {
   }, [location.pathname]);
 
   const toggleDropdown = (dropdown) => {
-    setActiveDropdown((current) =>
-      current === dropdown ? null : dropdown
-    );
+    setActiveDropdown((current) => (current === dropdown ? null : dropdown));
   };
 
   // Common active link styling
@@ -82,81 +101,75 @@ const Navbar = () => {
     links.some((item) => item.path === location.pathname);
 
   // Desktop dropdown component
-  
-// Desktop dropdown component
-const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
-  const isActive = isDropdownActive(links);
-  const isDropdownOpen = activeDropdown === name;
 
-  return (
-    <li
-      className="relative"
-      onMouseEnter={() => setActiveDropdown(name)}
-      onMouseLeave={() => setActiveDropdown(null)}
-    >
-      <button
-        type="button"
-        onClick={() => toggleDropdown(name)}
-        aria-expanded={isDropdownOpen}
-        className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
-          isActive
-            ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
-            : ""
-        }`}
+  // Desktop dropdown component
+  const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
+    const isActive = isDropdownActive(links);
+    const isDropdownOpen = activeDropdown === name;
+
+    return (
+      <li
+        className="relative"
+        onMouseEnter={() => setActiveDropdown(name)}
+        onMouseLeave={() => setActiveDropdown(null)}
       >
-        {name}
-
-        <ChevronDown
-          size={16}
-          className={`transition-transform duration-300 ${
-            isDropdownOpen ? "rotate-180" : ""
+        <button
+          type="button"
+          onClick={() => toggleDropdown(name)}
+          aria-expanded={isDropdownOpen}
+          className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-[#12a8ff] ${
+            isActive
+              ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-8"
+              : ""
           }`}
-        />
-      </button>
+        >
+          {name}
 
-      {/* Dropdown list */}
-      <div
-        className={`absolute left-0 top-full ${width} pt-5 transition-all duration-300 ${
-          isDropdownOpen
-            ? "visible translate-y-0 opacity-100"
-            : "invisible translate-y-4 opacity-0"
-        }`}
-      >
-        <div className="rounded-xl bg-[#f7f4ee] p-4 shadow-2xl">
-          <div
-            className={`flex flex-col ${
-              name === "Services" ? "gap-3 text-left" : "gap-2"
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-300 ${
+              isDropdownOpen ? "rotate-180" : ""
             }`}
-          >
-            {links.map((item, index) => (
-              <Link
-                key={index}
-                to={item.path}
-                onClick={() => setActiveDropdown(null)}
-                className={`text-[16px] font-[500] leading-relaxed text-[#17263d] transition-colors duration-300 hover:text-[#12a8ff] ${
-                  location.pathname === item.path
-                    ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-4"
-                    : ""
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          />
+        </button>
+
+        {/* Dropdown list */}
+        <div
+          className={`absolute left-0 top-full ${width} pt-5 transition-all duration-300 ${
+            isDropdownOpen
+              ? "visible translate-y-0 opacity-100"
+              : "invisible translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="rounded-xl bg-[#f7f4ee] p-4 shadow-2xl">
+            <div
+              className={`flex flex-col ${
+                name === "Services" ? "gap-3 text-left" : "gap-2"
+              }`}
+            >
+              {links.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  onClick={() => setActiveDropdown(null)}
+                  className={`text-[16px] font-[500] leading-relaxed text-[#17263d] transition-colors duration-300 hover:text-[#12a8ff] ${
+                    location.pathname === item.path
+                      ? "text-[#12a8ff] underline decoration-[#12a8ff] underline-offset-4"
+                      : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </li>
-  );
-};
-
+      </li>
+    );
+  };
 
   // Mobile dropdown component
-  const MobileDropdown = ({
-    name,
-    links,
-    isDropdownOpen,
-    setDropdownOpen,
-  }) => {
+  const MobileDropdown = ({ name, links, isDropdownOpen, setDropdownOpen }) => {
     return (
       <>
         <button
@@ -200,94 +213,78 @@ const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
     );
   };
 
-  
-return (
-  <nav
-    ref={dropdownRef}
-    className="absolute top-0 left-0 z-50 w-full"
-  >
-    <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-2">
+  return (
+    <nav ref={dropdownRef} className="absolute top-0 left-0 z-50 w-full">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-2">
+        {/* Logo */}
+        <div className="flex shrink-0 items-center">
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
+              alt="Smart Key Property Management"
+              className="h-35 w-35 object-contain lg:h-34 lg:w-34 xl:h-35 xl:w-35 2xl:h-38 2xl:w-38"
+            />
+          </Link>
+        </div>
 
-      {/* Logo */}
-      <div className="flex shrink-0 items-center">
-        <Link to="/">
-          <img
-            src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
-            alt="Smart Key Property Management"
-            className="h-35 w-35 object-contain lg:h-34 lg:w-34 xl:h-35 xl:w-35 2xl:h-38 2xl:w-38"
-          />
-        </Link>
-      </div>
+        {/* Desktop Navigation */}
+        <ul className="hidden min-w-0 flex-1 items-center justify-center gap-6 whitespace-nowrap font-medium text-white lg:flex lg:text-lg xl:gap-8 xl:text-lg 2xl:gap-6 2xl:text-xl">
+          {/* Home */}
+          <li>
+            <NavLink to="/" end className={getNavLinkClass}>
+              Home
+            </NavLink>
+          </li>
 
-      {/* Desktop Navigation */}
-      <ul className="hidden min-w-0 flex-1 items-center justify-center gap-6 whitespace-nowrap font-medium text-white lg:flex lg:text-lg xl:gap-8 xl:text-lg 2xl:gap-6 2xl:text-xl">
+          {/* About */}
+          <DesktopDropdown name="About" links={aboutLinks} />
 
-        {/* Home */}
-        <li>
-          <NavLink to="/" end className={getNavLinkClass}>
-            Home
+          {/* Services */}
+          <DesktopDropdown name="Services" links={servicesLinks} width="w-80" />
+
+          {/* Pricing */}
+          <li>
+            <NavLink to="/pricing" className={getNavLinkClass}>
+              Pricing
+            </NavLink>
+          </li>
+
+          {/* Portfolio */}
+          <li>
+            <NavLink to="/our-portfolio" className={getNavLinkClass}>
+              Portfolio
+            </NavLink>
+          </li>
+
+          {/* AppFolio */}
+          <DesktopDropdown name="AppFolio" links={appFolioLinks} />
+
+          {/* Blogs */}
+          <li>
+            <NavLink to="/blogs" className={getNavLinkClass}>
+              Blogs
+            </NavLink>
+          </li>
+
+          {/* Locations */}
+          <DesktopDropdown name="Locations" links={locations} width="w-40" />
+        </ul>
+
+        {/* Desktop Contact */}
+        <div className="hidden shrink-0 items-center lg:flex">
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              `whitespace-nowrap rounded-full border border-white px-3 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-white hover:text-black  xl:px-5 xl:text-sm 2xl:text-base ${
+                isActive ? "text-black" : ""
+              }`
+            }
+          >
+            Contact Us
           </NavLink>
-        </li>
+        </div>
 
-        {/* About */}
-        <DesktopDropdown name="About" links={aboutLinks} />
-
-        {/* Services */}
-        <DesktopDropdown
-          name="Services"
-          links={servicesLinks}
-          width="w-80"
-        />
-
-        {/* Pricing */}
-        <li>
-          <NavLink to="/pricing" className={getNavLinkClass}>
-            Pricing
-          </NavLink>
-        </li>
-
-        {/* Portfolio */}
-        <li>
-          <NavLink to="/our-portfolio" className={getNavLinkClass}>
-            Portfolio
-          </NavLink>
-        </li>
-
-        {/* AppFolio */}
-        <DesktopDropdown name="AppFolio" links={appFolioLinks} />
-
-        {/* Blogs */}
-        <li>
-          <NavLink to="/blogs" className={getNavLinkClass}>
-            Blogs
-          </NavLink>
-        </li>
-
-        {/* Locations */}
-        <DesktopDropdown
-          name="Locations"
-          links={locations}
-          width="w-40"
-        />
-      </ul>
-
-      {/* Desktop Contact */}
-      <div className="hidden shrink-0 items-center lg:flex">
-        <NavLink
-          to="/contact-us"
-          className={({ isActive }) =>
-            `whitespace-nowrap rounded-full border border-white px-3 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-white hover:text-black  xl:px-5 xl:text-sm 2xl:text-base ${
-              isActive ? "text-black" : ""
-            }`
-          }
-        >
-          Contact Us
-        </NavLink>
-      </div>
-
-      {/* Keep your existing mobile navigation code below this point */}
-
-
+        {/* Keep your existing mobile navigation code below this point */}
 
         {/* Mobile Menu Button */}
         <div className="text-white lg:hidden">
@@ -306,7 +303,6 @@ return (
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="flex max-h-[80vh] flex-col gap-4 overflow-y-auto bg-[#07172a] px-6 py-6 text-white lg:hidden">
-
           {/* Home */}
           <NavLink
             to="/"

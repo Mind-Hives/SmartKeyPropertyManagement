@@ -6,11 +6,12 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = ({
   backgroundSrc,
   title,
-  buttonText = "Learn More",
+  buttonText = "",
   buttonLink = "",
 }) => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex items-center">
+    <section className="relative flex min-h-screen w-full items-center overflow-hidden">
+
       {/* Background Video */}
       <video
         autoPlay
@@ -27,15 +28,17 @@ const HeroSection = ({
       <div className="absolute inset-0 bg-slate-900/80" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 lg:pt-40 lg:pb-24">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-15 sm:px-18 md:px-20 lg:px-22 xl:px-26 2xl:px-40 pt-30 pb-16 sm:pt-34 sm:pb-20 md:pt-40 lg:pt-44 lg:pb-24">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full max-w-3xl"
+          className="w-full"
         >
+
           {/* Title */}
-          <h1 className="max-w-4xl break-words text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+          <h1 className="whitespace-pre-line w-full max-w-[850px] text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             {title}
           </h1>
 
@@ -64,6 +67,7 @@ const HeroSection = ({
               </a>
             </motion.div>
           )}
+
         </motion.div>
       </div>
     </section>

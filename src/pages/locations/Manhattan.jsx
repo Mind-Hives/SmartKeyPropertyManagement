@@ -35,20 +35,20 @@ function Manhattan() {
   const services = [
     {
       title: "Tenant Screening & Placement ",
-      path: "/services/tenant-screening-and-placement",
+      path: "/services/tenant-screening-placement",
       secondtitle: "That Builds Confidence",
       description:
         "A structured screening process helps landlords evaluate applicants, review qualifications and make informed tenant placement decisions with greater confidence.",
     },
     {
       title: "Rent Collection & Lease Administration ",
-      path: "/services/rent-collection-and-arrears-recovery",
+      path: "/services/rent-collection-arrears-recovery",
       secondtitle:
         "Organized rent tracking, payment follow-ups and lease coordination help landlords maintain smoother operations and better visibility into rental performance.",
     },
     {
       title: "Maintenance & Property Inspections",
-      path: "/services/property-compliance-and-strategic-oversight",
+      path: "/services/property-compliance-strategic-oversight",
       secondtitle: "",
       description:
         "Coordinated maintenance requests, routine inspections and vendor communication help protect property condition while ensuring issues are addressed efficiently.",
@@ -347,7 +347,7 @@ function Manhattan() {
             {/* Button */}
             <div className="mt-7 sm:mt-8">
               <a
-                href="/services/property-maintenance-and-resident-services"
+                href="/services/property-maintenance-resident-services"
                 className="inline-flex items-center justify-center rounded-full border border-[#d9e2ec] px-7 py-3 text-sm font-medium text-[#416184] transition duration-300 hover:bg-[#416184] hover:text-white"
               >
                 Learn More

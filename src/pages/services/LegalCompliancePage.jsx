@@ -390,7 +390,7 @@ const LegalCompliancePage = () => {
               and reducing risk while maintaining strong{" "}
               <a
                 className="text-blue-500 hover:underline"
-                href="/services/rent-collection-and-arrears-recovery"
+                href="/services/rent-collection-arrears-recovery"
               >
                 rental property compliance
               </a>{" "}
