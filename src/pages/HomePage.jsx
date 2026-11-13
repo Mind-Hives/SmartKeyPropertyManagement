@@ -82,7 +82,7 @@ const faqData = [
   {
     question: "Can a property manager help reduce vacancy?",
     answer:
-      "Property managers screen tenants through background checks, credit evaluation, income verification, rental history review, and lease compliance assessment. This structured tenant screening process helps reduce payment risk, prevent disputes, and secure financially responsible renters.",
+      "Yes. Property managers reduce rental vacancy through strategic marketing, competitive pricing analysis, structured tenant screening, and efficient lease execution. Faster tenant placement combined with quality screening supports stable occupancy and consistent cash flow.",
   },
   {
     question: "Do property managers handle maintenance and repairs?",
