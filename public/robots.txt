@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.smartkeypropertymanagement.com/sitemap.xml
-
-Agentmap: https://www.smartkeypropertymanagement.com/.well-known/ard.json

@@ -12,7 +12,7 @@ const includeItems = [
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208166/Lease_Task-Check_SmartKey_result.avif",
     title: "Lease Preparation & Documentation",
-    text: "Lease administration involves more than preparing agreements. A structured process helps landlords manage renewals, tenant communication, documentation and lease tracking without operational gaps or missed timelines.",
+    text: "Lease agreements, supporting documents and tenant records are prepared, organized and maintained through a structured documentation process to ensure consistency and easy access when needed.",
   },
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208165/Lease_3_SmartKey_result.avif",

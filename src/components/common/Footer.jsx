@@ -74,9 +74,9 @@ const Footer = () => {
 
             <div className="space-y-5 text-[15px] text-[#a9bdd2]">
 
-              <a href="tel:+16464325559" className="flex items-start gap-3 hover:text-white transition-colors">
+              <a href="tel:+16464125559" className="flex items-start gap-3 hover:text-white transition-colors">
                 <Phone size={17} className="mt-0.5 shrink-0" />
-                <span>+1 (646) 432-5559</span>
+                <span>+1 (646) 412-5559</span>
               </a>
 
               <a href="mailto:info@smartkeypropertymanagement.com" className="flex items-start gap-3 hover:text-white transition-colors break-all">
