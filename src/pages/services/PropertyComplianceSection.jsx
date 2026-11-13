@@ -164,9 +164,9 @@ const PropertyComplianceSection = () => {
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Property Maintenance &
+            Property Compliance 
             <br className="hidden sm:block" />
-            Resident Services
+            & Strategic Oversight
           </span>
         </div>
       </section>

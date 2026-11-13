@@ -153,7 +153,9 @@ const LeaseAdministrationPage = () => {
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Lease Administration & Renewals
+            Lease Administration 
+            <br className="hidden sm:block" />
+            & Renewals
           </span>
         </div>
       </section>

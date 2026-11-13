@@ -13,11 +13,13 @@ const Footer = () => {
 
           {/* Company Info */}
           <div>
-            <img
-              src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
-              alt="Smart Key Property Management"
-              className="w-[200px] mb-5"
-            />
+            <Link to="/">
+              <img
+                src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208101/SamrtKey-logo-shape_result.avif"
+                alt="Smart Key Property Management"
+                className="w-[200px] mb-5"
+              />
+            </Link>
 
             <p className="text-[15px] leading-7 text-[#a9bdd2] max-w-[310px]">
               Smart Key Property Management manages small to mid-size rental
@@ -58,7 +60,7 @@ const Footer = () => {
                 <Link
                   key={label}
                   to={path}
-                  className="w-fit text-[15px] text-[#a9bdd2] hover:text-white hover:translate-x-1 transition-all duration-300"
+                  className="w-fit text-[15px] text-[#a9bdd2] hover:text-white hover:translate-x-2 transition-all duration-300"
                 >
                   {label}
                 </Link>

@@ -319,7 +319,7 @@ function Queens() {
                 href="/services/legal-compliances-risk-management"
                 className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#416184] underline underline-offset-4 transition hover:text-[#1f83c5]"
               >
-                LEARN MORE <span aria-hidden="true">↗</span>
+                Read More <span aria-hidden="true">↗</span>
               </a>
             </div>
 

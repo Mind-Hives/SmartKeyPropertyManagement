@@ -195,9 +195,9 @@ const LegalCompliancePage = () => {
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Legal Compliance &
+            Legal Compliance
             <br className="hidden sm:block" />
-            Risk Management
+            & Risk Management
           </span>
         </div>
       </section>

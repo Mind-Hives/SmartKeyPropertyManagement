@@ -167,7 +167,9 @@ const RentCollectionPage = () => {
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Rent Collection & Arrears Recovery
+            Rent Collection 
+            <br className="hidden sm:block" />
+            & Arrears Recovery
           </span>
         </div>
       </section>

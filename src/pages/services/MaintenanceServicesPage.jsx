@@ -230,17 +230,11 @@ const MaintenanceServicesPage = () => {
               Our Property Maintenance Coordination System
             </h2>
             <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
-              Managing maintenance across rental properties requires more than
-              responding to repair calls.{" "}
-              <a className="text-blue-500 hover:underline" href="/">
-                Smart Key
-              </a>{" "}
-              operates as a structured{" "}
-              <strong>property maintenance company</strong> that coordinates
-              maintenance requests, contractor scheduling and repair tracking
-              through an organized workflow. Our system ensures maintenance
-              issues are addressed efficiently while keeping property owners
-              informed throughout the process.
+              Managing maintenance across rental properties requires more than responding to repair calls. <a 
+              className="text-blue-500 hover:underline" href="/">Smart Key
+              </a> operates as a structured <strong>
+                property maintenance company
+                </strong> that coordinates maintenance requests, contractor scheduling and repair tracking through an organized workflow. Our system ensures maintenance issues are addressed efficiently while keeping property owners informed throughout the process.
             </p>
           </div>
 
@@ -317,7 +311,7 @@ const MaintenanceServicesPage = () => {
       </section>
 
       <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
-        <div className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
           <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
             Why Landlords Choose Smart Key Property Management
           </h2>

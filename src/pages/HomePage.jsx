@@ -198,7 +198,7 @@ const HomePage = () => {
               description="Smart Key Property Management helps landlords secure reliable tenants through structured background, credit, income and rental history screening. We reduce vacancy by leveraging NYC housing programs like CityFHEPS and managing unit approvals efficiently, with rent payments processed through DSS/HRA for added stability. Our strong network of brokers and real estate agents keeps a steady flow of prospects, so properties stay occupied and cash flow remains consistent."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895723/Property-manager-welcoming-approved-tenants-after-successful-tenant-screening-and-placement_result.avif"
               imageAlt="Property manager welcoming approved tenants after successful tenant screening and placement"
-              buttonText="Learn More"
+              buttonText="Read More"
               buttonLink="/services/tenant-screening-placement"
             />
             <ServiceBlock
@@ -207,7 +207,7 @@ const HomePage = () => {
               description="We provide property maintenance services designed to protect asset value and maintain tenant satisfaction. Our team manages the full maintenance lifecycle, including repair coordination, emergency response, vendor oversight, and documented tracking. Every service request is handled through a structured process that supports accountability, cost control, and compliance standards."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-maintenance-technician-inspecting-kitchen-sink-for-rental-property-repair_result.avif"
               imageAlt="Property maintenance technician inspecting kitchen sink for rental property repair"
-              buttonText="Learn More"
+              buttonText="Read More"
               buttonLink="/services/property-maintenance-resident-services"
             />
             <ServiceBlock
@@ -215,7 +215,7 @@ const HomePage = () => {
               description="Navigating landlord-tenant regulations in NYC requires precision and experience. We assist with lease enforcement, proper documentation, housing court coordination, and structured communication aligned with New York rental laws. Our compliance-focused approach helps property owners reduce legal exposure, avoid procedural mistakes, and maintain organized records throughout the tenancy lifecycle."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-reviewing-lease-documents-with-tenants-for-rental-compliance_result.avif"
               imageAlt="Property manager reviewing lease documents with tenants for rental compliance"
-              buttonText="Learn More"
+              buttonText="Read More"
               buttonLink="/services/legal-compliances-risk-management"
             />
             <ServiceBlock
@@ -224,7 +224,7 @@ const HomePage = () => {
               description="Smart Key Property Management ensures timely rent collection through structured tracking systems, automated reminders and consistent follow-ups. When payments become overdue, we initiate a clear arrears recovery process that includes documented notices, payment coordination, and escalation procedures when necessary. Our transparent financial reporting keeps owners fully informed while protecting steady cash flow and reducing prolonged delinquencies."
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-discussing-rent-payment-report-with-tenants-during-collection-review_result.avif"
               imageAlt="Property manager discussing rent payment report with tenants during collection review"
-              buttonText="Learn More"
+              buttonText="Read More"
               buttonLink="/services/rent-collection-arrears-recovery"
             />
           </div>
