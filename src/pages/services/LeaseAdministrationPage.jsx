@@ -251,7 +251,7 @@ const LeaseAdministrationPage = () => {
             The management of{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/rent-collection-and-arrears-recovery"
+              href="/services/rent-collection-arrears-recovery"
             >
               rental
             </a> properties on a concise basis relies heavily on the rental lease
@@ -384,7 +384,7 @@ const LeaseAdministrationPage = () => {
             more successful{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/tenant-screening-and-placement"
+              href="/services/tenant-screening-placement"
             >
               tenant screening and placement
             </a>{" "}
@@ -419,7 +419,7 @@ const LeaseAdministrationPage = () => {
       <SEO
         title="Lease Administration Services NYC | Smart Key Property Management"
         description="Smart Key provides lease administration services for NYC landlords, including lease tracking, renewal coordination, tenant communication and documentation management."
-        canonical='/services/lease-administration-and-renewals'
+        canonical='/services/lease-administration-renewals'
       />
     </main>
   );

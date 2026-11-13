@@ -35,21 +35,21 @@ function Bronx() {
   const services = [
     {
       title: "Tenant Screening & Placement ",
-      path: "/services/tenant-screening-and-placement",
+      path: "/services/tenant-screening-placement",
       secondtitle: "That Builds Confidence",
       description:
         "Our tenant screening and placement process includes thorough applicant verification to help you place qualified tenants and reduce the risk of future tenancy issues.",
     },
     {
       title: "Rent Collection & Lease Administration ",
-      path: "/services/rent-collection-and-arrears-recovery",
+      path: "/services/rent-collection-arrears-recovery",
       secondtitle: "That Keeps Income on Track ",
       description:
         "We handle rent collection services in the Bronx, arrears recovery and lease administration to help keep payments organized and your rental income flowing consistently.",
     },
     {
       title: "Maintenance & Property Inspections",
-      path: "/services/property-compliance-and-strategic-oversight",
+      path: "/services/property-compliance-strategic-oversight",
       secondtitle: "",
       description:
         "From routine maintenance to emergency repairs, we coordinate every service request with trusted vendors to keep your property well maintained and your residents satisfied.",
@@ -312,7 +312,7 @@ function Bronx() {
             {/* Button */}
             <div className="mt-8">
               <a
-                href="/services/property-maintenance-and-resident-services"
+                href="/services/property-maintenance-resident-services"
                 className="inline-flex items-center justify-center rounded-full border border-[#d9e2ec] px-7 py-3 text-sm font-medium text-[#416184] transition hover:bg-[#416184] hover:text-white"
               >
                 Learn More

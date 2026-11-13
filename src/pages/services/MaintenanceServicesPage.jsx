@@ -165,7 +165,7 @@ const MaintenanceServicesPage = () => {
             timely repairs, and organized communication between owners{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/tenant-screening-and-placement"
+              href="/services/tenant-screening-placement"
             >
               tenants
             </a>{" "}

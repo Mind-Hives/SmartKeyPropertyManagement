@@ -7,13 +7,13 @@ import PortfolioPage from "../pages/PortfolioPage.jsx";
 import BlogPage from "../pages/blogs/BlogPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
 import TeamSection from "../pages/aboutus/TeamSection.jsx";
-import RentCollectionPage from "../pages/services/rent_collection.jsx";
-import LeaseAdministrationPage from "../pages/services/lease_administration.jsx";
-import TenantScreeningPage from "../pages/services/teant_screening.jsx";
-import AccountingReportingPage from "../pages/services/accounting_reporting.jsx";
-import MaintenanceServicesPage from "../pages/services/maintainance_report.jsx";
-import LegalCompliancePage from "../pages/services/legal_compliance.jsx";
-import PropertyComplianceSection from "../pages/services/property_compliance.jsx";
+import RentCollectionPage from "../pages/services/RentCollectionPage.jsx";
+import LeaseAdministrationPage from "../pages/services/LeaseAdministrationPage.jsx";
+import TenantScreeningPage from "../pages/services/TenantScreeningPage.jsx";
+import AccountingReportingPage from "../pages/services/AccountingReportingPage.jsx";
+import MaintenanceServicesPage from "../pages/services/MaintenanceServicesPage.jsx";
+import LegalCompliancePage from "../pages/services/LegalCompliancePage.jsx";
+import PropertyComplianceSection from "../pages/services/PropertyComplianceSection.jsx";
 import Queens from "@/pages/locations/Queens.jsx";
 import Bronx from "@/pages/locations/Bronx.jsx";
 import Manhattan from "@/pages/locations/Manhattan.jsx";
@@ -28,13 +28,13 @@ export default function AppRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/our-team" element={<TeamSection />} />
 
-        <Route path="/services/rent-collection-and-arrears-recovery" element={<RentCollectionPage />} />
-        <Route path="/services/lease-administration-and-renewals" element={<LeaseAdministrationPage />} />
-        <Route path="/services/tenant-screening-and-placement" element={<TenantScreeningPage />} />
+        <Route path="/services/rent-collection-arrears-recovery" element={<RentCollectionPage />} />
+        <Route path="/services/lease-administration-renewals" element={<LeaseAdministrationPage />} />
+        <Route path="/services/tenant-screening-placement" element={<TenantScreeningPage />} />
         <Route path="/services/accounting-financial-reporting" element={<AccountingReportingPage />} />
-        <Route path="/services/property-maintenance-and-resident-services" element={<MaintenanceServicesPage />} />
-        <Route path="/services/property-compliance-and-strategic-oversight" element={<PropertyComplianceSection />} />
-        <Route path="/services/legal-compliances-and-risk-management" element={<LegalCompliancePage />} />
+        <Route path="/services/property-maintenance-resident-services" element={<MaintenanceServicesPage />} />
+        <Route path="/services/property-compliance-strategic-oversight" element={<PropertyComplianceSection />} />
+        <Route path="/services/legal-compliances-risk-management" element={<LegalCompliancePage />} />
 
 
         <Route path="/pricing" element={<PricingPage />} />

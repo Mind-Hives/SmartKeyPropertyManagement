@@ -440,7 +440,7 @@ const PropertyComplianceSection = () => {
                   6. Supports stronger{" "}
                   <a
                     className="text-blue-500 hover:underline"
-                    href="/services/tenant-screening-and-placement"
+                    href="/services/tenant-screening-placement"
                   >
                     tenant screening and placement
                   </a>{" "}

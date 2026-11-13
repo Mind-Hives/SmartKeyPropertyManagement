@@ -9,25 +9,25 @@
     <loc>https://www.smartkeypropertymanagement.com/our-team</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/rent-collection-and-arrears-recovery</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/rent-collection-arrears-recovery</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/lease-administration-and-renewals</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/lease-administration-renewals</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/tenant-screening-and-placement</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/tenant-screening-placement</loc>
   </url>
   <url>
     <loc>https://www.smartkeypropertymanagement.com/services/accounting-financial-reporting</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/property-maintenance-and-resident-services</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/property-maintenance-resident-services</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/property-compliance-and-strategic-oversight</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/property-compliance-strategic-oversight</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/services/legal-compliances-and-risk-management</loc>
+    <loc>https://www.smartkeypropertymanagement.com/services/legal-compliances-risk-management</loc>
   </url>
   <url>
     <loc>https://www.smartkeypropertymanagement.com/pricing</loc>
@@ -53,9 +53,24 @@
   <url>
     <loc>https://www.smartkeypropertymanagement.com/privacy-policy</loc>
   </url>
+  <url>
+    <loc>https://www.smartkeypropertymanagement.com/terms-and-conditions</loc>
+  </url>
 
   <!-- Individual Blog Articles -->
 
+  <url>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/changing-property-management-companies-in-queens-when-should-landlords-make-the-switch</loc>
+  </url>
+  <url>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/queens-property-violations-how-landlords-can-resolve-dob-hpd-oath-issues-before-costs-escalate</loc>
+  </url>
+  <url>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/late-rent-in-nyc-what-landlords-should-do-before-arrears-become-a-bigger-problem</loc>
+  </url>
+  <url>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/nyc-property-insurance-costs-are-rising-in-2026-what-landlords-can-do-about-higher-premiums</loc>
+  </url>
   <url>
     <loc>https://www.smartkeypropertymanagement.com/blogs/managing-a-rental-condo-in-nyc-what-owners-need-to-know</loc>
   </url>
@@ -72,7 +87,7 @@
     <loc>https://www.smartkeypropertymanagement.com/blogs/are-property-management-fees-in-nyc-too-high-see-what-a-5-plan-can-include</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/blogs/property-management-fees-in-nyc-what-landlords-pay-and-whats-included</loc>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/property-management-fees-in-nyc-what-landlords-pay-and-what-s-included</loc>
   </url>
   <url>
     <loc>https://www.smartkeypropertymanagement.com/blogs/top-challenges-manhattan-landlords-face-and-how-property-managers-can-solve-them</loc>
@@ -99,7 +114,7 @@
     <loc>https://www.smartkeypropertymanagement.com/blogs/why-tenant-retention-matters-more-than-finding-new-tenants-and-how-it-helps-reduce-turnover</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/blogs/the-difference-between-a-stressful-rental-property-and-a-stable-one-usually-isnt-the-property-understanding-tenant-turnover</loc>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/the-difference-between-a-stressful-rental-property-and-a-stable-one-usually-isn-t-the-property-understanding-tenant-turnover</loc>
   </url>
   <url>
     <loc>https://www.smartkeypropertymanagement.com/blogs/best-property-management-company-in-bronx-ny-what-to-look-for</loc>
@@ -132,7 +147,7 @@
     <loc>https://www.smartkeypropertymanagement.com/blogs/24-7-property-maintenance-services-the-hidden-value</loc>
   </url>
   <url>
-    <loc>https://www.smartkeypropertymanagement.com/blogs/what-does-a-property-management-company-really-do-complete-guide-for-landlords</loc>
+    <loc>https://www.smartkeypropertymanagement.com/blogs/what-does-a-property-management-company-really-do-a-complete-guide-for-landlords</loc>
   </url>
 
 </urlset>

@@ -147,7 +147,10 @@ const HomePage = () => {
       <Hero
         backgroundType="video"
         backgroundSrc="https://res.cloudinary.com/kj98z6s1/video/upload/v1793918917/Smartkey-Hero-Video.mp4"
-        title={"The Key to Hassle-Free Property Management"}
+        title={`The Key to 
+          Hassle-Free 
+          Property 
+          Management`}
         buttonText="Schedule Free Consultation"
         buttonLink="/contact-us"
       />
@@ -196,7 +199,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895723/Property-manager-welcoming-approved-tenants-after-successful-tenant-screening-and-placement_result.avif"
               imageAlt="Property manager welcoming approved tenants after successful tenant screening and placement"
               buttonText="Learn More"
-              buttonLink="/services/tenant-screening-and-placement"
+              buttonLink="/services/tenant-screening-placement"
             />
             <ServiceBlock
               reverse={true}
@@ -205,7 +208,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-maintenance-technician-inspecting-kitchen-sink-for-rental-property-repair_result.avif"
               imageAlt="Property maintenance technician inspecting kitchen sink for rental property repair"
               buttonText="Learn More"
-              buttonLink="/services/property-maintenance-and-resident-services"
+              buttonLink="/services/property-maintenance-resident-services"
             />
             <ServiceBlock
               title="Stay Legally Protected in Rental Market"
@@ -213,7 +216,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-reviewing-lease-documents-with-tenants-for-rental-compliance_result.avif"
               imageAlt="Property manager reviewing lease documents with tenants for rental compliance"
               buttonText="Learn More"
-              buttonLink="/services/legal-compliances-and-risk-management"
+              buttonLink="/services/legal-compliances-risk-management"
             />
             <ServiceBlock
               reverse={true}
@@ -222,7 +225,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-discussing-rent-payment-report-with-tenants-during-collection-review_result.avif"
               imageAlt="Property manager discussing rent payment report with tenants during collection review"
               buttonText="Learn More"
-              buttonLink="/services/rent-collection-and-arrears-recovery"
+              buttonLink="/services/rent-collection-arrears-recovery"
             />
           </div>
         </section>

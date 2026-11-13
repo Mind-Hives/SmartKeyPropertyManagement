@@ -35,25 +35,25 @@ function Queens() {
   const services = [
     {
       title: "Rent Collection & Arrears Support",
-      path: "/services/rent-collection-and-arrears-recovery",
+      path: "/services/rent-collection-arrears-recovery",
       description:
         "Organized payment tracking, tenant follow-ups and reporting help owners maintain better visibility into rental income.",
     },
     {
       title: "Property Maintenance Coordination",
-      path: "/services/property-maintenance-and-resident-services",
+      path: "/services/property-maintenance-resident-services",
       description:
         "Maintenance requests, vendor communication, repair tracking and updates are coordinated to keep properties running smoothly.",
     },
     {
       title: "Tenant Screening & Placement",
-      path: "/services/tenant-screening-and-placement",
+      path: "/services/tenant-screening-placement",
       description:
         "A structured screening process helps owners review applicants, verify information and coordinate smoother tenant placement.",
     },
     {
       title: "Lease Administration & Renewals",
-      path: "/services/lease-administration-and-renewals",
+      path: "/services/lease-administration-renewals",
       description:
         "Lease documentation, renewal timelines and tenant communication are managed through an organized process.",
     },
@@ -316,7 +316,7 @@ function Queens() {
               </p>
 
               <a
-                href="/services/legal-compliances-and-risk-management"
+                href="/services/legal-compliances-risk-management"
                 className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#416184] underline underline-offset-4 transition hover:text-[#1f83c5]"
               >
                 LEARN MORE <span aria-hidden="true">↗</span>

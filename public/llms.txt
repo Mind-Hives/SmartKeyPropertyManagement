@@ -62,7 +62,7 @@ Smart Key uses AppFolio as part of its property management operations for tracki
 - [Manhattan Property Management](https://www.smartkeypropertymanagement.com/manhattan): Property management services, property types, and local information for Manhattan owners.
 - [Our Portfolio](https://www.smartkeypropertymanagement.com/our-portfolio): Examples of residential properties represented in the company's portfolio.
 - [Our Team](https://www.smartkeypropertymanagement.com/our-team): Information about the people and teams supporting property management operations.
-- [Property Maintenance and Resident Services](https://www.smartkeypropertymanagement.com/services/property-maintenance-and-resident-services): Details about maintenance coordination, repair tracking, vendor scheduling, and resident support.
+- [Property Maintenance and Resident Services](https://www.smartkeypropertymanagement.com/services/property-maintenance-resident-services): Details about maintenance coordination, repair tracking, vendor scheduling, and resident support.
 - [Blogs](https://www.smartkeypropertymanagement.com/blogs): Articles and resources related to property management and residential rental ownership.
 - [Contact Smart Key](https://www.smartkeypropertymanagement.com/contact): Contact information and consultation enquiries.
 
