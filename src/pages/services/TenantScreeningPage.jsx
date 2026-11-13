@@ -150,8 +150,9 @@ const TenantScreeningPage = () => {
           </nav>
 
           <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Tenant Screening & <br className="hidden sm:block" />
-            Placements
+            Tenant Screening 
+            <br className="hidden sm:block" />
+            & Placements
           </h1>
         </div>
       </section>
@@ -160,8 +161,9 @@ const TenantScreeningPage = () => {
       <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
         <div className="w-full max-w-9xl mx-auto flex flex-col items-center text-center">
           <h2 className="w-full max-w-7xl text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
-            Tenant Screening & Placement Services <br /> for Residential
-            Landlords
+            Tenant Screening & Placement Services 
+            <br className="hidden sm:block" />
+            for Residential Landlords
           </h2>
 
           <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">

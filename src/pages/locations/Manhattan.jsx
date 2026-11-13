@@ -350,7 +350,7 @@ function Manhattan() {
                 href="/services/property-maintenance-resident-services"
                 className="inline-flex items-center justify-center rounded-full border border-[#d9e2ec] px-7 py-3 text-sm font-medium text-[#416184] transition duration-300 hover:bg-[#416184] hover:text-white"
               >
-                Learn More
+                Read More
               </a>
             </div>
           </div>

@@ -7,7 +7,7 @@ const ServiceBlock = ({
     image,
     imageAlt = "Property management",
     reverse = false,
-    buttonText = "Learn More",
+    buttonText = "Read More",
     buttonLink = "#",
 }) => {
     return (
