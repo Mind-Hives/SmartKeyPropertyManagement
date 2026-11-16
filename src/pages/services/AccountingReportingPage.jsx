@@ -225,9 +225,7 @@ const AccountingReportingPage = () => {
             </h2>
 
             <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
-              Property accounting requires more than simple payment tracking. It
-              includes rent records, expenses, vendor payments, owner statements
-              and clear financial visibility.
+              We monitor all financial aspects of property operations through a reliable and well-defined accounting system, ensuring accurate tracking, organized records and consistent financial reporting.
             </p>
           </div>
 
@@ -294,7 +292,7 @@ const AccountingReportingPage = () => {
             accounting, every transaction from{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/rent-collection-arrears-recovery"
+              href="/services/rent-collection-and-arrears-recovery"
             >
               rent collection
             </a>{" "}
@@ -465,15 +463,7 @@ const AccountingReportingPage = () => {
           </h2>
 
           <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
-            Property owners choose <a href="/">Smart Key Property Management</a>{" "}
-            because of a consistent and reliable approach to managing property
-            finances. Instead of fragmented systems and manual tracking, we
-            follow a well-defined process that ensures every financial activity
-            is recorded, monitored and reported accurately. At Smart Key
-            Property Management, we use platforms like AppFolio to provide
-            real-time access to financial data. This allows property owners to
-            stay informed without delays or dependency on manual updates, giving
-            them full visibility into their property's financial performance.
+            Property owners choose <a className="text-blue-500 hover:underline" href="/">Smart Key Property Management</a> because of a consistent and reliable approach to managing property finances. Instead of fragmented systems and manual tracking, we follow a well-defined process that ensures every financial activity is recorded, monitored and reported accurately. At Smart Key Property Management, we use platforms like AppFolio to provide real-time access to financial data. This allows property owners to stay informed without delays or dependency on manual updates, giving them full visibility into their property's financial performance.
           </p>
           <p className="w-full max-w-5xl mt-6 text-sm sm:text-base leading-7 text-[#416184]">
             Our focus is on maintaining accuracy, consistency, and transparency

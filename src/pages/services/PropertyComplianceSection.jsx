@@ -45,7 +45,18 @@ const coordinationCards = [
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208190/Complience_Constructor_SmartKey_result.avif",
     title: "Tenant & Property Compliance Management",
-    text: "Rental Property Compliance Management Coordinating inspections, record keeping, resolving compliance issues with tenants and ensuring that the required documentation is organized and supporting lease administration and renewals. Proper documentation management makes audits, inspections and regulatory reviews easier.",
+    text: (
+      <>
+        Rental Property Compliance Management Coordinating inspections, record keeping, resolving compliance issues with tenants and ensuring that the required documentation is organized and supporting{" "}
+        <a 
+        href="/services/lease-administration-and-renewals"
+        className="text-blue-500 hover:underline"
+        >
+        lease administration
+        </a>
+        {" "}and renewals. Proper documentation management makes audits, inspections and regulatory reviews easier.
+      </>
+    ),
   },
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208187/Complience_Tracking_SmartKey_result.avif",
@@ -92,7 +103,16 @@ const processSteps = [
   {
     no: "05",
     title: "Strategic Planning & Performance Recommendations",
-    text: "Through ongoing property reviews, we provide recommendations that support long-term asset protection, risk reduction, and stronger operational performance. This approach works alongside services such as Legal Compliance, Lease Administration & Renewals, Accounting & Financial Reporting and Tenant Screening & Placement to create a more structured property management strategy.",
+    text: (
+      <>
+        Through ongoing property reviews, we provide recommendations that support long-term asset protection, risk reduction, and stronger operational performance. This approach works alongside services such as{" "}
+        <a 
+        href="services/legal-compliances-and-risk-management"
+        className=" text-blue-500 hover:underline"
+        >Legal Compliance
+        </a>, Lease Administration & Renewals, Accounting & Financial Reporting and Tenant Screening & Placement to create a more structured property management strategy.
+      </>
+    ),
     side: "right",
   },
 ];
@@ -440,7 +460,7 @@ const PropertyComplianceSection = () => {
                   6. Supports stronger{" "}
                   <a
                     className="text-blue-500 hover:underline"
-                    href="/services/tenant-screening-placement"
+                    href="/services/tenant-screening-and-placement"
                   >
                     tenant screening and placement
                   </a>{" "}

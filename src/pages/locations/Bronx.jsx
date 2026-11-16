@@ -8,48 +8,45 @@ import SEO from "@/components/seo/SEO";
 
 function Bronx() {
   const names = [
-    "Astoria",
-    "Long Island City",
-    "Sunnyside",
-    "Woodside",
-    "Jackson Heights",
-    "Elmhurst",
-    "Flushing",
-    "Forest Hills",
-    "Rego Park",
-    "Jamaica",
-    "Kew Gardens",
-    "Ridgewood",
-    "Bayside",
-    "Fresh Meadows",
-    "Astoria",
-    "Sunnyside",
-    "Woodside",
-    "Elmhurst",
-    "Flushing",
-    "Jamaica",
-    "Forest Hills",
-    "Bayside",
+    "Belmont",
+    "Pelham Parkway",
+    "Wakefield",
+    "Co-op City",
+    "Soundview",
+    "Hunts Point",
+    "University Heights",
+    "Riverdale",
+    "Tremont",
+    "Kingsbridge",
+    "Fordham",
+    "Pelham Bay",
+    "Morris Park",
+    "Throggs Neck",
+    "Parkchester",
+    "Mott Haven",
+    "Tremont",
+    "Concourse",
+    "Bedford Park",
   ];
 
   const services = [
     {
       title: "Tenant Screening & Placement ",
-      path: "/services/tenant-screening-placement",
+      path: "/services/tenant-screening-and-placement",
       secondtitle: "That Builds Confidence",
       description:
         "Our tenant screening and placement process includes thorough applicant verification to help you place qualified tenants and reduce the risk of future tenancy issues.",
     },
     {
       title: "Rent Collection & Lease Administration ",
-      path: "/services/rent-collection-arrears-recovery",
+      path: "/services/rent-collection-and-arrears-recovery",
       secondtitle: "That Keeps Income on Track ",
       description:
         "We handle rent collection services in the Bronx, arrears recovery and lease administration to help keep payments organized and your rental income flowing consistently.",
     },
     {
       title: "Maintenance & Property Inspections",
-      path: "/services/property-compliance-strategic-oversight",
+      path: "/services/property-compliance-and-strategic-oversight",
       secondtitle: "",
       description:
         "From routine maintenance to emergency repairs, we coordinate every service request with trusted vendors to keep your property well maintained and your residents satisfied.",
@@ -158,7 +155,7 @@ function Bronx() {
       <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
           <h1 className="w-full max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Full-Service Property Management Services in the Bronx,New York
+            Full-Service Property Management Services in the Bronx, New York
           </h1>
 
           <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
@@ -216,7 +213,7 @@ function Bronx() {
             {/* Image */}
             <div className="w-full overflow-hidden rounded-[28px] lg:w-1/2">
               <img
-                src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208123/6a6921c126b08e9d4447b45d_2-p-1080.avif"
+                src="https://res.cloudinary.com/kj98z6s1/image/upload/v1794859346/output_1.avif"
                 alt="Property management in Queens"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-full"
@@ -312,7 +309,7 @@ function Bronx() {
             {/* Button */}
             <div className="mt-8">
               <a
-                href="/services/property-maintenance-resident-services"
+                href="/services/property-maintenance-and-resident-services"
                 className="inline-flex items-center justify-center rounded-full border border-[#d9e2ec] px-7 py-3 text-sm font-medium text-[#416184] transition hover:bg-[#416184] hover:text-white"
               >
                 Read More

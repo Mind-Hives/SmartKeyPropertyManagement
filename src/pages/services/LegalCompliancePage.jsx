@@ -22,17 +22,17 @@ const complianceItems = [
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208206/Legal_Claim_SmartKey_result.avif",
     title: "Tenant Disputes & Claims",
-    text: "Failure to follow compliance standards can result in increased scrutiny from regulatory authorities. This added pressure can disrupt operations and make property management more difficult to control.",
+    text: "Unresolved tenant complaints or failure to meet legal obligations can lead to disputes, compensation claims, and legal action. These conflicts may increase expenses and damage landlord-tenant relationships.",
   },
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208207/Legal_Explore_SmartKey_result.avif",
     title: "Regulatory Scrutiny & Operational Pressure",
-    text: "Failure to follow compliance standards can result in increased scrutiny from regulatory authorities. This added pressure can disrupt operations and make property management more difficult to control",
+    text: "Failure to meet compliance requirements can attract greater attention from regulatory authorities, resulting in additional inspections, corrective actions, and administrative burdens that disrupt daily property operations.",
   },
   {
     icon: "https://res.cloudinary.com/kj98z6s1/image/upload/v1793208210/Legal_compliance_SmartKey_result.avif",
     title: "DOB & HPD Compliance Risks",
-    text: "Non-compliance with NYC Department of Buildings (DOB) rules on building codes, permits, and inspections, plus HPD requirements for housing maintenance, registration and violations, can lead to severe fines up to $10,000, daily penalties, and operational shutdowns.",
+    text: "In high-regulation markets like New York City, even minor documentation errors can create serious legal exposure. A structured compliance system is no longer optional it’s essential for protecting your property and your income.",
   },
 ];
 
@@ -205,7 +205,7 @@ const LegalCompliancePage = () => {
       <section className="bg-white px-5 py-12 sm:px-8 md:px-10 lg:px-16 lg:py-20">
         <div className="w-full max-w-9xl mx-auto flex flex-col items-center text-center">
           <h1 className="w-full max-w-7xl text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
-            Legal Compliance & Risk Management Help for
+            Legal Compliances & Risk Management Help for
             <br className="hidden md:block" /> Rental Properties
           </h1>
           <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
@@ -252,22 +252,14 @@ const LegalCompliancePage = () => {
             <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
               Rental property regulations in New York and New Jersey are among
               the most complex in the United States. Laws governing lease
-              agreements, tenant rights NYC, rent regulations,{" "}
-              <a
+              agreements, tenant rights NYC, rent regulations, <a
                 className="text-blue-500 hover:underline"
-                href="/blogs/understanding-the-nyc-eviction-process-key-steps-and-legal-insights"
+                href="/blog/understanding-the-nyc-eviction-process-key-steps-and-legal-insights"
               >
                 eviction procedures and property standards
-              </a>{" "}
-              continue to evolve under strict rental laws New York enforces.
+              </a> continue to evolve under strict rental laws New York enforces.
               Managing these landlord compliance requirements without a
               structured system can quickly create risk.
-            </p>
-            <p className="mx-auto mt-3 max-w-6xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg">
-              In high-regulation markets like New York City, even minor
-              documentation errors can create serious legal exposure. A
-              structured compliance system is no longer optional it's essential
-              for protecting your property and your income
             </p>
           </div>
 
@@ -390,7 +382,7 @@ const LegalCompliancePage = () => {
               and reducing risk while maintaining strong{" "}
               <a
                 className="text-blue-500 hover:underline"
-                href="/services/rent-collection-arrears-recovery"
+                href="/services/rent-collection-and-arrears-recovery"
               >
                 rental property compliance
               </a>{" "}
@@ -468,7 +460,7 @@ const LegalCompliancePage = () => {
       <section className="bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <div className="mx-auto w-full max-w-5xl">
           <h2 className="text-center text-2xl font-bold leading-tight text-[#416184] sm:text-3xl lg:text-4xl">
-            Accurate, Transparent, and Reliable Financial Management
+            Our Risk Management Strategy
           </h2>
           <p className="mx-auto mt-4 max-w-4xl text-sm leading-6 text-[#416184] sm:text-base sm:leading-7">
             Maintaining control over property finances requires accuracy,
@@ -561,17 +553,27 @@ const LegalCompliancePage = () => {
           <ul className="mt-5 space-y-3 pl-26 pr-26 text-sm leading-6 text-[#416184] sm:text-base sm:leading-7">
             <li>
               <strong>
-                1. Consistent screening criteria applied uniformly
+                1. Ongoing compliance monitoring for NY & NJ rental operations
               </strong>
             </li>
             <li>
               <strong>
-                2. Documented verification and evaluation workflow
+                2. Coordination with qualified real estate attorneys
               </strong>
             </li>
             <li>
               <strong>
-                3. Structured communication aligned with compliance standards
+                3. Notice preparation, tracking and documentation management
+              </strong>
+            </li>
+            <li>
+              <strong>
+                4. Issue escalation and structured handling
+              </strong>
+            </li>
+            <li>
+              <strong>
+                4. Clear and organized communication between all parties
               </strong>
             </li>
           </ul>

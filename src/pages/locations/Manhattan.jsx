@@ -8,47 +8,45 @@ import SEO from "@/components/seo/SEO";
 
 function Manhattan() {
   const names = [
-    "Astoria",
-    "Long Island City",
-    "Sunnyside",
-    "Woodside",
-    "Jackson Heights",
-    "Elmhurst",
-    "Flushing",
-    "Forest Hills",
-    "Rego Park",
-    "Jamaica",
-    "Kew Gardens",
-    "Ridgewood",
-    "Bayside",
-    "Fresh Meadows",
-    "Astoria",
-    "Sunnyside",
-    "Woodside",
-    "Elmhurst",
-    "Flushing",
-    "Jamaica",
-    "Forest Hills",
-    "Bayside",
+    "Upper West Side",
+    "Harlem",
+    "East Harlem",
+    "Washington Heights",
+    "Inwood",
+    "Midtown",
+    "Chelsea",
+    "Hell’s Kitchen",
+    "Greenwich Village",
+    "West Village",
+    "SoHo",
+    "Tribeca",
+    "Financial District",
+    "Lower East Side",
+    "East Village",
+    "Murray Hill",
+    "Gramercy",
+    "Flatiron District",
+    "Morningside Heights",
   ];
 
   const services = [
     {
       title: "Tenant Screening & Placement ",
-      path: "/services/tenant-screening-placement",
+      path: "/services/tenant-screening-and-placement",
       secondtitle: "That Builds Confidence",
       description:
         "A structured screening process helps landlords evaluate applicants, review qualifications and make informed tenant placement decisions with greater confidence.",
     },
     {
-      title: "Rent Collection & Lease Administration ",
-      path: "/services/rent-collection-arrears-recovery",
-      secondtitle:
+      title: "Rent Collection",
+      path: "/services/rent-collection-and-arrears-recovery",
+      secondtitle: "& Lease Administration That Keeps Income Organized",
+      description:
         "Organized rent tracking, payment follow-ups and lease coordination help landlords maintain smoother operations and better visibility into rental performance.",
     },
     {
       title: "Maintenance & Property Inspections",
-      path: "/services/property-compliance-strategic-oversight",
+      path: "/services/property-compliance-and-strategic-oversight",
       secondtitle: "",
       description:
         "Coordinated maintenance requests, routine inspections and vendor communication help protect property condition while ensuring issues are addressed efficiently.",
@@ -56,28 +54,9 @@ function Manhattan() {
     {
       title: "Accounting & Financial Reporting ",
       path: "/services/accounting-financial-reporting",
-      secondtitle: "You Can Count On",
+      secondtitle: "You Can Rely On",
       description:
         "Accurate financial records, expense tracking and detailed reporting give property owners clearer insight into income, costs and overall investment performance.",
-    },
-  ];
-
-  const numbers = [
-    {
-      title: "16 Total → 0 Open",
-      description: "DOB Violations",
-    },
-    {
-      title: "122 Total → 0 Open",
-      description: "OATH/ECB Violations",
-    },
-    {
-      title: "33 Total → 0 Open",
-      description: "Complaints",
-    },
-    {
-      title: "8 Total → 0 Open",
-      description: "Jobs / Filings",
     },
   ];
 
@@ -193,7 +172,7 @@ function Manhattan() {
             coordination, every detail needs consistent attention. Smart Key
             Property Management provides structured{" "}
             <a
-              href="/blogs/top-challenges-manhattan-landlords-face-and-how-property-managers-can-solve-them"
+              href="/blog/top-challenges-manhattan-landlords-face-and-how-property-managers-can-solve-them"
               className="text-blue-500 hover:underline"
             >
               Manhattan property management support
@@ -202,6 +181,9 @@ function Manhattan() {
             maintenance coordination and dependable follow-through, we help
             property owners maintain better visibility and smoother operations
             through trusted property management in Manhattan.
+          </p>
+          <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
+            With organized communication, transparent reporting, proactive maintenance coordination and dependable follow-through, we help property owners maintain better visibility and smoother operations through trusted property management in Manhattan.
           </p>
 
           <div className="mt-8 flex justify-center">
@@ -243,7 +225,7 @@ function Manhattan() {
                 src="https://res.cloudinary.com/kj98z6s1/image/upload/v1793208129/6a8491c8d0a730a800373848_Section_04-p-1080.avif"
                 alt=""
                 loading="lazy"
-                className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-full"
+                className="aspect-[4/3] w-full object-cover lg:h-full"
               />
             </div>
 
@@ -252,10 +234,6 @@ function Manhattan() {
               <h2 className="text-3xl font-semibold leading-tight text-[#416184] sm:text-4xl lg:text-[42px]">
                 Full-Service Property Management Services in Manhattan
               </h2>
-
-              {/* <p className="mt-6 text-sm leading-7 text-[#416184] sm:text-base">
-                      
-                    </p> */}
 
               {/* Services */}
               <div className="mt-8 divide-y divide-[#dfe7ee]">
@@ -347,7 +325,7 @@ function Manhattan() {
             {/* Button */}
             <div className="mt-7 sm:mt-8">
               <a
-                href="/services/property-maintenance-resident-services"
+                href="/services/property-maintenance-and-resident-services"
                 className="inline-flex items-center justify-center rounded-full border border-[#d9e2ec] px-7 py-3 text-sm font-medium text-[#416184] transition duration-300 hover:bg-[#416184] hover:text-white"
               >
                 Read More

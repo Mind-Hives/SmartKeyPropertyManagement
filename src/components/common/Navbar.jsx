@@ -10,15 +10,15 @@ const aboutLinks = [
 const servicesLinks = [
   {
     name: "Rent Collection & Arrears Recovery",
-    path: "/services/rent-collection-arrears-recovery",
+    path: "/services/rent-collection-and-arrears-recovery",
   },
   {
     name: "Lease Administration & Renewals",
-    path: "/services/lease-administration-renewals",
+    path: "/services/lease-administration-and-renewals",
   },
   {
     name: "Tenant Screening & Placements",
-    path: "/services/tenant-screening-placement",
+    path: "/services/tenant-screening-and-placement",
   },
   {
     name: "Accounting & Financial Reporting",
@@ -26,15 +26,15 @@ const servicesLinks = [
   },
   {
     name: "Maintenance & Resident Services",
-    path: "/services/property-maintenance-resident-services",
+    path: "/services/property-maintenance-and-resident-services",
   },
   {
-    name: "Compliance & Strategic Oversight",
-    path: "/services/property-compliance-strategic-oversight",
+    name: "Property Compliance & Strategic Oversight",
+    path: "/services/property-compliance-and-strategic-oversight",
   },
   {
     name: "Legal Compliances & Risk Management",
-    path: "/services/legal-compliances-risk-management",
+    path: "/services/legal-compliances-and-risk-management",
   },
 ];
 
@@ -103,7 +103,7 @@ const Navbar = () => {
   // Desktop dropdown component
 
   // Desktop dropdown component
-  const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
+  const DesktopDropdown = ({ name, links, width = "min-w-85" }) => {
     const isActive = isDropdownActive(links);
     const isDropdownOpen = activeDropdown === name;
 
@@ -240,7 +240,7 @@ const Navbar = () => {
           <DesktopDropdown name="About" links={aboutLinks} />
 
           {/* Services */}
-          <DesktopDropdown name="Services" links={servicesLinks} width="w-80" />
+          <DesktopDropdown name="Services" links={servicesLinks} />
 
           {/* Pricing */}
           <li>
@@ -259,9 +259,9 @@ const Navbar = () => {
           {/* AppFolio */}
           <DesktopDropdown name="AppFolio" links={appFolioLinks} />
 
-          {/* Blogs */}
+          {/* blog */}
           <li>
-            <NavLink to="/blogs" className={getNavLinkClass}>
+            <NavLink to="/blog" className={getNavLinkClass}>
               Blogs
             </NavLink>
           </li>
@@ -390,7 +390,7 @@ const Navbar = () => {
 
           {/* Blogs */}
           <NavLink
-            to="/blogs"
+            to="/blog"
             className={({ isActive }) =>
               `block transition-colors duration-300 hover:text-[#12a8ff] ${
                 isActive ? "text-[#12a8ff] underline underline-offset-4" : ""

@@ -241,7 +241,7 @@ const TenantScreeningPage = () => {
               Vacancy reduces{" "}
               <a
                 className="text-blue-500 hover:underline"
-                href="/services/rent-collection-arrears-recovery"
+                href="/services/rent-collection-and-arrears-recovery"
               >
                 rental collection
               </a>{" "}
@@ -340,7 +340,7 @@ const TenantScreeningPage = () => {
             applicant communication and{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/property-compliance-strategic-oversight"
+              href="/services/property-compliance-and-strategic-oversight"
             >
               compliance-focused workflows
             </a>

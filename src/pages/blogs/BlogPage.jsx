@@ -8,7 +8,7 @@ const API_URL = import.meta.env.VITE_API_URL.replace(/\/+$/, "");
 const CARDS_PER_PAGE = 6;
 
 const BlogPage = () => {
-  const [blogs, setBlogs] = useState([]);
+  const [blog, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ const BlogPage = () => {
       try {
         setLoading(true);
 
-        const response = await axios.get(`${API_URL}/api/blogs`);
+        const response = await axios.get(`${API_URL}/api/blog`);
 
         console.log("API Response:", response.data);
 
@@ -30,8 +30,8 @@ const BlogPage = () => {
           setBlogs([]);
         }
       } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-        setError("Unable to load blogs.");
+        console.error("Failed to fetch blog:", error);
+        setError("Unable to load blog.");
       } finally {
         setLoading(false);
       }
@@ -40,11 +40,11 @@ const BlogPage = () => {
     fetchBlogs();
   }, []);
 
-  const totalPages = Math.ceil(blogs.length / CARDS_PER_PAGE);
+  const totalPages = Math.ceil(blog.length / CARDS_PER_PAGE);
 
   const startIndex = (currentPage - 1) * CARDS_PER_PAGE;
 
-  const currentBlogs = blogs.slice(startIndex, startIndex + CARDS_PER_PAGE);
+  const currentBlogs = blog.slice(startIndex, startIndex + CARDS_PER_PAGE);
 
   const handlePrevious = () => {
     if (currentPage > 1) {
@@ -94,14 +94,14 @@ const BlogPage = () => {
       <section className="py-12 md:py-16 px-5">
         <div className="max-w-6xl mx-auto">
           {loading && (
-            <p className="text-center py-16 text-gray-500">Loading blogs...</p>
+            <p className="text-center py-16 text-gray-500">Loading blog...</p>
           )}
 
           {error && <p className="text-center py-16 text-red-500">{error}</p>}
 
-          {!loading && !error && blogs.length === 0 && (
+          {!loading && !error && blog.length === 0 && (
             <p className="text-center py-16 text-gray-500">
-              No published blogs found.
+              No published blog found.
             </p>
           )}
 
@@ -158,7 +158,7 @@ const BlogCard = ({ blog }) => {
     : "/placeholder.jpg";
 
   return (
-    <Link to={`/blogs/${blog.slug}`}>
+    <Link to={`/blog/${blog.slug}`}>
       <article className="bg-white shadow-md border border-gray-100 overflow-hidden group h-full">
         <div className="w-full h-[190px] overflow-hidden">
           <img

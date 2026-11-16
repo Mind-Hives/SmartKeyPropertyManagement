@@ -35,25 +35,25 @@ function Queens() {
   const services = [
     {
       title: "Rent Collection & Arrears Support",
-      path: "/services/rent-collection-arrears-recovery",
+      path: "/services/rent-collection-and-arrears-recovery",
       description:
         "Organized payment tracking, tenant follow-ups and reporting help owners maintain better visibility into rental income.",
     },
     {
       title: "Property Maintenance Coordination",
-      path: "/services/property-maintenance-resident-services",
+      path: "/services/property-maintenance-and-resident-services",
       description:
         "Maintenance requests, vendor communication, repair tracking and updates are coordinated to keep properties running smoothly.",
     },
     {
       title: "Tenant Screening & Placement",
-      path: "/services/tenant-screening-placement",
+      path: "/services/tenant-screening-and-placement",
       description:
         "A structured screening process helps owners review applicants, verify information and coordinate smoother tenant placement.",
     },
     {
       title: "Lease Administration & Renewals",
-      path: "/services/lease-administration-renewals",
+      path: "/services/lease-administration-and-renewals",
       description:
         "Lease documentation, renewal timelines and tenant communication are managed through an organized process.",
     },
@@ -190,20 +190,15 @@ function Queens() {
           <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
             <a href="/" className="text-blue-500 hover:underline">
               Smart Key Property Management
-            </a>
-            provides reliable Queens property management support for residential
-            landlords who need organized operations, responsive communication
-            and consistent property oversight. From tenant coordination and rent
-            collection to maintenance, lease administration and reporting, we
-            help keep rental properties running smoothly. Our approach to
-            property management in Queens NY focuses on transparency, proactive
-            coordination and dependable support tailored to each property's
-            needs.
+            </a> provides reliable Queens property management support for residential landlords who need organized operations, responsive communication and consistent property oversight. From tenant coordination and rent collection to maintenance, lease administration and reporting, we help keep rental properties running smoothly. Our approach to property management in Queens NY focuses on transparency, proactive coordination and dependable support tailored to each property's needs.
+          </p>
+          <p className="w-full max-w-5xl mt-8 text-base sm:text-lg md:text-xl leading-relaxed">
+            Our approach to property management in Queens NY focuses on transparency, proactive coordination and dependable support tailored to each property’s needs.
           </p>
 
           <div className="mt-8 flex justify-center">
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-block bg-[#1f83c5] text-white font-semibold text-sm sm:text-base px-7 sm:px-10 py-4 rounded-3xl hover:bg-[#176da6] transition"
             >
               Request a Property Consultation
@@ -316,7 +311,7 @@ function Queens() {
               </p>
 
               <a
-                href="/services/legal-compliances-risk-management"
+                href="/services/legal-compliances-and-risk-management"
                 className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#416184] underline underline-offset-4 transition hover:text-[#1f83c5]"
               >
                 Read More <span aria-hidden="true">↗</span>
@@ -470,7 +465,7 @@ function Queens() {
           {/* Call to Action */}
           <div className="w-full flex justify-center mt-10">
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-block bg-[#1f83c5] text-white font-semibold text-base px-8 sm:px-10 py-4 sm:py-5 rounded-3xl hover:bg-[#176da6] transition"
             >
               Get Started Today
@@ -489,7 +484,7 @@ function Queens() {
         }
         title={"Own Property? We Make Managing It Effortless."}
         buttonText="Schedule Free Consultation"
-        buttonLink="/contact"
+        buttonLink="/contact-us"
       />
 
       {/* For SEO ranking */}

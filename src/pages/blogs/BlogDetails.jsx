@@ -127,7 +127,7 @@ export default function BlogDetails() {
         setBlog(null);
 
         const response = await axios.get(
-          `${API_URL}/api/blogs/${encodeURIComponent(id)}`,
+          `${API_URL}/api/blog/${encodeURIComponent(id)}`,
           {
             signal: controller.signal,
             timeout: 15000,
@@ -223,7 +223,7 @@ export default function BlogDetails() {
         </p>
 
         <Link
-          to="/blogs"
+          to="/blog"
           className="bg-[#17395f] text-white px-6 py-3 rounded-full text-sm hover:bg-[#2f4f73] transition"
         >
           Back to Blogs
@@ -261,7 +261,7 @@ export default function BlogDetails() {
 
             <span className="mx-2">/</span>
 
-            <Link to="/blogs" className="hover:text-white">
+            <Link to="/blog" className="hover:text-white">
               Blog
             </Link>
 
