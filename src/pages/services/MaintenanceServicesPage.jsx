@@ -79,7 +79,7 @@ const processSteps = [
 
 const whyCards = [
   "Organized maintenance coordination",
-  "Tenant Communication Support",
+  "Faster response to tenant repair requests",
   "Reliable vendor network",
   "Clear documentation and reporting",
   "Structured workflow that reduces operational stress",
@@ -148,9 +148,9 @@ const MaintenanceServicesPage = () => {
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Property Maintenance &
+            Property Compliance 
             <br className="hidden sm:block" />
-            Resident Services
+            & Strategic Oversigh
           </span>
         </div>
       </section>
@@ -165,7 +165,7 @@ const MaintenanceServicesPage = () => {
             timely repairs, and organized communication between owners{" "}
             <a
               className="text-blue-500 hover:underline"
-              href="/services/tenant-screening-placement"
+              href="/services/tenant-screening-and-placement"
             >
               tenants
             </a>{" "}

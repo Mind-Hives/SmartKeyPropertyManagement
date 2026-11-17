@@ -4,7 +4,6 @@ import ServiceBlock from "@/components/serviceBlock/ServiceBlock";
 import ScrollingSec from "../components/scrolling/ScrollingSection.jsx";
 import FooterCTA from "@/components/common/FooterCTA";
 import FAQ from "../components/common/FAQ.jsx";
-import { MyMap } from "@/components/ui";
 import GoogleReviews from "@/components/reviews/GoogleReviews";
 import SocialMediaGallery from "@/components/socialMedia/SocialMediaGallery";
 import SEO from "@/components/seo/SEO";
@@ -199,7 +198,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895723/Property-manager-welcoming-approved-tenants-after-successful-tenant-screening-and-placement_result.avif"
               imageAlt="Property manager welcoming approved tenants after successful tenant screening and placement"
               buttonText="Read More"
-              buttonLink="/services/tenant-screening-placement"
+              buttonLink="/services/tenant-screening-and-placement"
             />
             <ServiceBlock
               reverse={true}
@@ -208,7 +207,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-maintenance-technician-inspecting-kitchen-sink-for-rental-property-repair_result.avif"
               imageAlt="Property maintenance technician inspecting kitchen sink for rental property repair"
               buttonText="Read More"
-              buttonLink="/services/property-maintenance-resident-services"
+              buttonLink="/services/property-maintenance-and-resident-services"
             />
             <ServiceBlock
               title="Stay Legally Protected in Rental Market"
@@ -216,7 +215,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-reviewing-lease-documents-with-tenants-for-rental-compliance_result.avif"
               imageAlt="Property manager reviewing lease documents with tenants for rental compliance"
               buttonText="Read More"
-              buttonLink="/services/legal-compliances-risk-management"
+              buttonLink="/services/legal-compliances-and-risk-management"
             />
             <ServiceBlock
               reverse={true}
@@ -225,7 +224,7 @@ const HomePage = () => {
               image="https://res.cloudinary.com/kj98z6s1/image/upload/v1793895722/Property-manager-discussing-rent-payment-report-with-tenants-during-collection-review_result.avif"
               imageAlt="Property manager discussing rent payment report with tenants during collection review"
               buttonText="Read More"
-              buttonLink="/services/rent-collection-arrears-recovery"
+              buttonLink="/services/rent-collection-and-arrears-recovery"
             />
           </div>
         </section>

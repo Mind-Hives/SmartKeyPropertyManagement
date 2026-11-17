@@ -24,7 +24,7 @@ const costCards = [
       "Smart Key's rent collection services for landlords streamline the payment process, ensuring landlords receive payments on time. By prioritizing ",
       <a
         className="text-blue-500 hover:underline"
-        href="/services/tenant-screening-placement"
+        href="/services/tenant-screening-and-placement"
         target="_blank"
         rel="noreferrer"
       >
@@ -186,7 +186,12 @@ const RentCollectionPage = () => {
             Rent collection is a fundamental aspect of property management that directly influences rental income and long-term business stability. In highly-regulated markets like New York City and New Jersey, managing rent payments requires much more than a basic tracking system it demands a robust, compliance-driven approach to ensure timely payments and avoid costly legal disputes.
           </p>
           <p className="w-full max-w-6xl mt-8 text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed">
-            At <a href="/" className="text-blue-500 hover:underline">Smart Key Property Management</a>, we assist landlords in navigating the complexities of rental property compliance. With ever-evolving landlord legal responsibilities in both NYC and NJ, it's essential to have a structured system that not only tracks rent but also addresses overdue payments in a compliant and efficient manner. We work closely with legal professionals to ensure that all arrears recovery actions adhere to local regulations, are well-organized and are fully documented. This process helps minimize financial risks, maintains consistent cash flow and ensures transparency for both landlords and tenants, so everyone stays informed and aligned throughout the lease cycle.
+            At{" "}
+            <a 
+            href="/" 
+            className="text-blue-500 hover:underline"
+            >Smart Key Property Management
+            </a>, we assist landlords in navigating the complexities of rental property compliance. With ever-evolving landlord legal responsibilities in both NYC and NJ, it's essential to have a structured system that not only tracks rent but also addresses overdue payments in a compliant and efficient manner. We work closely with legal professionals to ensure that all arrears recovery actions adhere to local regulations, are well-organized and are fully documented. This process helps minimize financial risks, maintains consistent cash flow and ensures transparency for both landlords and tenants, so everyone stays informed and aligned throughout the lease cycle.
           </p>
 
           <div className="mt-8 flex justify-center">
@@ -268,6 +273,7 @@ const RentCollectionPage = () => {
       />
 
       {/* Why Choose */}
+
       <section className="bg-white py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-10 text-center">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center mt-6">
           <h2 className="w-full text-3xl sm:text-4xl lg:text-[42px] font-semibold leading-tight text-[#416184]">
@@ -311,7 +317,7 @@ const RentCollectionPage = () => {
             Risk management is crucial for landlords to protect their rental
             income and prevent{" "}
             <a
-              href="/services/legal-compliances-risk-management"
+              href="/services/legal-compliances-and-risk-management"
               className="font-semibold hover:underline text-[#1f83c5]"
             >
               legal complications
@@ -397,7 +403,7 @@ const RentCollectionPage = () => {
       <SEO
         title="Rent Collection Services for Landlords in NYC & NJ | Smart Key"
         description="Smart Key provides rent collection services for NYC & NJ landlords, including payment tracking, tenant follow-ups, arrears management and clear owner reporting."
-        canonical='/services/rent-collection-arrears-recovery'
+        canonical='/services/rent-collection-and-arrears-recovery'
       />
     </main>
   );

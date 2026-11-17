@@ -55,7 +55,7 @@ const Footer = () => {
                 ["Contact Us", "/contact-us"],
                 ["Privacies & Policies", "/privacy-policy"],
                 ["Terms & Comditions", "/terms-and-conditions"],
-                ["Blogs", "/blogs"],
+                ["Blogs", "/blog"],
               ].map(([label, path]) => (
                 <Link
                   key={label}

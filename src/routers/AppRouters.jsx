@@ -28,22 +28,22 @@ export default function AppRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/our-team" element={<TeamSection />} />
 
-        <Route path="/services/rent-collection-arrears-recovery" element={<RentCollectionPage />} />
-        <Route path="/services/lease-administration-renewals" element={<LeaseAdministrationPage />} />
-        <Route path="/services/tenant-screening-placement" element={<TenantScreeningPage />} />
+        <Route path="/services/rent-collection-and-arrears-recovery" element={<RentCollectionPage />} />
+        <Route path="/services/lease-administration-and-renewals" element={<LeaseAdministrationPage />} />
+        <Route path="/services/tenant-screening-and-placement" element={<TenantScreeningPage />} />
         <Route path="/services/accounting-financial-reporting" element={<AccountingReportingPage />} />
-        <Route path="/services/property-maintenance-resident-services" element={<MaintenanceServicesPage />} />
-        <Route path="/services/property-compliance-strategic-oversight" element={<PropertyComplianceSection />} />
-        <Route path="/services/legal-compliances-risk-management" element={<LegalCompliancePage />} />
+        <Route path="/services/property-maintenance-and-resident-services" element={<MaintenanceServicesPage />} />
+        <Route path="/services/property-compliance-and-strategic-oversight" element={<PropertyComplianceSection />} />
+        <Route path="/services/legal-compliances-and-risk-management" element={<LegalCompliancePage />} />
 
 
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/our-portfolio" element={<PortfolioPage />} />
-        <Route path="/blogs" element={<BlogPage />} />
-        <Route path="/blogs/:id" element={<BlogDetails />} />
-        <Route path="/Queens" element={<Queens />}/>
-        <Route path="/Bronx" element={<Bronx />}/>
-        <Route path="/Manhattan" element={<Manhattan />}/>
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/queens" element={<Queens />}/>
+        <Route path="/bronx" element={<Bronx />}/>
+        <Route path="/manhattan" element={<Manhattan />}/>
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<LegalPrivacyPolicy />}/>
         <Route path="/terms-and-conditions" element={<TermsAndComditions />}/>
