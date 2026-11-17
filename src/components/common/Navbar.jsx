@@ -101,9 +101,7 @@ const Navbar = () => {
     links.some((item) => item.path === location.pathname);
 
   // Desktop dropdown component
-
-  // Desktop dropdown component
-  const DesktopDropdown = ({ name, links, width = "min-w-85" }) => {
+  const DesktopDropdown = ({ name, links, width = "min-w-40" }) => {
     const isActive = isDropdownActive(links);
     const isDropdownOpen = activeDropdown === name;
 
@@ -240,7 +238,7 @@ const Navbar = () => {
           <DesktopDropdown name="About" links={aboutLinks} />
 
           {/* Services */}
-          <DesktopDropdown name="Services" links={servicesLinks} />
+          <DesktopDropdown name="Services" links={servicesLinks} width="85"/>
 
           {/* Pricing */}
           <li>
@@ -267,7 +265,7 @@ const Navbar = () => {
           </li>
 
           {/* Locations */}
-          <DesktopDropdown name="Locations" links={locations} width="w-40" />
+          <DesktopDropdown name="Locations" links={locations} width="w-35" />
         </ul>
 
         {/* Desktop Contact */}
