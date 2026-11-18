@@ -144,13 +144,13 @@ const MaintenanceServicesPage = () => {
 
             <ChevronRight size={15} aria-hidden="true" />
 
-            <span className="text-[#9ddff5]">Property Maintenance</span>
+            <span className="text-[#9ddff5]">Property Maintenance & Resident Services</span>
           </nav>
 
           <span className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Property Compliance 
+            Property Maintenance & 
             <br className="hidden sm:block" />
-            & Strategic Oversigh
+            Resident Services
           </span>
         </div>
       </section>
