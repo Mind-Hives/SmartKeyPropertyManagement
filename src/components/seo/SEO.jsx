@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -8,7 +7,12 @@ const SEO = ({
   canonical,
   robots = "index, follow",
 }) => {
-  const siteUrl = "www.smartkeypropertymanagement.com";
+  const siteUrl = "https://www.smartkeypropertymanagement.com";
+
+  // Generate a valid absolute canonical URL.
+  const canonicalUrl = canonical
+    ? new URL(canonical, `${siteUrl}/`).href
+    : undefined;
 
   return (
     <Helmet>
@@ -22,11 +26,8 @@ const SEO = ({
       <meta name="robots" content={robots} />
 
       {/* Canonical URL */}
-      {canonical && (
-        <link
-          rel="canonical"
-          href={`${siteUrl}${canonical}`}
-        />
+      {canonicalUrl && (
+        <link rel="canonical" href={canonicalUrl} />
       )}
     </Helmet>
   );

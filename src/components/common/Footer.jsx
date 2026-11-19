@@ -131,7 +131,7 @@ const Footer = () => {
 
           <p className="text-center">
             Designed and Developed by{" "}
-            <span className="text-white font-semibold"><a className="hover:text-amber-200" href="https://mindhives.co/">@MindHives</a></span>
+            <span className="text-white font-semibold"><a className="hover:text-amber-200" href="https://mindhives.net/">@MindHives</a></span>
           </p>
         </div>
       </div>
