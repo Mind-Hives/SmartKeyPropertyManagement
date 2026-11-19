@@ -1,4 +1,3 @@
-
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import DOMPurify from "dompurify";
@@ -29,7 +28,6 @@ const getImageUrl = (path) => {
   // Convert relative CMS path to absolute URL
   return `${API_URL}/${imagePath.replace(/^\/+/, "")}`;
 };
-
 
 // Format blog publication date.
 const formatDate = (date) => {
@@ -131,7 +129,7 @@ export default function BlogDetails() {
           {
             signal: controller.signal,
             timeout: 15000,
-          }
+          },
         );
 
         console.log("Blog details:", response.data);
@@ -157,7 +155,7 @@ export default function BlogDetails() {
         setError(
           err.response?.status === 404
             ? "Blog not found."
-            : "Unable to load this blog. Please try again."
+            : "Unable to load this blog. Please try again.",
         );
       } finally {
         if (!controller.signal.aborted) {
@@ -175,10 +173,7 @@ export default function BlogDetails() {
   const formattedContent = useMemo(() => {
     if (!blog) return "";
 
-    return prepareBlogHtml(
-      blog.content || "",
-      blog.title || ""
-    );
+    return prepareBlogHtml(blog.content || "", blog.title || "");
   }, [blog]);
 
   // FAQ data from Next.js CMS.
@@ -191,7 +186,7 @@ export default function BlogDetails() {
         typeof item.question === "string" &&
         typeof item.answer === "string" &&
         item.question.trim() &&
-        item.answer.trim()
+        item.answer.trim(),
     );
   }, [blog]);
 
@@ -202,9 +197,7 @@ export default function BlogDetails() {
         <div className="text-center">
           <div className="w-9 h-9 border-[3px] border-[#17395f]/20 border-t-[#17395f] rounded-full animate-spin mx-auto mb-4" />
 
-          <p className="text-[#17395f] text-sm">
-            Loading blog...
-          </p>
+          <p className="text-[#17395f] text-sm">Loading blog...</p>
         </div>
       </main>
     );
@@ -232,14 +225,10 @@ export default function BlogDetails() {
     );
   }
 
-  const publishDate =
-    blog.publishedAt ||
-    blog.publishDate ||
-    blog.createdAt;
+  const publishDate = blog.publishedAt || blog.publishDate || blog.createdAt;
 
   return (
     <main className="bg-white">
-
       {/* HERO SECTION */}
       <section className="relative h-[220px] md:h-[300px] flex items-end overflow-hidden">
         <img
@@ -267,16 +256,13 @@ export default function BlogDetails() {
 
             <span className="mx-2">/</span>
 
-            <span className="text-white">
-              {blog.title}
-            </span>
+            <span className="text-white">{blog.title}</span>
           </nav>
         </div>
       </section>
 
       {/* ARTICLE */}
-      <article className="max-w-4xl mx-auto px-5 py-14 md:py-20">
-
+      <article className="max-w-6xl mx-auto  py-14 md:py-20">
         {/* Article Header */}
         <header className="text-center mb-10">
           <p className="text-[#6c87a6] text-xs mb-4">
@@ -288,31 +274,26 @@ export default function BlogDetails() {
           </h1>
         </header>
 
-        
-{/* MAIN BLOG IMAGE */}
-{blog.coverImage && (
-  <figure className="mb-12 md:mb-16">
-    <img
-      src={getImageUrl(blog.coverImage)}
-      alt={blog.imageAlt || blog.title}
-      className="block w-full h-auto max-h-[500px] object-cover rounded-md"
-      loading="eager"
-      onLoad={() => {
-        console.log(
-          "Blog image loaded:",
-          getImageUrl(blog.coverImage)
-        );
-      }}
-      onError={(event) => {
-        console.error("Blog image failed to load:", {
-          originalPath: blog.coverImage,
-          resolvedUrl: event.currentTarget.src,
-        });
-      }}
-    />
-  </figure>
-)}
-
+        {/* MAIN BLOG IMAGE */}
+        {blog.coverImage && (
+          <figure className="mb-12 md:mb-16">
+            <img
+              src={getImageUrl(blog.coverImage)}
+              alt={blog.imageAlt || blog.title}
+              className="block w-full h-auto max-h-[500px] object-cover rounded-md"
+              loading="eager"
+              onLoad={() => {
+                console.log("Blog image loaded:", getImageUrl(blog.coverImage));
+              }}
+              onError={(event) => {
+                console.error("Blog image failed to load:", {
+                  originalPath: blog.coverImage,
+                  resolvedUrl: event.currentTarget.src,
+                });
+              }}
+            />
+          </figure>
+        )}
 
         {/* HTML Blog Content */}
         <div
@@ -321,14 +302,12 @@ export default function BlogDetails() {
             __html: formattedContent,
           }}
         />
-
       </article>
 
       {/* FAQ SECTION */}
       {faqs.length > 0 && (
         <section className="bg-white py-16 md:py-24">
           <div className="max-w-2xl mx-auto px-5">
-
             <h2 className="text-center text-[#36567a] text-3xl md:text-4xl font-medium mb-12 leading-tight">
               Frequently Asked
               <br />
@@ -336,19 +315,15 @@ export default function BlogDetails() {
             </h2>
 
             <div className="divide-y divide-gray-200">
-
               {faqs.map((faq, index) => {
                 const isOpen = openFaq === index;
 
                 return (
                   <div key={index} className="py-5">
-
                     <button
                       type="button"
                       className="w-full flex justify-between items-start text-left gap-6"
-                      onClick={() =>
-                        setOpenFaq(isOpen ? null : index)
-                      }
+                      onClick={() => setOpenFaq(isOpen ? null : index)}
                       aria-expanded={isOpen}
                     >
                       <span className="text-[#273d58] text-sm md:text-base leading-relaxed">
@@ -365,16 +340,13 @@ export default function BlogDetails() {
                         {faq.answer}
                       </div>
                     )}
-
                   </div>
                 );
               })}
-
             </div>
           </div>
         </section>
       )}
-
     </main>
   );
 }
