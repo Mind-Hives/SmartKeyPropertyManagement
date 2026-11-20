@@ -280,7 +280,7 @@ export default function BlogDetails() {
             <img
               src={getImageUrl(blog.coverImage)}
               alt={blog.imageAlt || blog.title}
-              className="block w-full h-auto max-h-[500px] object-cover rounded-md"
+              className="block w-full h-auto object-cover rounded-md"
               loading="eager"
               onLoad={() => {
                 console.log("Blog image loaded:", getImageUrl(blog.coverImage));
